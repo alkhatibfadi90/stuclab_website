@@ -34,7 +34,7 @@ function Contact() {
       return;
     }
 
-    // Placeholder submit flow to be replaced by Formspree or Cloudflare Worker.
+    // Placeholder submit flow to be replaced by your chosen backend form endpoint.
     console.log('Contact form submission:', formData);
     setStatus({
       type: 'success',

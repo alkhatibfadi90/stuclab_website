@@ -17,24 +17,21 @@ npm run build
 
 Build output is generated in `dist/`.
 
-## Cloudflare Pages deployment
+## Vercel deployment
 
-Use these settings in Cloudflare Pages:
+Use these settings in Vercel:
 
-- Framework preset: `Vite` (or `None`)
+- Framework preset: `Vite`
 - Build command: `npm run build`
 - Build output directory: `dist`
 - Root directory: `/` (project root)
 
 ### Included deployment files
 
-- `wrangler.toml`: sets `pages_build_output_dir = "dist"` for Wrangler-based Pages deploys.
-- `public/_headers`: basic security and cache headers.
+- `vercel.json`: framework, build command, and output directory for Vercel.
 
-Note: this site does not use client-side route paths, so no `_redirects` fallback is required.
-
-You can also deploy with Wrangler:
+You can also deploy with Vercel CLI:
 
 ```bash
-npx wrangler pages deploy dist --project-name struclab-website
+npx vercel --prod
 ```
