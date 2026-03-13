@@ -29,8 +29,9 @@ Use these settings in Cloudflare Pages:
 ### Included deployment files
 
 - `wrangler.toml`: sets `pages_build_output_dir = "dist"` for Wrangler-based Pages deploys.
-- `public/_redirects`: SPA fallback (`/* /index.html 200`).
 - `public/_headers`: basic security and cache headers.
+
+Note: this site does not use client-side route paths, so no `_redirects` fallback is required.
 
 You can also deploy with Wrangler:
 
