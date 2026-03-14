@@ -13,7 +13,7 @@ function Footer() {
       <div className="footer-top-rule" aria-hidden="true" />
       <div className="container footer-inner">
         <div className="footer-brand-col">
-          <p className="footer-brand">StrucLab</p>
+          <p className="footer-brand"><span className="brand-struc">Struc</span><span className="brand-lab">Lab</span></p>
           <p className="footer-descriptor">Structural &amp; Computational Engineering</p>
           <p className="footer-location">Perth, Australia</p>
           <p className="footer-copy">&copy; {year} StrucLab. All rights reserved.</p>

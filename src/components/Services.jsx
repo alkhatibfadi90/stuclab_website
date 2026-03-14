@@ -93,7 +93,7 @@ function Services() {
             <article className="service-card" key={title} data-reveal>
               <div className="service-card-top">
                 <div className="service-icon" aria-hidden="true">
-                  <Icon size={18} strokeWidth={1.75} />
+                  <Icon size={34} strokeWidth={2} />
                 </div>
                 <h3 className="service-title">{title}</h3>
                 <p className="service-desc">{description}</p>

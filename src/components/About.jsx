@@ -1,17 +1,67 @@
-const highlights = [
-  'Chartered Structural Engineer',
-  '9+ Years Experience',
-  'Structural & Computational Focus',
-];
+import { Building2, BriefcaseBusiness, Clock3, ShieldCheck } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: '9+', label: 'Years Experience' },
-  { value: 'CEng', label: 'Chartered Engineer' },
-  { value: '∞', label: 'High-Rise & Complex' },
-  { value: 'S+C', label: 'Structural & Computational' },
+  { target: 9, suffix: '+', label: 'Years Experience', Icon: Clock3 },
+  { target: 50, suffix: '+', label: 'Projects Delivered / Contributed', Icon: BriefcaseBusiness },
+  { target: 20, suffix: '+', label: 'Complex / High-Rise Structures', Icon: Building2 },
+  { target: 100, suffix: '%', label: 'Engineering-Focused Solutions', Icon: ShieldCheck },
 ];
 
 function About() {
+  const countersRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [counts, setCounts] = useState(() => stats.map(() => 0));
+
+  useEffect(() => {
+    if (!countersRef.current || hasAnimated) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasAnimated(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(countersRef.current);
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!hasAnimated) {
+      return;
+    }
+
+    const duration = 1250;
+    let frameId;
+    let start;
+
+    const tick = (timestamp) => {
+      if (!start) {
+        start = timestamp;
+      }
+
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      setCounts(stats.map(({ target }) => Math.round(target * eased)));
+
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(tick);
+      }
+    };
+
+    frameId = window.requestAnimationFrame(tick);
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, [hasAnimated]);
+
   return (
     <section id="about" className="section section-alt" aria-labelledby="about-title">
       <div className="container">
@@ -42,25 +92,20 @@ function About() {
               and digital engineering.
             </p>
           </div>
+        </div>
 
-          <div className="about-stats-col">
-            <div className="about-stats-grid">
-              {stats.map(({ value, label }) => (
-                <div className="about-stat" key={label}>
-                  <span className="about-stat-value">{value}</span>
-                  <span className="about-stat-label">{label}</span>
+        <div className="about-counters" data-reveal ref={countersRef}>
+          {stats.map(({ label, suffix, Icon }, index) => (
+            <article className="about-counter-card" key={label}>
+              <div className="about-counter-top">
+                <div className="about-counter-icon" aria-hidden="true">
+                  <Icon size={24} strokeWidth={2} />
                 </div>
-              ))}
-            </div>
-            <ul className="about-highlights" aria-label="Key credentials">
-              {highlights.map((item) => (
-                <li key={item}>
-                  <span className="highlight-dot" aria-hidden="true" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+                <p className="about-counter-value">{counts[index]}{suffix}</p>
+              </div>
+              <p className="about-counter-label">{label}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

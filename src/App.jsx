@@ -27,7 +27,7 @@ function App() {
         });
       },
       {
-        threshold: 0.35,
+        threshold: 0,
         rootMargin: '-20% 0px -45% 0px',
       },
     );

@@ -11,18 +11,6 @@ const navItems = [
 
 function Navbar({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setIsScrolled(window.scrollY > 24);
-    };
-
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -41,10 +29,10 @@ function Navbar({ activeSection }) {
   };
 
   return (
-    <header className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+    <header className="navbar navbar-scrolled">
       <div className="container navbar-inner">
         <a href="#home" className="brand" onClick={(event) => handleNavClick(event, 'home')}>
-          StrucLab
+          <span className="brand-struc">Struc</span><span className="brand-lab">Lab</span>
         </a>
 
         <nav className="nav-desktop" aria-label="Primary navigation">
@@ -77,16 +65,18 @@ function Navbar({ activeSection }) {
         className={`nav-mobile ${isOpen ? 'open' : ''}`}
         aria-label="Mobile navigation"
       >
-        {navItems.map((item) => (
-          <a
-            key={item.id}
-            href={`#${item.id}`}
-            className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-            onClick={(event) => handleNavClick(event, item.id)}
-          >
-            {item.label}
-          </a>
-        ))}
+        <div>
+          {navItems.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+              onClick={(event) => handleNavClick(event, item.id)}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
       </nav>
     </header>
   );
