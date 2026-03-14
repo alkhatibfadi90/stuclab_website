@@ -1,42 +1,27 @@
 import { Menu, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
-
-const navItems = [
-  { label: 'Home', id: 'home' },
-  { label: 'About', id: 'about' },
-  { label: 'Services', id: 'services' },
-  { label: 'Expertise', id: 'expertise' },
-  { label: 'Contact', id: 'contact' },
-];
+import { useState } from 'react';
+import { NAV_ITEMS } from '../content/siteContent';
+import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
+import { scrollToSection } from '../utils/scrollToSection';
 
 function Navbar({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
+  useBodyScrollLock(isOpen);
 
   const handleNavClick = (event, id) => {
     event.preventDefault();
-    const target = document.getElementById(id);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsOpen(false);
-    }
+    scrollToSection(id, () => setIsOpen(false));
   };
 
   return (
-    <header className="navbar navbar-scrolled">
+    <header className="navbar">
       <div className="container navbar-inner">
         <a href="#home" className="brand" onClick={(event) => handleNavClick(event, 'home')}>
           <span className="brand-struc">Struc</span><span className="brand-lab">Lab</span>
         </a>
 
         <nav className="nav-desktop" aria-label="Primary navigation">
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
@@ -66,7 +51,7 @@ function Navbar({ activeSection }) {
         aria-label="Mobile navigation"
       >
         <div>
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}

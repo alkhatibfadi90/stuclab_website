@@ -1,5 +1,6 @@
 import { Mail, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import { isValidEmail } from '../utils/validation';
 
 const initialForm = {
   name: '',
@@ -28,8 +29,7 @@ function Contact() {
       return;
     }
 
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
-    if (!isValidEmail) {
+    if (!isValidEmail(formData.email)) {
       setStatus({ type: 'error', text: 'Please enter a valid email address.' });
       return;
     }

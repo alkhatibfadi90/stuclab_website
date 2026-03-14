@@ -1,66 +1,11 @@
-import { BriefcaseBusiness, Clock3, GraduationCap, ShieldCheck } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
-
-const stats = [
-  { target: 15, suffix: '+', label: 'Years Experience', Icon: Clock3 },
-  { target: 40, suffix: '+', label: 'Projects Delivered / Contributed', Icon: BriefcaseBusiness },
-  { target: 20, suffix: '+', label: 'Professional Training Programs', Icon: GraduationCap },
-  { target: 100, suffix: '%', label: 'Engineering-Focused Solutions', Icon: ShieldCheck },
-];
+import { ABOUT_STATS } from '../content/siteContent';
+import { useCountUpOnVisible } from '../hooks/useCountUpOnVisible';
 
 function About() {
-  const countersRef = useRef(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const [counts, setCounts] = useState(() => stats.map(() => 0));
-
-  useEffect(() => {
-    if (!countersRef.current || hasAnimated) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasAnimated(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.35 },
-    );
-
-    observer.observe(countersRef.current);
-
-    return () => observer.disconnect();
-  }, [hasAnimated]);
-
-  useEffect(() => {
-    if (!hasAnimated) {
-      return;
-    }
-
-    const duration = 1250;
-    let frameId;
-    let start;
-
-    const tick = (timestamp) => {
-      if (!start) {
-        start = timestamp;
-      }
-
-      const progress = Math.min((timestamp - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-
-      setCounts(stats.map(({ target }) => Math.round(target * eased)));
-
-      if (progress < 1) {
-        frameId = window.requestAnimationFrame(tick);
-      }
-    };
-
-    frameId = window.requestAnimationFrame(tick);
-
-    return () => window.cancelAnimationFrame(frameId);
-  }, [hasAnimated]);
+  const { triggerRef, counts } = useCountUpOnVisible(ABOUT_STATS, {
+    threshold: 0.35,
+    duration: 1250,
+  });
 
   return (
     <section id="about" className="section section-alt" aria-labelledby="about-title">
@@ -94,8 +39,8 @@ function About() {
           </div>
         </div>
 
-        <div className="about-counters" data-reveal ref={countersRef}>
-          {stats.map(({ label, suffix, Icon }, index) => (
+        <div className="about-counters" data-reveal ref={triggerRef}>
+          {ABOUT_STATS.map(({ label, suffix, Icon }, index) => (
             <article className="about-counter-card" key={label}>
               <div className="about-counter-top">
                 <div className="about-counter-icon" aria-hidden="true">

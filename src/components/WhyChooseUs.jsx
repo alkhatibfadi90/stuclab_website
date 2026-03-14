@@ -1,27 +1,4 @@
-import { Compass, Cpu, Layers2, ShieldCheck } from 'lucide-react';
-
-const reasons = [
-  {
-    title: 'Technical Depth',
-    text: 'Strong technical background combining industry experience with advanced structural engineering research.',
-    Icon: ShieldCheck,
-  },
-  {
-    title: 'Practical Engineering',
-    text: 'Focus on practical, buildable structural solutions suited to real project conditions.',
-    Icon: Layers2,
-  },
-  {
-    title: 'Flexible Support',
-    text: 'Engineering support can be provided to project teams on a flexible basis depending on project needs.',
-    Icon: Compass,
-  },
-  {
-    title: 'Efficiency Focus',
-    text: 'Use of computational tools and automation to improve design efficiency and reduce engineering time.',
-    Icon: Cpu,
-  },
-];
+import { WHY_CHOOSE_US_REASONS } from '../content/siteContent';
 
 function WhyChooseUs() {
   return (
@@ -33,7 +10,7 @@ function WhyChooseUs() {
         </div>
 
         <div className="why-grid">
-          {reasons.map(({ title, text, Icon }) => (
+          {WHY_CHOOSE_US_REASONS.map(({ title, text, Icon }) => (
             <article className="why-card" key={title} data-reveal>
               <Icon size={20} aria-hidden="true" />
               <h3>{title}</h3>

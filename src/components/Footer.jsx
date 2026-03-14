@@ -1,10 +1,4 @@
-const footerLinks = [
-  { label: 'Home', id: 'home' },
-  { label: 'About', id: 'about' },
-  { label: 'Services', id: 'services' },
-  { label: 'Expertise', id: 'expertise' },
-  { label: 'Contact', id: 'contact' },
-];
+import { NAV_ITEMS } from '../content/siteContent';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -21,7 +15,7 @@ function Footer() {
 
         <nav className="footer-nav" aria-label="Footer navigation">
           <p className="footer-nav-heading">Navigation</p>
-          {footerLinks.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <a key={item.id} href={`#${item.id}`}>
               {item.label}
             </a>
