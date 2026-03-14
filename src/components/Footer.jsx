@@ -7,23 +7,40 @@ const footerLinks = [
 ];
 
 function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="footer">
+      <div className="footer-top-rule" aria-hidden="true" />
       <div className="container footer-inner">
-        <div>
+        <div className="footer-brand-col">
           <p className="footer-brand">StrucLab</p>
-          <p>Structural &amp; Computational Engineering</p>
-          <p>Perth, Australia</p>
-          <p className="footer-copy">&copy; StrucLab</p>
+          <p className="footer-descriptor">Structural &amp; Computational Engineering</p>
+          <p className="footer-location">Perth, Australia</p>
+          <p className="footer-copy">&copy; {year} StrucLab. All rights reserved.</p>
         </div>
 
         <nav className="footer-nav" aria-label="Footer navigation">
+          <p className="footer-nav-heading">Navigation</p>
           {footerLinks.map((item) => (
             <a key={item.id} href={`#${item.id}`}>
               {item.label}
             </a>
           ))}
         </nav>
+
+        <div className="footer-contact-col">
+          <p className="footer-nav-heading">Contact</p>
+          <a href="mailto:fadi@struclab.com" className="footer-email">fadi@struclab.com</a>
+          <a
+            href="https://www.linkedin.com/company/struclab"
+            className="footer-linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="StrucLab on LinkedIn"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -47,69 +47,82 @@ function Contact() {
     <section id="contact" className="section section-contact" aria-labelledby="contact-title">
       <div className="container contact-grid">
         <div className="contact-content" data-reveal>
-          <p className="eyebrow">Contact</p>
-          <h2 id="contact-title">Contact</h2>
-          <p>
-            If you would like to discuss a project or explore how StrucLab can assist your team,
-            please get in touch.
+          <p className="eyebrow">Get in Touch</p>
+          <h2 id="contact-title">Let's Discuss<br />Your Project</h2>
+          <p className="contact-intro">
+            Whether you're a consultant, contractor, or developer — StrucLab can provide
+            specialist structural engineering support tailored to your project needs.
           </p>
           <div className="contact-meta">
-            <p>
-              <Mail size={16} aria-hidden="true" />
-              <span>Email: fadi@struclab.com</span>
-            </p>
-            <p>
-              <MapPin size={16} aria-hidden="true" />
-              <span>Location: Perth, Australia</span>
-            </p>
+            <a className="contact-meta-item" href="mailto:fadi@struclab.com">
+              <span className="contact-meta-icon"><Mail size={15} aria-hidden="true" /></span>
+              <span>fadi@struclab.com</span>
+            </a>
+            <div className="contact-meta-item">
+              <span className="contact-meta-icon"><MapPin size={15} aria-hidden="true" /></span>
+              <span>Perth, Australia</span>
+            </div>
           </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit} noValidate data-reveal>
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            autoComplete="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-row">
+            <div className="form-field">
+              <label htmlFor="name">Name <span className="required-mark">*</span></label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                placeholder="Your full name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-field">
+              <label htmlFor="email">Email <span className="required-mark">*</span></label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                placeholder="your@email.com"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
 
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-field">
+            <label htmlFor="company">Company / Organisation</label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              autoComplete="organization"
+              placeholder="Optional"
+              value={formData.company}
+              onChange={handleChange}
+            />
+          </div>
 
-          <label htmlFor="company">Company</label>
-          <input
-            id="company"
-            name="company"
-            type="text"
-            autoComplete="organization"
-            value={formData.company}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-field">
+            <label htmlFor="message">Message <span className="required-mark">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your project or enquiry…"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           <button className="btn btn-primary form-submit" type="submit">
-            Send Message
+            Send Enquiry
           </button>
 
           {status.text && (

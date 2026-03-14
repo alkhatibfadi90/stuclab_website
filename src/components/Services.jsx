@@ -83,19 +83,27 @@ function Services() {
         <div className="section-heading" data-reveal>
           <p className="eyebrow">What We Offer</p>
           <h2 id="services-title">Services</h2>
+          <p className="section-lead">
+            Technically rigorous engineering support across design, analysis, review, and digital engineering.
+          </p>
         </div>
 
         <div className="services-grid">
           {services.map(({ title, description, points, Icon }) => (
             <article className="service-card" key={title} data-reveal>
-              <div className="service-icon" aria-hidden="true">
-                <Icon size={20} />
+              <div className="service-card-top">
+                <div className="service-icon" aria-hidden="true">
+                  <Icon size={18} strokeWidth={1.75} />
+                </div>
+                <h3 className="service-title">{title}</h3>
+                <p className="service-desc">{description}</p>
               </div>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <ul>
+              <ul className="service-points">
                 {points.map((point) => (
-                  <li key={point}>{point}</li>
+                  <li key={point}>
+                    <span className="service-point-bullet" aria-hidden="true" />
+                    {point}
+                  </li>
                 ))}
               </ul>
             </article>
