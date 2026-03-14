@@ -1,10 +1,10 @@
-import { Building2, BriefcaseBusiness, Clock3, ShieldCheck } from 'lucide-react';
+import { BriefcaseBusiness, Clock3, GraduationCap, ShieldCheck } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { target: 9, suffix: '+', label: 'Years Experience', Icon: Clock3 },
-  { target: 50, suffix: '+', label: 'Projects Delivered / Contributed', Icon: BriefcaseBusiness },
-  { target: 20, suffix: '+', label: 'Complex / High-Rise Structures', Icon: Building2 },
+  { target: 15, suffix: '+', label: 'Years Experience', Icon: Clock3 },
+  { target: 40, suffix: '+', label: 'Projects Delivered / Contributed', Icon: BriefcaseBusiness },
+  { target: 20, suffix: '+', label: 'Professional Training Programs', Icon: GraduationCap },
   { target: 100, suffix: '%', label: 'Engineering-Focused Solutions', Icon: ShieldCheck },
 ];
 
@@ -67,7 +67,7 @@ function About() {
       <div className="container">
         <div className="section-heading" data-reveal>
           <p className="eyebrow">About StrucLab</p>
-          <h2 id="about-title">Built on Experience.<br />Focused on Results.</h2>
+          <h2 id="about-title"><span className="about-title-accent">Built to Support</span> — Not to Compete</h2>
         </div>
 
         <div className="about-body" data-reveal>
@@ -77,19 +77,19 @@ function About() {
               contractors, and developers across a wide range of building projects.
             </p>
             <p>
-              The practice combines practical structural engineering experience with advanced
-              analytical and computational tools — delivering technically rigorous, efficient, and
+              The practice combines practical structural engineering expertise with advanced
+              analytical and computational tools, delivering technically rigorous, efficient, and
               buildable structural solutions.
             </p>
             <p>
-              The founder, Fadi Alkhatib, is a Chartered Structural Engineer with more than nine
-              years of professional experience delivering complex structural projects including
-              high-rise buildings, mixed-use developments, and technically demanding structures.
+              StrucLab was founded by Chartered Engineers with extensive structural engineering
+              experience in Australia, bringing together decades of combined industry expertise
+              across complex building projects.
             </p>
             <p>
-              StrucLab works collaboratively with project teams on a flexible basis, providing
-              specialist support across structural design, advanced analysis, independent review,
-              and digital engineering.
+              Working collaboratively with project teams, StrucLab provides flexible specialist
+              support across structural design, advanced analysis, independent review,
+              computational engineering, and professional training.
             </p>
           </div>
         </div>

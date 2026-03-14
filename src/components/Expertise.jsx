@@ -1,12 +1,36 @@
 const expertiseItems = [
-  'High-rise buildings',
-  'Reinforced concrete structures',
-  'Steel structures',
-  'Complex transfer structures',
-  'Structural optimisation',
-  'Finite element modelling',
-  'Seismic and wind engineering',
-  'Engineering automation tools',
+  {
+    label: 'Reinforced Concrete Structures',
+    image: '/assets/expertise/reinforced-concrete-structures.jpg',
+  },
+  {
+    label: 'Post Tensioned Concrete Structures',
+    image: '/assets/expertise/post-tensioned-concrete-structures.jpg',
+  },
+  {
+    label: 'Steel Structures',
+    image: '/assets/expertise/steel-structures.jpg',
+  },
+  {
+    label: 'High-rise / Complex Structures',
+    image: '/assets/expertise/high-rise-complex-structures.png',
+  },
+  {
+    label: 'Structural Retrofit and Strengthening',
+    image: '/assets/expertise/structural-assessment-and-investigation.jpg',
+  },
+  {
+    label: 'Seismic and Wind Design',
+    image: '/assets/expertise/seismic-and-wind-design.png',
+  },
+  {
+    label: 'Advance Structural Analysis',
+    image: '/assets/expertise/advanced-structural-analysis.jpg',
+  },
+  {
+    label: 'Structural Optimization and Automation',
+    image: '/assets/expertise/structural-optimization-and-automation.jpeg',
+  },
 ];
 
 function Expertise() {
@@ -20,8 +44,13 @@ function Expertise() {
         </div>
 
         <ul className="expertise-grid" data-reveal>
-          {expertiseItems.map((item) => (
-            <li key={item}>{item}</li>
+          {expertiseItems.map(({ label, image }) => (
+            <li key={label}>
+              <div className="expertise-media">
+                <img src={image} alt={label} loading="lazy" />
+              </div>
+              <span className="expertise-label">{label}</span>
+            </li>
           ))}
         </ul>
       </div>

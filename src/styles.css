@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&display=swap');
 
 /*  Design Tokens  */
 :root {
@@ -76,6 +76,10 @@ h2 {
   font-size: clamp(1.85rem, 3.2vw, 3.1rem);
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.about-title-accent {
+  color: #d4aa5a;
 }
 
 h3 {
@@ -241,17 +245,20 @@ p {
 }
 
 .brand {
-  font-size: 1.2rem;
-  letter-spacing: 0.05em;
+  font-size: clamp(1.35rem, 1.15rem + 0.45vw, 1.65rem);
+  letter-spacing: 0.02em;
   font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  text-rendering: geometricPrecision;
 }
 
 .brand-struc {
-  color: var(--accent);
+  color: #d4aa5a;
 }
 
 .brand-lab {
-  color: var(--muted);
+  color: #7A7F87;
 }
 
 .nav-desktop {
@@ -614,26 +621,70 @@ p {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .expertise-grid li {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 0.9rem 1.1rem;
-  text-align: center;
-  font-size: 0.88rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dbe1e8;
+  border-radius: 1.25rem 1.25rem 0.85rem 1.25rem;
+  padding: 0.75rem 0.75rem 0.95rem;
+  min-height: 246px;
   color: var(--text-secondary);
-  font-weight: 500;
-  background: #fff;
-  box-shadow: var(--shadow-xs);
-  transition: border-color var(--transition), color var(--transition), transform var(--transition);
+  font-weight: 600;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.expertise-grid li::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #d4aa5a 0%, rgba(212, 170, 90, 0.3) 70%, transparent 100%);
 }
 
 .expertise-grid li:hover {
   border-color: #d4c49a;
   color: var(--text);
-  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.expertise-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d4aa5a;
+}
+
+.expertise-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.expertise-label {
+  display: block;
+  width: 100%;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+  text-wrap: balance;
+  padding: 0 0.2rem;
+  text-align: center;
 }
 
 /*  Why Choose Us  */
@@ -817,7 +868,7 @@ a.contact-meta-item:hover {
 
 /*  Footer  */
 .footer {
-  background: var(--footer-bg);
+  background: linear-gradient(180deg, #4a4f57 0%, #3f454d 52%, #353b43 100%);
   color: var(--footer-text);
   padding: 4rem 0 2.8rem;
   position: relative;
@@ -845,14 +896,12 @@ a.contact-meta-item:hover {
 }
 
 .footer-brand {
-  color: var(--accent);
   font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.07em;
-}
-
-.footer-brand .brand-lab {
-  color: #888;
+  font-size: clamp(1.25rem, 1.05rem + 0.4vw, 1.5rem);
+  letter-spacing: 0.02em;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  text-rendering: geometricPrecision;
 }
 
 .footer-descriptor {
@@ -1078,6 +1127,19 @@ a.contact-meta-item:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .expertise-grid li {
+    min-height: 216px;
+    padding: 0.65rem 0.65rem 0.85rem;
+  }
+
+  .expertise-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .expertise-label {
+    font-size: 0.9rem;
+  }
+
   .about-counters {
     grid-template-columns: 1fr;
   }
@@ -1099,5 +1161,13 @@ a.contact-meta-item:hover {
 @media (max-width: 420px) {
   .expertise-grid {
     grid-template-columns: 1fr;
+  }
+
+  .expertise-grid li {
+    min-height: 0;
+  }
+
+  .expertise-media {
+    aspect-ratio: 16 / 9;
   }
 }

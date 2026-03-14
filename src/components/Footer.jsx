@@ -30,7 +30,7 @@ function Footer() {
 
         <div className="footer-contact-col">
           <p className="footer-nav-heading">Contact</p>
-          <a href="mailto:fadi@struclab.com" className="footer-email">fadi@struclab.com</a>
+          <a href="mailto:info@struclab.com.au" className="footer-email">info@struclab.com.au</a>
           <a
             href="https://www.linkedin.com/company/struclab"
             className="footer-linkedin"

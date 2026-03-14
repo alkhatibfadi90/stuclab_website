@@ -8,12 +8,12 @@
         <div className="hero-content" data-reveal>
           <p className="eyebrow hero-eyebrow">Structural &amp; Computational Engineering</p>
           <h1 id="hero-title">
-            Engineering Precision.<br />
-            <span className="hero-title-accent">Delivered with Rigour.</span>
+            Shaping Structures<br />
+            <span className="hero-title-accent">One Algorithm at a Time</span>
           </h1>
           <p className="hero-subtext">
-            StrucLab provides expert structural engineering support from complex structural design
-            and analysis to independent review and engineering automation.
+            StrucLab delivers advanced structural design support, independent engineering review,
+            computational engineering solutions, and industry-focused training.
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#contact">

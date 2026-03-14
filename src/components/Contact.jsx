@@ -52,9 +52,9 @@ function Contact() {
             specialist structural engineering support tailored to your project needs.
           </p>
           <div className="contact-meta">
-            <a className="contact-meta-item" href="mailto:fadi@struclab.com">
+            <a className="contact-meta-item" href="mailto:info@struclab.com.au">
               <span className="contact-meta-icon"><Mail size={15} aria-hidden="true" /></span>
-              <span>fadi@struclab.com</span>
+              <span>info@struclab.com.au</span>
             </a>
             <div className="contact-meta-item">
               <span className="contact-meta-icon"><MapPin size={15} aria-hidden="true" /></span>
