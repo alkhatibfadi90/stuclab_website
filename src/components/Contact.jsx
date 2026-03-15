@@ -23,15 +23,6 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (formData.website.trim()) {
-      setStatus({
-        type: 'success',
-        text: 'Thank you. Your enquiry has been sent successfully.',
-      });
-      setFormData(initialForm);
-      return;
-    }
-
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus({
         type: 'error',
@@ -110,7 +101,7 @@ function Contact() {
               id="website"
               name="website"
               type="text"
-              autoComplete="off"
+              autoComplete="new-password"
               tabIndex="-1"
               value={formData.website}
               onChange={handleChange}
