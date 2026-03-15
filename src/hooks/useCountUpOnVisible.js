@@ -8,7 +8,7 @@ export function useCountUpOnVisible(items, options = {}) {
 
   useEffect(() => {
     if (!triggerRef.current || hasAnimated) {
-      return undefined;
+      return;
     }
 
     const observer = new IntersectionObserver(
@@ -28,7 +28,7 @@ export function useCountUpOnVisible(items, options = {}) {
 
   useEffect(() => {
     if (!hasAnimated) {
-      return undefined;
+      return;
     }
 
     let frameId;

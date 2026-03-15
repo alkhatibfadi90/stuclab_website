@@ -5,7 +5,7 @@ export function useRevealOnScroll() {
     const revealElements = document.querySelectorAll('[data-reveal]');
 
     if (!revealElements.length) {
-      return undefined;
+      return;
     }
 
     const observer = new IntersectionObserver(

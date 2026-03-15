@@ -789,6 +789,15 @@ a.contact-meta-item:hover {
   gap: 1.1rem;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-field {
   display: grid;
   gap: 0.42rem;

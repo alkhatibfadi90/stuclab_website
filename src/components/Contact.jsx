@@ -7,19 +7,30 @@ const initialForm = {
   email: '',
   company: '',
   message: '',
+  website: '',
 };
 
 function Contact() {
   const [formData, setFormData] = useState(initialForm);
   const [status, setStatus] = useState({ type: '', text: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (formData.website.trim()) {
+      setStatus({
+        type: 'success',
+        text: 'Thank you. Your enquiry has been sent successfully.',
+      });
+      setFormData(initialForm);
+      return;
+    }
 
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus({
@@ -34,11 +45,40 @@ function Contact() {
       return;
     }
 
-    setStatus({
-      type: 'success',
-      text: 'Message sent successfully (placeholder). Backend integration can be added next.',
-    });
-    setFormData(initialForm);
+    setIsSubmitting(true);
+    setStatus({ type: '', text: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error('RATE_LIMIT');
+        }
+        throw new Error('Request failed');
+      }
+
+      setStatus({
+        type: 'success',
+        text: 'Thank you. Your enquiry has been sent successfully.',
+      });
+      setFormData(initialForm);
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        text: error.message === 'RATE_LIMIT'
+          ? 'Too many attempts. Please wait a few minutes before sending another enquiry.'
+          : 'Unable to send your message right now. Please email info@struclab.com.au directly.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -64,6 +104,19 @@ function Contact() {
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit} noValidate data-reveal>
+          <div className="form-honeypot" aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              autoComplete="off"
+              tabIndex="-1"
+              value={formData.website}
+              onChange={handleChange}
+            />
+          </div>
+
           <div className="form-row">
             <div className="form-field">
               <label htmlFor="name">Name <span className="required-mark">*</span></label>
@@ -119,8 +172,8 @@ function Contact() {
             />
           </div>
 
-          <button className="btn btn-primary form-submit" type="submit">
-            Send Enquiry
+          <button className="btn btn-primary form-submit" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send Enquiry'}
           </button>
 
           {status.text && (

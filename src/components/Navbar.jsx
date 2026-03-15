@@ -13,6 +13,17 @@ function Navbar({ activeSection }) {
     scrollToSection(id, () => setIsOpen(false));
   };
 
+  const renderNavLinks = () => NAV_ITEMS.map((item) => (
+    <a
+      key={item.id}
+      href={`#${item.id}`}
+      className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+      onClick={(event) => handleNavClick(event, item.id)}
+    >
+      {item.label}
+    </a>
+  ));
+
   return (
     <header className="navbar">
       <div className="container navbar-inner">
@@ -21,16 +32,7 @@ function Navbar({ activeSection }) {
         </a>
 
         <nav className="nav-desktop" aria-label="Primary navigation">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-              onClick={(event) => handleNavClick(event, item.id)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {renderNavLinks()}
         </nav>
 
         <button
@@ -51,16 +53,7 @@ function Navbar({ activeSection }) {
         aria-label="Mobile navigation"
       >
         <div>
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-              onClick={(event) => handleNavClick(event, item.id)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {renderNavLinks()}
         </div>
       </nav>
     </header>
