@@ -92,7 +92,7 @@ export const SERVICES = [
       'Technical training and mentoring for engineers and teams in structural design principles, analysis methods, and digital engineering tools.',
     points: [
       'Structural design and analysis training',
-      'ETABS and structural modelling guidance',
+      'CSI ETABS, SAFE, SAP2000, RAMConcept, Python, Parametric Modelling',
       'Engineering scripting and computational workflows training',
     ],
     Icon: GraduationCap,
@@ -131,6 +131,29 @@ export const EXPERTISE_ITEMS = [
   {
     label: 'Structural Optimization and Automation',
     image: '/assets/expertise/structural-optimization-and-automation.jpeg',
+  },
+];
+
+export const PROFESSIONAL_CREDENTIALS = [
+  {
+    title: 'APEC IntPE(Aus)',
+    organization: 'ENGINEERS AUSTRALIA',
+    image: '/assets/credentials/apec-intpe-aus.webp',
+  },
+  {
+    title: 'CPEng Chartered Engineer',
+    organization: 'ENGINEERS AUSTRALIA',
+    image: '/assets/credentials/cpeng-chartered-engineer.png',
+  },
+  {
+    title: 'NER Registred Engineer',
+    organization: 'ENGINEERS AUSTRALIA',
+    image: '/assets/credentials/ner-registred-engineer.png',
+  },
+  {
+    title: 'MIEAus Full Member',
+    organization: 'ENGINEERS AUSTRALIA',
+    image: '/assets/credentials/mieaus-full-member.png',
   },
 ];
 

@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import ProfessionalCredentials from './components/ProfessionalCredentials';
 import Expertise from './components/Expertise';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
@@ -25,6 +26,7 @@ function App() {
         <About />
         <Services />
         <Expertise />
+        <ProfessionalCredentials />
         <WhyChooseUs />
         <Contact />
       </main>
