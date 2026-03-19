@@ -125,7 +125,7 @@ export const EXPERTISE_ITEMS = [
     image: '/assets/expertise/seismic-and-wind-design.png',
   },
   {
-    label: 'Advance Structural Analysis',
+    label: 'Advanced Structural Analysis',
     image: '/assets/expertise/advanced-structural-analysis.jpg',
   },
   {
@@ -146,7 +146,7 @@ export const PROFESSIONAL_CREDENTIALS = [
     image: '/assets/credentials/cpeng-chartered-engineer.png',
   },
   {
-    title: 'NER Registred Engineer',
+    title: 'NER Registered Engineer',
     organization: 'ENGINEERS AUSTRALIA',
     image: '/assets/credentials/ner-registred-engineer.png',
   },
