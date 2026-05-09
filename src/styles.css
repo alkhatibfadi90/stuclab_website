@@ -23,6 +23,14 @@
   --radius-md: 0.85rem;
   --radius-lg: 1.1rem;
   --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Toolkit / tool sub-page tokens (reused across all tool pages) */
+  --toolkit-surface: #F5F5F3;
+  --toolkit-surface-border: rgba(0, 0, 0, 0.04);
+  --toolkit-surface-shadow: 0 2px 6px rgba(20, 20, 20, 0.04);
+  --toolkit-surface-shadow-hover: 0 10px 26px rgba(20, 20, 20, 0.09);
+  --toolkit-disclaimer-bg: #1A1A1A;
+  --toolkit-disclaimer-text: #D4D4D4;
 }
 
 /*  Reset & Base  */
@@ -1240,5 +1248,222 @@ a.contact-meta-item:hover {
 
   .expertise-media {
     aspect-ratio: 16 / 9;
+  }
+}
+
+/*  Brand + LinkedIn icon group  */
+.brand-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.brand-linkedin:hover,
+.brand-linkedin:focus-visible {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.brand-linkedin svg {
+  flex-shrink: 0;
+}
+
+/*  Toolkit nav pill  */
+.nav-toolkit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.95rem;
+  margin-left: 0.4rem;
+  background: var(--accent);
+  color: #181818;
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.015em;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  box-shadow: 0 4px 14px rgba(200, 162, 74, 0.28);
+  transition: background var(--transition), border-color var(--transition),
+    box-shadow var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.nav-toolkit svg {
+  flex-shrink: 0;
+  color: #181818;
+}
+
+.nav-toolkit:hover,
+.nav-toolkit:focus-visible {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  box-shadow: 0 6px 20px rgba(200, 162, 74, 0.42);
+  transform: translateY(-1px);
+}
+
+.nav-toolkit.is-current {
+  box-shadow: 0 0 0 2px rgba(200, 162, 74, 0.28), 0 4px 14px rgba(200, 162, 74, 0.32);
+}
+
+/*  Toolkit page  */
+.toolkit-page {
+  background: var(--bg-alt);
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6rem);
+  min-height: calc(100vh - 4.8rem);
+}
+
+.toolkit-heading {
+  text-align: left;
+}
+
+.toolkit-h1 {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  max-width: none;
+  margin-top: 0.25rem;
+  color: var(--text);
+}
+
+.toolkit-lead {
+  margin-top: 0.85rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 62ch;
+}
+
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.toolkit-card {
+  position: relative;
+  border: 1px solid var(--toolkit-surface-border);
+  border-radius: var(--radius-lg);
+  padding: 1.65rem 1.5rem 2.4rem;
+  background: var(--toolkit-surface);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--toolkit-surface-shadow);
+  cursor: default;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.toolkit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--toolkit-surface-shadow-hover);
+}
+
+.toolkit-card-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.78;
+}
+
+.toolkit-card-icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(200, 162, 74, 0.24), rgba(200, 162, 74, 0.1));
+  color: var(--accent);
+  margin-bottom: 1.3rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 10px 22px rgba(70, 86, 106, 0.12);
+}
+
+.toolkit-card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.toolkit-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.toolkit-disclaimer {
+  margin-top: 2.5rem;
+  padding: 1.3rem 1.5rem;
+  border: none;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  background: var(--toolkit-disclaimer-bg);
+  color: var(--toolkit-disclaimer-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.toolkit-disclaimer-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.toolkit-disclaimer-body {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--toolkit-disclaimer-text);
+}
+
+.toolkit-meta {
+  margin: 1.6rem 0 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  opacity: 0.78;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .toolkit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .toolkit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*  Toolkit pill in mobile menu  */
+@media (max-width: 768px) {
+  .nav-mobile .nav-toolkit {
+    margin: 0.85rem 1.25rem;
+    padding: 0.7rem 1.1rem;
+    border-top: none;
+    min-height: 0;
+    align-self: flex-start;
+    width: auto;
   }
 }

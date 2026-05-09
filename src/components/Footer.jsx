@@ -1,7 +1,22 @@
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_ITEMS } from '../content/siteContent';
+import { scrollToSection } from '../utils/scrollToSection';
 
 function Footer() {
   const year = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
+
+  const handleSectionClick = (event, id) => {
+    event.preventDefault();
+    if (isHome) {
+      scrollToSection(id);
+      return;
+    }
+    navigate({ pathname: '/', hash: `#${id}` });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-top-rule" aria-hidden="true" />
@@ -16,17 +31,22 @@ function Footer() {
         <nav className="footer-nav" aria-label="Footer navigation">
           <p className="footer-nav-heading">Navigation</p>
           {NAV_ITEMS.map((item) => (
-            <a key={item.id} href={`#${item.id}`}>
+            <a
+              key={item.id}
+              href={isHome ? `#${item.id}` : `/#${item.id}`}
+              onClick={(event) => handleSectionClick(event, item.id)}
+            >
               {item.label}
             </a>
           ))}
+          <Link to="/toolkit">Toolkit</Link>
         </nav>
 
         <div className="footer-contact-col">
           <p className="footer-nav-heading">Contact</p>
           <a href="mailto:info@struclab.com.au" className="footer-email">info@struclab.com.au</a>
           <a
-            href="https://www.linkedin.com/company/struclab"
+            href="https://www.linkedin.com/company/struclab-australia"
             className="footer-linkedin"
             target="_blank"
             rel="noopener noreferrer"

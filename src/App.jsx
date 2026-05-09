@@ -1,19 +1,23 @@
+import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import ProfessionalCredentials from './components/ProfessionalCredentials';
-import Expertise from './components/Expertise';
-import WhyChooseUs from './components/WhyChooseUs';
-import Contact from './components/Contact';
+import Home from './components/Home';
+import Toolkit from './components/Toolkit';
 import Footer from './components/Footer';
 import { SECTION_IDS } from './content/siteContent';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useRevealOnScroll } from './hooks/useRevealOnScroll';
 
 function App() {
-  const activeSection = useActiveSection(SECTION_IDS);
-  useRevealOnScroll();
+  const location = useLocation();
+  const activeSection = useActiveSection(SECTION_IDS, location.pathname);
+  useRevealOnScroll(location.pathname);
+
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   return (
     <>
@@ -22,13 +26,10 @@ function App() {
       </a>
       <Navbar activeSection={activeSection} />
       <main id="main-content">
-        <Hero />
-        <About />
-        <Services />
-        <Expertise />
-        <ProfessionalCredentials />
-        <WhyChooseUs />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/toolkit" element={<Toolkit />} />
+        </Routes>
       </main>
       <Footer />
     </>

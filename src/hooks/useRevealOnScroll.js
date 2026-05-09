@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-export function useRevealOnScroll() {
+export function useRevealOnScroll(trigger) {
   useEffect(() => {
-    const revealElements = document.querySelectorAll('[data-reveal]');
+    const revealElements = document.querySelectorAll('[data-reveal]:not(.is-visible)');
 
     if (!revealElements.length) {
-      return;
+      return undefined;
     }
 
     const observer = new IntersectionObserver(
@@ -26,7 +26,7 @@ export function useRevealOnScroll() {
     revealElements.forEach((element) => observer.observe(element));
 
     return () => {
-      revealElements.forEach((element) => observer.unobserve(element));
+      observer.disconnect();
     };
-  }, []);
+  }, [trigger]);
 }

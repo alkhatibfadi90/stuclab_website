@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useActiveSection(sectionIds) {
+export function useActiveSection(sectionIds, trigger) {
   const [activeSection, setActiveSection] = useState(sectionIds[0] ?? 'home');
 
   useEffect(() => {
@@ -29,9 +29,9 @@ export function useActiveSection(sectionIds) {
     sections.forEach((section) => observer.observe(section));
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      observer.disconnect();
     };
-  }, [sectionIds]);
+  }, [sectionIds, trigger]);
 
   return activeSection;
 }
