@@ -10,10 +10,14 @@
           <h1 id="hero-title">
             Shaping Structures<br />
             <span className="hero-title-accent">One Algorithm at a Time</span>
+            <span style={{ display: 'block', fontSize: '0.55em', fontWeight: 700, marginTop: '0.6em' }}>
+              Specialist Support for Complex Structures
+            </span>
           </h1>
           <p className="hero-subtext">
-            StrucLab delivers advanced structural design support, independent engineering review,
-            computational engineering solutions, and industry-focused training.
+            StrucLab provides senior-level structural analysis, design support, computational
+            engineering and professional training for consulting firms, contractors, and developers across Australia —
+            delivered as flexible, project-based collaboration.
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#contact">

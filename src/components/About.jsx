@@ -18,23 +18,25 @@ function About() {
         <div className="about-body" data-reveal>
           <div className="about-text-col">
             <p className="about-lead">
-              StrucLab provides structural and computational engineering support to consultants,
-              contractors, and developers across a wide range of building projects.
+              StrucLab is a specialist structural engineering practice supporting consulting firms,
+              contractors, and developers on complex and demanding structural projects.
             </p>
             <p>
-              The practice combines practical structural engineering expertise with advanced
-              analytical and computational tools, delivering technically rigorous, efficient, and
-              buildable structural solutions.
+              The practice was founded to fill a specific gap — providing senior technical capacity
+              that established teams can call on when projects need deeper analysis, specialist
+              input, or extra hands at critical stages. StrucLab works as a collaborator, not a
+              competitor, integrating with client teams under their project leadership.
             </p>
             <p>
-              StrucLab was founded by Chartered Engineers with extensive structural engineering
-              experience in Australia, bringing together decades of combined industry expertise
-              across complex building projects.
+              Founded by Chartered Professional Engineers with over a decade of experience on
+              Australian projects, StrucLab combines technical depth with practical, buildable
+              thinking. Every engagement is delivered with the same standard of rigour expected
+              on landmark projects, scaled to suit the brief.
             </p>
             <p>
-              Working collaboratively with project teams, StrucLab provides flexible specialist
-              support across structural design, advanced analysis, independent review,
-              computational engineering, and professional training.
+              By keeping the practice focused and specialist, StrucLab offers structural firms a
+              reliable extension of their own technical capability — without the overhead of a
+              permanent hire.
             </p>
           </div>
         </div>
