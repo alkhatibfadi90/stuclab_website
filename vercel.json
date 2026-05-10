@@ -5,6 +5,10 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/toolkit", "destination": "/labkit", "permanent": true },
+    { "source": "/toolkit/(.*)", "destination": "/labkit/$1", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api/|assets/|.*\\..*).*)", "destination": "/" }
   ]

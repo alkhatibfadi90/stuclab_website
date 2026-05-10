@@ -24,13 +24,13 @@
   --radius-lg: 1.1rem;
   --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Toolkit / tool sub-page tokens (reused across all tool pages) */
-  --toolkit-surface: #F5F5F3;
-  --toolkit-surface-border: rgba(0, 0, 0, 0.04);
-  --toolkit-surface-shadow: 0 2px 6px rgba(20, 20, 20, 0.04);
-  --toolkit-surface-shadow-hover: 0 10px 26px rgba(20, 20, 20, 0.09);
-  --toolkit-disclaimer-bg: #1A1A1A;
-  --toolkit-disclaimer-text: #D4D4D4;
+  /* LabKit / tool sub-page tokens (reused across all tool pages) */
+  --labkit-surface: #F5F5F3;
+  --labkit-surface-border: rgba(0, 0, 0, 0.04);
+  --labkit-surface-shadow: 0 2px 6px rgba(20, 20, 20, 0.04);
+  --labkit-surface-shadow-hover: 0 10px 26px rgba(20, 20, 20, 0.09);
+  --labkit-disclaimer-bg: var(--brand-ink);
+  --labkit-disclaimer-text: #D4D4D4;
 }
 
 /*  Reset & Base  */
@@ -1275,8 +1275,8 @@ a.contact-meta-item:hover {
   flex-shrink: 0;
 }
 
-/*  Toolkit nav pill  */
-.nav-toolkit {
+/*  LabKit nav pill  */
+.nav-labkit {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -1295,36 +1295,58 @@ a.contact-meta-item:hover {
   white-space: nowrap;
 }
 
-.nav-toolkit svg {
+.nav-labkit svg {
   flex-shrink: 0;
   color: #181818;
 }
 
-.nav-toolkit:hover,
-.nav-toolkit:focus-visible {
+.nav-labkit:hover,
+.nav-labkit:focus-visible {
   background: var(--accent-deep);
   border-color: var(--accent-deep);
   box-shadow: 0 6px 20px rgba(200, 162, 74, 0.42);
   transform: translateY(-1px);
 }
 
-.nav-toolkit.is-current {
+.nav-labkit.is-current {
   box-shadow: 0 0 0 2px rgba(200, 162, 74, 0.28), 0 4px 14px rgba(200, 162, 74, 0.32);
 }
 
-/*  Toolkit page  */
-.toolkit-page {
+/*  LabKit landing pages (cream/light theme — used by /labkit and /labkit/concrete)  */
+.labkit-landing {
   background: var(--bg-alt);
   padding-top: clamp(3.5rem, 6vw, 5.5rem);
   padding-bottom: clamp(4rem, 7vw, 6rem);
   min-height: calc(100vh - 4.8rem);
 }
 
-.toolkit-heading {
+.labkit-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1.4rem;
+  padding: 7px 14px;
+  border: 1px solid var(--brand-gold-deep);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--brand-ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.labkit-back:hover,
+.labkit-back:focus-visible {
+  background: rgba(196, 154, 46, 0.08);
+  border-color: var(--brand-gold);
+}
+
+.labkit-heading {
   text-align: left;
 }
 
-.toolkit-h1 {
+.labkit-h1 {
   font-size: clamp(2rem, 4.2vw, 3.4rem);
   font-weight: 800;
   max-width: none;
@@ -1332,94 +1354,125 @@ a.contact-meta-item:hover {
   color: var(--text);
 }
 
-.toolkit-lead {
+.labkit-lead {
   margin-top: 0.85rem;
   font-size: 1.05rem;
   color: var(--text-secondary);
   max-width: 62ch;
 }
 
-.toolkit-grid {
+.labkit-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.3rem;
   margin-top: 0.5rem;
 }
 
-.toolkit-card {
+.labkit-card {
   position: relative;
-  border: 1px solid var(--toolkit-surface-border);
-  border-radius: var(--radius-lg);
-  padding: 1.65rem 1.5rem 2.4rem;
-  background: var(--toolkit-surface);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--brand-gold-deep);
+  border-radius: 6px;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Reserve room for the "open in new tab" corner icon (tool cards only) */
+.labkit-card-link[target="_blank"] {
+  padding-right: 32px;
+}
+
+/* Clickable card variant — hover/focus only on the link form */
+.labkit-card-link:hover,
+.labkit-card-link:focus-visible {
+  border-color: var(--brand-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Coming-soon variant — non-link cards render as <article> */
+article.labkit-card {
+  border-style: dashed;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.labkit-card-icon {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding-top: 2px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--brand-gold);
+  flex-shrink: 0;
+}
+
+.labkit-card-body {
   display: flex;
   flex-direction: column;
-  box-shadow: var(--toolkit-surface-shadow);
-  cursor: default;
-  transition: transform var(--transition), box-shadow var(--transition);
+  gap: 6px;
+  min-width: 0;
 }
 
-.toolkit-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--toolkit-surface-shadow-hover);
-}
-
-.toolkit-card-badge {
-  position: absolute;
-  bottom: 1rem;
-  right: 1.2rem;
-  display: inline-flex;
-  align-items: center;
-  padding: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  opacity: 0.78;
-}
-
-.toolkit-card-icon {
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, rgba(200, 162, 74, 0.24), rgba(200, 162, 74, 0.1));
-  color: var(--accent);
-  margin-bottom: 1.3rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 10px 22px rgba(70, 86, 106, 0.12);
-}
-
-.toolkit-card-title {
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
+.labkit-card-title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
   line-height: 1.3;
-  color: var(--text);
+  color: var(--brand-ink);
 }
 
-.toolkit-card-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
+.labkit-card-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
   color: var(--text-secondary);
 }
 
-.toolkit-disclaimer {
+.labkit-card-badge {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.labkit-card-link .labkit-card-badge {
+  background: var(--brand-gold);
+  color: var(--brand-ink);
+}
+
+article.labkit-card .labkit-card-badge {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text-secondary);
+}
+
+.labkit-disclaimer {
   margin-top: 2.5rem;
   padding: 1.3rem 1.5rem;
   border: none;
   border-left: 3px solid var(--accent);
   border-radius: var(--radius-md);
-  background: var(--toolkit-disclaimer-bg);
-  color: var(--toolkit-disclaimer-text);
+  background: var(--labkit-disclaimer-bg);
+  color: var(--labkit-disclaimer-text);
   box-shadow: var(--shadow-sm);
 }
 
-.toolkit-disclaimer-label {
+.labkit-disclaimer-label {
   margin: 0 0 0.5rem;
   font-size: 0.7rem;
   letter-spacing: 0.16em;
@@ -1428,14 +1481,14 @@ a.contact-meta-item:hover {
   color: var(--accent);
 }
 
-.toolkit-disclaimer-body {
+.labkit-disclaimer-body {
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.65;
-  color: var(--toolkit-disclaimer-text);
+  color: var(--labkit-disclaimer-text);
 }
 
-.toolkit-meta {
+.labkit-meta {
   margin: 1.6rem 0 0;
   font-size: 0.82rem;
   letter-spacing: 0.06em;
@@ -1445,20 +1498,20 @@ a.contact-meta-item:hover {
 }
 
 @media (max-width: 1024px) {
-  .toolkit-grid {
+  .labkit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 600px) {
-  .toolkit-grid {
+  .labkit-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/*  Toolkit pill in mobile menu  */
+/*  LabKit pill in mobile menu  */
 @media (max-width: 768px) {
-  .nav-mobile .nav-toolkit {
+  .nav-mobile .nav-labkit {
     margin: 0.85rem 1.25rem;
     padding: 0.7rem 1.1rem;
     border-top: none;

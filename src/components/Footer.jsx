@@ -39,7 +39,7 @@ function Footer() {
               {item.label}
             </a>
           ))}
-          <Link to="/toolkit">Toolkit</Link>
+          <Link to="/labkit">LabKit</Link>
         </nav>
 
         <div className="footer-contact-col">

@@ -2,16 +2,24 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Toolkit from './components/Toolkit';
+import LabKit from './components/LabKit';
+import ConcreteIndex from './components/labkit/concrete/ConcreteIndex';
+import ColumnPunching from './components/labkit/concrete/ColumnPunching';
 import Footer from './components/Footer';
 import { SECTION_IDS } from './content/siteContent';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useRevealOnScroll } from './hooks/useRevealOnScroll';
 
+// LabKit tool pages (3+ segments under /labkit) render their own topbar/footer
+// and replace the site chrome. Category landings (e.g. /labkit/concrete) keep it.
+const TOOL_ROUTE_RE = /^\/labkit\/[^/]+\/[^/]+/;
+
 function App() {
   const location = useLocation();
   const activeSection = useActiveSection(SECTION_IDS, location.pathname);
   useRevealOnScroll(location.pathname);
+
+  const isToolPage = TOOL_ROUTE_RE.test(location.pathname);
 
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
@@ -24,14 +32,16 @@ function App() {
       <a className="skip-link" href="#main-content">
         Skip to main content
       </a>
-      <Navbar activeSection={activeSection} />
+      {!isToolPage && <Navbar activeSection={activeSection} />}
       <main id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/toolkit" element={<Toolkit />} />
+          <Route path="/labkit" element={<LabKit />} />
+          <Route path="/labkit/concrete" element={<ConcreteIndex />} />
+          <Route path="/labkit/concrete/column-punching" element={<ColumnPunching />} />
         </Routes>
       </main>
-      <Footer />
+      {!isToolPage && <Footer />}
     </>
   );
 }

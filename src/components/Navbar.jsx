@@ -1,4 +1,4 @@
-import { Menu, Wrench, X } from 'lucide-react';
+import { Calculator, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_ITEMS } from '../content/siteContent';
@@ -10,7 +10,7 @@ function Navbar({ activeSection }) {
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
-  const isToolkit = location.pathname === '/toolkit';
+  const isLabKit = location.pathname === '/labkit';
   useBodyScrollLock(isOpen);
 
   const closeMenu = () => setIsOpen(false);
@@ -34,7 +34,7 @@ function Navbar({ activeSection }) {
     }
   };
 
-  const handleToolkitClick = () => {
+  const handleLabKitClick = () => {
     closeMenu();
   };
 
@@ -53,20 +53,20 @@ function Navbar({ activeSection }) {
           </a>
         );
 
-        // Inject Toolkit pill between Expertise and Contact
+        // Inject LabKit pill between Expertise and Contact
         if (item.id === 'expertise') {
           return (
-            <span key="expertise-with-toolkit" style={{ display: 'contents' }}>
+            <span key="expertise-with-labkit" style={{ display: 'contents' }}>
               {link}
               <Link
-                key="toolkit"
-                to="/toolkit"
-                className={`nav-toolkit ${isToolkit ? 'is-current' : ''}`}
-                onClick={handleToolkitClick}
-                aria-current={isToolkit ? 'page' : undefined}
+                key="labkit"
+                to="/labkit"
+                className={`nav-labkit ${isLabKit ? 'is-current' : ''}`}
+                onClick={handleLabKitClick}
+                aria-current={isLabKit ? 'page' : undefined}
               >
-                <Wrench size={15} strokeWidth={2.25} aria-hidden="true" />
-                <span>Toolkit</span>
+                <Calculator size={16} aria-hidden="true" />
+                <span>LabKit</span>
               </Link>
             </span>
           );
