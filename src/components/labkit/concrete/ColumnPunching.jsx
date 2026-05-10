@@ -22,6 +22,10 @@ function computeResults(raw) {
   const Mvy = num(raw.Mvy);
   const u_ineff = num(raw.u_ineff);
   const shear_head = raw.shear_head;
+  const ties_provided = raw.ties_provided;
+  const lig_size = num(raw.lig_size);
+  const lig_s = num(raw.lig_s);
+  const fsyf = num(raw.fsyf);
 
   const phi = 0.70;
 
@@ -90,26 +94,62 @@ function computeResults(raw) {
   const vuMinX = calcVuMin(Mvx, aL);
   const vuMinY = calcVuMin(Mvy, aW);
 
+  // ---- Provided closed fitments — Cl 9.3.4(d) ----
+  // Per-direction torsion strip: x = Ds (slab thickness), y = a_dir
+  // Asw,min/s = 0.2·y/fsy.f                 (Cl 9.3.5)
+  // Asw provided (one leg) / s              (user input)
+  // φVu,max = 3·φVu,min·√(x/y)              (Eq 9.3.4(5))
+  // φVu (provided) = φVu,min·√(ratio) ≤ φVu,max   (Eq 9.3.4(4))
+  function calcVuProvided(phiVu_min, a_dir) {
+    const x_strip = Ds;
+    const y_strip = a_dir;
+    const Asw_min_per_s = (fsyf > 0) ? (0.2 * y_strip) / fsyf : 0;
+    const Asw_one_leg = Math.PI * Math.pow(lig_size / 2, 2);
+    const Asw_per_s_provided = (lig_s > 0) ? Asw_one_leg / lig_s : 0;
+    const phiVu_max = (y_strip > 0) ? 3 * phiVu_min * Math.sqrt(x_strip / y_strip) : phiVu_min;
+    let ratio = 0;
+    let phiVu_provided_uncapped = phiVu_min;
+    let phiVu_provided = phiVu_min;
+    if (ties_provided === 'Y' && Asw_min_per_s > 0) {
+      ratio = Asw_per_s_provided / Asw_min_per_s;
+      phiVu_provided_uncapped = phiVu_min * Math.sqrt(ratio);
+      phiVu_provided = Math.min(phiVu_provided_uncapped, phiVu_max);
+    }
+    return {
+      x_strip, y_strip,
+      Asw_min_per_s, Asw_one_leg, Asw_per_s_provided,
+      ratio, phiVu_max,
+      phiVu_provided_uncapped, phiVu_provided,
+    };
+  }
+  const vuProvX = calcVuProvided(vuMinX.phiVu, aL);
+  const vuProvY = calcVuProvided(vuMinY.phiVu, aW);
+
   // ---- Governing ----
   const govNoTies = vuX.phiVu <= vuY.phiVu
     ? { dir: 'X', phiVu: vuX.phiVu, ecc: vuX.ecc, a: aL, M: Mvx }
     : { dir: 'Y', phiVu: vuY.phiVu, ecc: vuY.ecc, a: aW, M: Mvy };
   const govMin = vuMinX.phiVu <= vuMinY.phiVu
-    ? { dir: 'X', phiVu: vuMinX.phiVu }
-    : { dir: 'Y', phiVu: vuMinY.phiVu };
+    ? { dir: 'X', phiVu: vuMinX.phiVu, asw_min: vuProvX.Asw_min_per_s }
+    : { dir: 'Y', phiVu: vuMinY.phiVu, asw_min: vuProvY.Asw_min_per_s };
+  const govProvided = vuProvX.phiVu_provided <= vuProvY.phiVu_provided
+    ? { dir: 'X', phiVu: vuProvX.phiVu_provided }
+    : { dir: 'Y', phiVu: vuProvY.phiVu_provided };
 
   const utilNoTies = Vstar / govNoTies.phiVu;
   const utilMin = Vstar / govMin.phiVu;
+  const utilProvided = Vstar / govProvided.phiVu;
 
   return {
     fc, scp, Ds, dom, shape, L, W, D, position, Vstar, Mvx, Mvy, u_ineff, shear_head,
+    ties_provided, lig_size, lig_s, fsyf,
     phi,
     aL, aW, u_gross, u, betaH, configText,
     fcv_max, fcv1, fcv,
     phiVuo_noSH, phiVuo_max_SH, phiVuo1_SH, phiVuo_SH, phiVuo,
-    vuX, vuY, vuMinX, vuMinY,
-    govNoTies, govMin,
-    utilNoTies, utilMin,
+    vuX, vuY, vuMinX, vuMinY, vuProvX, vuProvY,
+    govNoTies, govMin, govProvided,
+    utilNoTies, utilMin, utilProvided,
   };
 }
 
@@ -197,11 +237,13 @@ function ColumnPunching() {
 
   const {
     fc, scp, Ds, dom, shape, L, W, D, position, Vstar, Mvx, Mvy, u_ineff, shear_head,
+    ties_provided, lig_size, lig_s, fsyf,
     phi, aL, aW, u_gross, u, betaH, configText,
     fcv_max, fcv1, fcv,
     phiVuo_noSH, phiVuo_max_SH, phiVuo1_SH, phiVuo_SH, phiVuo,
-    vuX, vuY, vuMinX, vuMinY,
-    govNoTies, govMin, utilNoTies, utilMin,
+    vuX, vuY, vuMinX, vuMinY, vuProvX, vuProvY,
+    govNoTies, govMin, govProvided,
+    utilNoTies, utilMin, utilProvided,
   } = r;
 
   const printRows = [
@@ -610,14 +652,27 @@ function ColumnPunching() {
                     Direction {govNoTies.dir} governs (M = {govNoTies.M} kNm, a = {fmt(govNoTies.a, 0)} mm)
                   </div>
                 </div>
-                <div className={`result-card ${statusClass(utilMin)}`}>
-                  <div className="rc-label">φV<sub>u,min</sub> — min ties (governing)</div>
-                  <div className="rc-value">{fmt(govMin.phiVu, 1)} kN</div>
-                  <div className={`rc-status ${statusClass(utilMin)}`}>
-                    <span className="dot"></span>{statusText(utilMin)} · Util {fmt(utilMin, 2)}
+                {ties_provided === 'Y' ? (
+                  <div className={`result-card ${statusClass(utilProvided)}`}>
+                    <div className="rc-label">φV<sub>u</sub> — provided ties (governing)</div>
+                    <div className="rc-value">{fmt(govProvided.phiVu, 1)} kN</div>
+                    <div className={`rc-status ${statusClass(utilProvided)}`}>
+                      <span className="dot"></span>{statusText(utilProvided)} · Util {fmt(utilProvided, 2)}
+                    </div>
+                    <div className="rc-note">N{lig_size} @ {lig_s} mm · Direction {govProvided.dir} governs</div>
                   </div>
-                  <div className="rc-note">Direction {govMin.dir} governs</div>
-                </div>
+                ) : (
+                  <div className={`result-card ${statusClass(utilMin)}`}>
+                    <div className="rc-label">φV<sub>u,min</sub> — min ties required (governing)</div>
+                    <div className="rc-value">{fmt(govMin.phiVu, 1)} kN</div>
+                    <div className={`rc-status ${statusClass(utilMin)}`}>
+                      <span className="dot"></span>{statusText(utilMin)} · Util {fmt(utilMin, 2)}
+                    </div>
+                    <div className="rc-note">
+                      Required A<sub>sw,min</sub>/s = {fmt(govMin.asw_min, 4)} mm²/mm · Direction {govMin.dir} governs
+                    </div>
+                  </div>
+                )}
               </div>
             </section>
 
@@ -776,17 +831,105 @@ function ColumnPunching() {
                     <td className="ref">Eq 9.3.4(2)</td>
                   </tr>
 
+                  {ties_provided === 'Y' && (
+                    <>
+                      <tr className="subhead"><td colSpan={3}>Provided closed fitments — Cl 9.3.4(d)</td></tr>
+
+                      <tr className="subhead">
+                        <td colSpan={3}>
+                          Direction X — torsion strip x = D<sub>s</sub> = {fmt(Ds, 0)} mm,
+                          y = a<sub>L</sub> = {fmt(aL, 0)} mm
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">A<sub>sw,min</sub>/s = 0.2·y/f<sub>sy.f</sub></td>
+                        <td className="value">{fmt(vuProvX.Asw_min_per_s, 4)} mm²/mm</td>
+                        <td className="ref">Eq 9.3.5</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">A<sub>sw</sub> provided (one leg) = π·(d<sub>b</sub>/2)²</td>
+                        <td className="value">{fmt(vuProvX.Asw_one_leg, 1)} mm²</td>
+                        <td className="ref">N{lig_size}</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">A<sub>sw</sub>/s provided</td>
+                        <td className="value">{fmt(vuProvX.Asw_per_s_provided, 4)} mm²/mm</td>
+                        <td className="ref">—</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">Ratio: (A<sub>sw</sub>/s) / (A<sub>sw,min</sub>/s)</td>
+                        <td className="value">{fmt(vuProvX.ratio, 3)}</td>
+                        <td className="ref">—</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">φV<sub>u,max,X</sub> = 3·φV<sub>u,min,X</sub>·√(x/y)</td>
+                        <td className="value">{fmt(vuProvX.phiVu_max, 1)} kN</td>
+                        <td className="ref">Eq 9.3.4(5)</td>
+                      </tr>
+                      <tr className="summary-row">
+                        <td className="label"><strong>φV<sub>u,X</sub> = φV<sub>u,min,X</sub>·√(ratio) ≤ φV<sub>u,max,X</sub></strong></td>
+                        <td className="value">{fmt(vuProvX.phiVu_provided, 1)} kN</td>
+                        <td className="ref">Eq 9.3.4(4)</td>
+                      </tr>
+
+                      <tr className="subhead">
+                        <td colSpan={3}>
+                          Direction Y — torsion strip x = D<sub>s</sub> = {fmt(Ds, 0)} mm,
+                          y = a<sub>W</sub> = {fmt(aW, 0)} mm
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">A<sub>sw,min</sub>/s = 0.2·y/f<sub>sy.f</sub></td>
+                        <td className="value">{fmt(vuProvY.Asw_min_per_s, 4)} mm²/mm</td>
+                        <td className="ref">Eq 9.3.5</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">A<sub>sw</sub> provided (one leg) = π·(d<sub>b</sub>/2)²</td>
+                        <td className="value">{fmt(vuProvY.Asw_one_leg, 1)} mm²</td>
+                        <td className="ref">N{lig_size}</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">A<sub>sw</sub>/s provided</td>
+                        <td className="value">{fmt(vuProvY.Asw_per_s_provided, 4)} mm²/mm</td>
+                        <td className="ref">—</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">Ratio: (A<sub>sw</sub>/s) / (A<sub>sw,min</sub>/s)</td>
+                        <td className="value">{fmt(vuProvY.ratio, 3)}</td>
+                        <td className="ref">—</td>
+                      </tr>
+                      <tr>
+                        <td className="label indent">φV<sub>u,max,Y</sub> = 3·φV<sub>u,min,Y</sub>·√(x/y)</td>
+                        <td className="value">{fmt(vuProvY.phiVu_max, 1)} kN</td>
+                        <td className="ref">Eq 9.3.4(5)</td>
+                      </tr>
+                      <tr className="summary-row">
+                        <td className="label"><strong>φV<sub>u,Y</sub> = φV<sub>u,min,Y</sub>·√(ratio) ≤ φV<sub>u,max,Y</sub></strong></td>
+                        <td className="value">{fmt(vuProvY.phiVu_provided, 1)} kN</td>
+                        <td className="ref">Eq 9.3.4(4)</td>
+                      </tr>
+                    </>
+                  )}
+
                   <tr className="subhead"><td colSpan={3}>Governing — adopted for design</td></tr>
                   <tr className="summary-row">
                     <td className="label"><strong>φV<sub>u</sub> governing — Direction {govNoTies.dir}</strong></td>
                     <td className="value">{fmt(govNoTies.phiVu, 1)} kN</td>
                     <td className="ref">Util {fmt(utilNoTies, 2)}</td>
                   </tr>
-                  <tr className="summary-row">
-                    <td className="label"><strong>φV<sub>u,min</sub> governing — Direction {govMin.dir}</strong></td>
-                    <td className="value">{fmt(govMin.phiVu, 1)} kN</td>
-                    <td className="ref">Util {fmt(utilMin, 2)}</td>
-                  </tr>
+                  {ties_provided === 'Y' ? (
+                    <tr className="summary-row">
+                      <td className="label"><strong>φV<sub>u</sub> (provided ties) governing — Direction {govProvided.dir}</strong></td>
+                      <td className="value">{fmt(govProvided.phiVu, 1)} kN</td>
+                      <td className="ref">Util {fmt(utilProvided, 2)}</td>
+                    </tr>
+                  ) : (
+                    <tr className="summary-row">
+                      <td className="label"><strong>φV<sub>u,min</sub> governing — Direction {govMin.dir}</strong></td>
+                      <td className="value">{fmt(govMin.phiVu, 1)} kN</td>
+                      <td className="ref">Util {fmt(utilMin, 2)}</td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </section>
