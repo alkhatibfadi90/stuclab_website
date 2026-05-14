@@ -5,6 +5,8 @@ import Home from './components/Home';
 import LabKit from './components/LabKit';
 import ConcreteIndex from './components/labkit/concrete/ConcreteIndex';
 import ColumnPunching from './components/labkit/concrete/ColumnPunching';
+import InsightsIndex from './components/insights/InsightsIndex';
+import InsightPost from './components/insights/InsightPost';
 import Footer from './components/Footer';
 import { SECTION_IDS } from './content/siteContent';
 import { useActiveSection } from './hooks/useActiveSection';
@@ -39,6 +41,8 @@ function App() {
           <Route path="/labkit" element={<LabKit />} />
           <Route path="/labkit/concrete" element={<ConcreteIndex />} />
           <Route path="/labkit/concrete/column-punching" element={<ColumnPunching />} />
+          <Route path="/insights" element={<InsightsIndex />} />
+          <Route path="/insights/:slug" element={<InsightPost />} />
         </Routes>
       </main>
       {!isToolPage && <Footer />}

@@ -40,6 +40,7 @@ function Footer() {
             </a>
           ))}
           <Link to="/labkit">LabKit</Link>
+          <Link to="/insights">Insights</Link>
         </nav>
 
         <div className="footer-contact-col">

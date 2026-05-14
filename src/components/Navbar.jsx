@@ -11,6 +11,7 @@ function Navbar({ activeSection }) {
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
   const isLabKit = location.pathname === '/labkit';
+  const isInsights = location.pathname.startsWith('/insights');
   useBodyScrollLock(isOpen);
 
   const closeMenu = () => setIsOpen(false);
@@ -38,6 +39,10 @@ function Navbar({ activeSection }) {
     closeMenu();
   };
 
+  const handleInsightsClick = () => {
+    closeMenu();
+  };
+
   const renderNavLinks = () => (
     <>
       {NAV_ITEMS.map((item, index) => {
@@ -53,7 +58,7 @@ function Navbar({ activeSection }) {
           </a>
         );
 
-        // Inject LabKit pill between Expertise and Contact
+        // Inject LabKit pill and Insights link between Expertise and Contact
         if (item.id === 'expertise') {
           return (
             <span key="expertise-with-labkit" style={{ display: 'contents' }}>
@@ -67,6 +72,15 @@ function Navbar({ activeSection }) {
               >
                 <Calculator size={16} aria-hidden="true" />
                 <span>LabKit</span>
+              </Link>
+              <Link
+                key="insights"
+                to="/insights"
+                className={`nav-link ${isInsights ? 'active' : ''}`}
+                onClick={handleInsightsClick}
+                aria-current={isInsights ? 'page' : undefined}
+              >
+                Insights
               </Link>
             </span>
           );
