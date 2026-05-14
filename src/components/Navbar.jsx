@@ -1,4 +1,4 @@
-import { BookOpen, Calculator, Linkedin, Menu, X } from 'lucide-react';
+import { BookOpen, Calculator, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_ITEMS } from '../content/siteContent';
@@ -105,15 +105,6 @@ function Navbar({ activeSection }) {
               <span className="brand-struc">Struc</span><span className="brand-lab">Lab</span>
             </Link>
           )}
-          <a
-            href="https://www.linkedin.com/company/struclab-australia"
-            className="linkedin-badge"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="StrucLab on LinkedIn"
-          >
-            <Linkedin size={16} aria-hidden="true" />
-          </a>
         </div>
 
         <nav className="nav-desktop" aria-label="Primary navigation">

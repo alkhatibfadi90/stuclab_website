@@ -1,8 +1,27 @@
 {
   "permissions": {
+    "defaultMode": "acceptEdits",
     "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
       "Bash(powershell:*)",
-      "Bash(pwsh:*)"
+      "Bash(pwsh:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(git:*)",
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(type:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Bash(rm -rf:*)"
     ]
   }
 }

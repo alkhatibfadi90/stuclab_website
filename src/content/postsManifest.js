@@ -2,13 +2,22 @@
 // Markdown bodies live in src/content/posts/{slug}.md
 export const posts = [
   {
-    slug: 'hello-struclab',
-    title: 'Hello, StrucLab Insights',
-    date: '2026-05-14',
+    slug: 'cracked-section-properties-etabs',
+    title: 'Cracked Section Properties in ETABS — What Most Engineers Get Wrong',
+    date: '2026-05-22',
     excerpt:
-      'A short note on why we are launching Insights — practical engineering writing on concrete, lateral systems, and automation.',
-    tags: ['announcement', 'automation'],
-    readingTime: '3 min read',
+      'Applying 0.7 to all columns and 0.35 to all walls and moving on is the most common stiffness-modifier mistake I see — and the one with the biggest downstream consequences.',
+    tags: ['etabs', 'methodology', 'high-rise'],
+    readingTime: '8 min read',
+  },
+  {
+    slug: 'lateral-stability-workflow',
+    title: 'Setting Up a Lateral Stability Workflow That Actually Holds Up',
+    date: '2026-05-15',
+    excerpt:
+      'Most lateral systems fail in review for the same reason — the workflow skipped straight to modelling. Here\'s the order that catches problems before they become rework.',
+    tags: ['lateral', 'methodology', 'high-rise'],
+    readingTime: '7 min read',
   },
 ];
 

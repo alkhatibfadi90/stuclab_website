@@ -1,78 +1,54 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  BookOpen,
-  Box,
-  Columns3,
-  Frame,
-  Terminal,
-  Wind,
-} from 'lucide-react';
+import { Box } from 'lucide-react';
 
-const LABKIT_CATEGORIES = [
+// Within a category page, every tool card uses the same category icon.
+// For Modelling & Analysis: Box (3D modelling representation).
+const CATEGORY_ICON = Box;
+
+const CATEGORIES = [
   {
-    title: 'Loads & Actions',
-    description: 'Wind, seismic, and load combinations to AS/NZS 1170.',
-    badge: 'Coming soon',
-    Icon: Wind,
+    title: 'Wall Stiffness Modifier',
+    description: 'Cracked-section Ieff for wall elements in ULS elastic analysis — AS 3600 Cl 6.2.4.2 & Table 6.2.4.',
+    badge: 'LIVE',
+    href: '/labkit/modelling-analysis/wall-stiffness-modifier',
   },
   {
-    title: 'Concrete Design',
-    description: 'Member design, cover, and detailing to AS 3600.',
-    badge: '1 tool',
-    Icon: Columns3,
-    href: '/labkit/concrete',
-  },
-  {
-    title: 'Steel Design',
-    description: 'Member capacity and connections to AS 4100.',
-    badge: 'Coming soon',
-    Icon: Frame,
-  },
-  {
-    title: 'Modelling & Analysis',
-    description: 'Section properties, stiffness modifiers, and modelling assumptions for elastic analysis.',
-    badge: '2 tools',
-    Icon: Box,
-    href: '/labkit/modelling-analysis',
-  },
-  {
-    title: 'Detailing & Reference',
-    description: 'Reo schedules, bolt lookups, and code references.',
-    badge: 'Coming soon',
-    Icon: BookOpen,
-  },
-  {
-    title: 'Productivity & Automation',
-    description: 'Unit converters, ETABS helpers, and Python snippets.',
-    badge: 'Coming soon',
-    Icon: Terminal,
+    title: 'Column Stiffness Modifier',
+    description: 'Cracked-section Ieff for column elements in ULS elastic analysis — AS 3600 Cl 6.2.4.2 & Table 6.2.4.',
+    badge: 'LIVE',
+    href: '/labkit/modelling-analysis/column-stiffness-modifier',
   },
 ];
 
-function LabKit() {
+function ModellingAnalysisIndex() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   return (
-    <section id="labkit" className="section labkit-landing" aria-labelledby="labkit-title">
+    <section
+      id="labkit-modelling-analysis"
+      className="section labkit-landing"
+      aria-labelledby="labkit-modelling-analysis-title"
+    >
       <div className="container">
+        <Link to="/labkit" className="labkit-back">← Back to LabKit</Link>
+
         <div className="section-heading labkit-heading" data-reveal>
-          <p className="eyebrow">Free Engineering Tools</p>
-          <h1 id="labkit-title" className="labkit-h1 labkit-page-title">LabKit</h1>
+          <p className="eyebrow">LabKit · Modelling &amp; Analysis</p>
+          <h1 id="labkit-modelling-analysis-title" className="labkit-h1">Modelling &amp; Analysis</h1>
           <p className="section-lead labkit-lead">
-            Free calculators and utilities for practicing structural engineers.
-            Built around Australian Standards.
+            Free helpers for elastic analysis — section properties, stiffness modifiers, and modelling assumptions for structural software.
           </p>
         </div>
 
         <div className="labkit-grid">
-          {LABKIT_CATEGORIES.map(({ title, description, badge, Icon, href }) => {
+          {CATEGORIES.map(({ title, description, badge, href }) => {
             const cardInner = (
               <>
                 <div className="labkit-card-icon" aria-hidden="true">
-                  <Icon size={24} color="var(--brand-gold)" strokeWidth={1.5} />
+                  <CATEGORY_ICON size={24} color="var(--brand-gold)" strokeWidth={1.5} />
                 </div>
                 <div className="labkit-card-body">
                   <h3 className="labkit-card-title">{title}</h3>
@@ -84,14 +60,16 @@ function LabKit() {
 
             if (href) {
               return (
-                <Link
+                <a
                   className="labkit-card labkit-card-link"
-                  to={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={title}
                   data-reveal
                 >
                   {cardInner}
-                </Link>
+                </a>
               );
             }
 
@@ -103,7 +81,7 @@ function LabKit() {
           })}
         </div>
 
-        <p className="labkit-meta">More tools added regularly.</p>
+        <p className="labkit-meta">More modelling &amp; analysis tools coming soon.</p>
 
         <aside className="labkit-disclaimer" role="note" data-reveal>
           <p className="labkit-disclaimer-label">Disclaimer</p>
@@ -120,4 +98,4 @@ function LabKit() {
   );
 }
 
-export default LabKit;
+export default ModellingAnalysisIndex;

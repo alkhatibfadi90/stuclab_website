@@ -944,9 +944,27 @@ a.contact-meta-item:hover {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  grid-template-columns: 1.3fr 0.7fr 0.7fr 0.8fr;
   gap: 3rem;
   align-items: start;
+}
+
+.footer-resources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.footer-resources a svg {
+  color: var(--accent);
+  opacity: 0.75;
+  flex-shrink: 0;
+  transition: opacity var(--transition);
+}
+
+.footer-resources a:hover svg,
+.footer-resources a:focus-visible svg {
+  opacity: 1;
 }
 
 .footer-brand-col {
@@ -1037,7 +1055,6 @@ a.contact-meta-item:hover {
   color: var(--accent);
 }
 
-/* Footer LinkedIn badge inherits gray idle from parent, flips to gold on link hover. */
 .footer-linkedin .linkedin-badge {
   width: 1.85rem;
   height: 1.85rem;
@@ -1125,7 +1142,7 @@ a.contact-meta-item:hover {
   }
 
   .footer-inner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
@@ -1265,7 +1282,7 @@ a.contact-meta-item:hover {
   gap: 0.6rem;
 }
 
-/*  LinkedIn badge — rounded square container used site-wide  */
+/*  LinkedIn badge — solid LinkedIn-blue rounded square (used site-wide)  */
 .linkedin-badge {
   display: inline-flex;
   align-items: center;
@@ -1273,28 +1290,34 @@ a.contact-meta-item:hover {
   width: 2rem;
   height: 2rem;
   border-radius: 8px;
-  background: transparent;
-  color: currentColor;
-  border: 1px solid currentColor;
-  opacity: 0.55;
-  transition: background var(--transition), border-color var(--transition),
-    color var(--transition), opacity var(--transition), transform var(--transition);
+  background: #0A66C2;
+  color: #ffffff;
+  border: 1px solid #0A66C2;
+  transition: transform var(--transition), box-shadow var(--transition);
   flex-shrink: 0;
 }
 
 .linkedin-badge svg {
   flex-shrink: 0;
+  fill: currentColor;
+  stroke: none;
+}
+
+.linkedin-badge svg * {
+  fill: currentColor;
+  stroke: none;
 }
 
 .linkedin-badge:hover,
-.linkedin-badge:focus-visible,
-a:hover > .linkedin-badge,
-a:focus-visible > .linkedin-badge {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #181818;
-  opacity: 1;
+a:hover > .linkedin-badge {
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.35);
+}
+
+.linkedin-badge:focus-visible,
+a:focus-visible > .linkedin-badge {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /*  LabKit nav pill  */
@@ -1374,6 +1397,14 @@ a:focus-visible > .linkedin-badge {
   max-width: none;
   margin-top: 0.25rem;
   color: var(--text);
+}
+
+.labkit-page-title {
+  color: var(--accent);
+}
+
+.labkit-page-title {
+  color: var(--accent);
 }
 
 .labkit-lead {
@@ -1821,30 +1852,102 @@ a.insight-tag:focus-visible {
   max-width: 700px;
 }
 
-.insight-author {
+/*  Insights — Author card  */
+.insight-author-card {
   max-width: 700px;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
+  padding: 1.5rem 1.65rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-xs);
 }
 
-.insight-author-line {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+.insight-author-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-alt);
+  border: 2px solid var(--accent-light);
+}
+
+.insight-author-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.insight-author-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0.7rem;
-  flex-wrap: wrap;
+  min-width: 0;
 }
 
-.insight-author-line strong {
+.insight-author-label {
+  margin: 0;
+}
+
+.insight-author-bio {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.insight-author-bio strong {
   color: var(--text);
   font-weight: 700;
 }
 
-.insight-author-badge {
-  /* Inherits .linkedin-badge color from surrounding text color. */
-  color: var(--text-secondary);
+.insight-author-cta {
+  min-height: 0;
+  padding: 0.45rem 0.85rem 0.45rem 1rem;
+  font-size: 0.88rem;
+  align-self: flex-start;
+  gap: 0.55rem;
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent-deep);
 }
+
+.insight-author-cta:hover,
+.insight-author-cta:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #181818;
+}
+
+.insight-author-cta .linkedin-badge {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .insight-author-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .insight-author-content {
+    align-items: center;
+  }
+
+  .insight-author-cta {
+    align-self: center;
+  }
+}
+
 
 .insight-cta {
   max-width: 700px;

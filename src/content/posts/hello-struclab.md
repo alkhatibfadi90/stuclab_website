@@ -42,4 +42,4 @@ spreadsheet pivoting — and it's the same five lines on every project.
 ## What's next
 
 New posts will land here as we write them. If there's a topic you'd like
-us to dig into, [get in touch](/#contact).
+us to dig into, [visit our LinkedIn Page](https://www.linkedin.com/company/struclab-engineering).

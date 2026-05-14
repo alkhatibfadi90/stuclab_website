@@ -108,26 +108,38 @@ function InsightPost() {
 
         <hr className="insight-divider" />
 
-        <aside className="insight-author" data-reveal>
-          <p className="insight-author-line">
+        <aside className="insight-author-card" aria-labelledby="author-label" data-reveal>
+          <div className="insight-author-photo">
+            <img src="/assets/fadi-headshot.jpg" alt="" />
+          </div>
+          <div className="insight-author-content">
+            <p id="author-label" className="eyebrow insight-author-label">
+              About the author
+            </p>
+            <p className="insight-author-bio">
+              <strong>Fadi Al-Khatib, PhD, CPEng</strong> — Senior Structural
+              Engineer and founder of StrucLab. Specialises in high-rise design,
+              advanced FE analysis, ETABS modelling, post-tensioned concrete,
+              and engineering automation.
+            </p>
             <a
-              href="https://www.linkedin.com/in/fadi-al-khatib-30b6a8324/"
-              className="linkedin-badge insight-author-badge"
+              href="https://www.linkedin.com/in/fadi-alkhatib"
+              className="btn btn-ghost insight-author-cta"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Fadi Alkhatib on LinkedIn"
+              aria-label="Fadi Al-Khatib on LinkedIn"
             >
-              <Linkedin size={16} aria-hidden="true" />
+              <span>Connect on LinkedIn</span>
+              <span className="linkedin-badge" aria-hidden="true">
+                <Linkedin size={14} />
+              </span>
             </a>
-            <span>
-              Written by <strong>Fadi Alkhatib, CPEng.</strong> StrucLab.
-            </span>
-          </p>
+          </div>
         </aside>
 
         <aside className="insight-cta" data-reveal>
           <p className="insight-cta-text">
-            Need training or automation support?
+            Need automation, training, or structural support? Get in touch.
           </p>
           <Link to="/#contact" className="btn btn-primary insight-cta-btn">
             Get in touch

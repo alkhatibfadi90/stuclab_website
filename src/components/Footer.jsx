@@ -1,4 +1,4 @@
-import { Linkedin } from 'lucide-react';
+import { BookOpen, Calculator, Linkedin } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_ITEMS } from '../content/siteContent';
 import { scrollToSection } from '../utils/scrollToSection';
@@ -40,15 +40,25 @@ function Footer() {
               {item.label}
             </a>
           ))}
-          <Link to="/labkit">LabKit</Link>
-          <Link to="/insights">Insights</Link>
+        </nav>
+
+        <nav className="footer-nav footer-resources" aria-label="Resources">
+          <p className="footer-nav-heading">Explore</p>
+          <Link to="/labkit">
+            <Calculator size={14} aria-hidden="true" />
+            <span>LabKit</span>
+          </Link>
+          <Link to="/insights">
+            <BookOpen size={14} aria-hidden="true" />
+            <span>Insights</span>
+          </Link>
         </nav>
 
         <div className="footer-contact-col">
           <p className="footer-nav-heading">Contact</p>
           <a href="mailto:info@struclab.com.au" className="footer-email">info@struclab.com.au</a>
           <a
-            href="https://www.linkedin.com/company/struclab-australia"
+            href="https://www.linkedin.com/company/struclab-engineering"
             className="footer-linkedin"
             target="_blank"
             rel="noopener noreferrer"

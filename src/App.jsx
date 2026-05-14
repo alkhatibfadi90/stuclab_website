@@ -5,6 +5,9 @@ import Home from './components/Home';
 import LabKit from './components/LabKit';
 import ConcreteIndex from './components/labkit/concrete/ConcreteIndex';
 import ColumnPunching from './components/labkit/concrete/ColumnPunching';
+import ModellingAnalysisIndex from './components/labkit/modelling-analysis/ModellingAnalysisIndex';
+import WallStiffnessModifier from './components/labkit/modelling-analysis/WallStiffnessModifier';
+import ColumnStiffnessModifier from './components/labkit/modelling-analysis/ColumnStiffnessModifier';
 import InsightsIndex from './components/insights/InsightsIndex';
 import InsightsByTag from './components/insights/InsightsByTag';
 import InsightPost from './components/insights/InsightPost';
@@ -42,6 +45,9 @@ function App() {
           <Route path="/labkit" element={<LabKit />} />
           <Route path="/labkit/concrete" element={<ConcreteIndex />} />
           <Route path="/labkit/concrete/column-punching" element={<ColumnPunching />} />
+          <Route path="/labkit/modelling-analysis" element={<ModellingAnalysisIndex />} />
+          <Route path="/labkit/modelling-analysis/wall-stiffness-modifier" element={<WallStiffnessModifier />} />
+          <Route path="/labkit/modelling-analysis/column-stiffness-modifier" element={<ColumnStiffnessModifier />} />
           <Route path="/insights" element={<InsightsIndex />} />
           <Route path="/insights/tag/:tag" element={<InsightsByTag />} />
           <Route path="/insights/:slug" element={<InsightPost />} />
