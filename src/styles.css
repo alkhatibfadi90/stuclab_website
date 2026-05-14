@@ -1029,11 +1029,18 @@ a.contact-meta-item:hover {
   transition: color var(--transition);
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.55rem;
 }
 
-.footer-linkedin:hover {
+.footer-linkedin:hover,
+.footer-linkedin:focus-visible {
   color: var(--accent);
+}
+
+/* Footer LinkedIn badge inherits gray idle from parent, flips to gold on link hover. */
+.footer-linkedin .linkedin-badge {
+  width: 1.85rem;
+  height: 1.85rem;
 }
 
 /*  Reveal Animations  */
@@ -1258,21 +1265,36 @@ a.contact-meta-item:hover {
   gap: 0.6rem;
 }
 
-.brand-linkedin {
+/*  LinkedIn badge — rounded square container used site-wide  */
+.linkedin-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition), opacity var(--transition);
-}
-
-.brand-linkedin:hover,
-.brand-linkedin:focus-visible {
-  opacity: 0.85;
-  transform: translateY(-1px);
-}
-
-.brand-linkedin svg {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  background: transparent;
+  color: currentColor;
+  border: 1px solid currentColor;
+  opacity: 0.55;
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition), opacity var(--transition), transform var(--transition);
   flex-shrink: 0;
+}
+
+.linkedin-badge svg {
+  flex-shrink: 0;
+}
+
+.linkedin-badge:hover,
+.linkedin-badge:focus-visible,
+a:hover > .linkedin-badge,
+a:focus-visible > .linkedin-badge {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #181818;
+  opacity: 1;
+  transform: translateY(-1px);
 }
 
 /*  LabKit nav pill  */
@@ -1535,7 +1557,7 @@ article.labkit-card .labkit-card-badge {
 
 .insight-item {
   padding: 1.75rem 0;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(200, 162, 74, 0.35);
 }
 
 .insight-item:first-child {
@@ -1574,7 +1596,7 @@ article.labkit-card .labkit-card-badge {
 
 .insight-tag {
   display: inline-block;
-  padding: 0.18rem 0.55rem;
+  padding: 0.18rem 0.6rem;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -1582,6 +1604,21 @@ article.labkit-card .labkit-card-badge {
   color: var(--accent-deep);
   background: var(--accent-light);
   border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+}
+
+a.insight-tag:hover,
+a.insight-tag:focus-visible {
+  background: var(--accent);
+  color: #181818;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.insight-tag-name {
+  color: var(--accent);
 }
 
 .insight-title {
@@ -1593,13 +1630,17 @@ article.labkit-card .labkit-card-badge {
 }
 
 .insight-title a {
-  color: var(--text);
+  color: var(--accent);
   transition: color var(--transition);
 }
 
 .insight-title a:hover,
 .insight-title a:focus-visible {
   color: var(--accent-deep);
+}
+
+.insight-page-title {
+  color: var(--accent);
 }
 
 .insight-excerpt {
@@ -1637,7 +1678,7 @@ article.labkit-card .labkit-card-badge {
   line-height: 1.18;
   letter-spacing: -0.025em;
   max-width: none;
-  color: var(--text);
+  color: var(--accent);
   margin-bottom: 0.65rem;
 }
 
@@ -1786,9 +1827,13 @@ article.labkit-card .labkit-card-badge {
 }
 
 .insight-author-line {
-  margin: 0 0 0.4rem;
+  margin: 0;
   font-size: 0.95rem;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
 .insight-author-line strong {
@@ -1796,17 +1841,9 @@ article.labkit-card .labkit-card-badge {
   font-weight: 700;
 }
 
-.insight-author-link {
-  display: inline-block;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--accent-deep);
-  transition: color var(--transition);
-}
-
-.insight-author-link:hover,
-.insight-author-link:focus-visible {
-  color: var(--accent);
+.insight-author-badge {
+  /* Inherits .linkedin-badge color from surrounding text color. */
+  color: var(--text-secondary);
 }
 
 .insight-cta {
@@ -1843,5 +1880,101 @@ article.labkit-card .labkit-card-badge {
 
   .insight-cta-btn {
     width: 100%;
+  }
+}
+
+/*  Insights — Related posts  */
+.insight-related {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(200, 162, 74, 0.35);
+}
+
+.insight-related-heading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.4rem;
+}
+
+.insight-related-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.related-card {
+  padding: 1.2rem 1.25rem 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  box-shadow: var(--shadow-xs);
+  transition: border-color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.related-card:hover,
+.related-card:focus-within {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.related-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.related-card-meta time {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.related-card-title {
+  margin: 0.1rem 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.related-card-title a {
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+.related-card-title a:hover,
+.related-card-title a:focus-visible {
+  color: var(--accent-deep);
+}
+
+.related-card-excerpt {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .insight-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .insight-related-grid {
+    grid-template-columns: 1fr;
   }
 }

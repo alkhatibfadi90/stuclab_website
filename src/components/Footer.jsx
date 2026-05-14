@@ -1,3 +1,4 @@
+import { Linkedin } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { NAV_ITEMS } from '../content/siteContent';
 import { scrollToSection } from '../utils/scrollToSection';
@@ -53,7 +54,10 @@ function Footer() {
             rel="noopener noreferrer"
             aria-label="StrucLab on LinkedIn"
           >
-            LinkedIn
+            <span className="linkedin-badge" aria-hidden="true">
+              <Linkedin size={16} />
+            </span>
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>

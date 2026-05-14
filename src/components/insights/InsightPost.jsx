@@ -3,8 +3,9 @@ import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
+import { Linkedin } from 'lucide-react';
 import 'highlight.js/styles/atom-one-dark.css';
-import { posts } from '../../content/postsManifest';
+import { posts, getRelatedPosts } from '../../content/postsManifest';
 
 // Vite eagerly statically maps every markdown file under posts/ so we can
 // resolve them synchronously by slug. ?raw returns the file text.
@@ -33,6 +34,9 @@ function InsightPost() {
   const { slug } = useParams();
   const post = useMemo(() => posts.find((p) => p.slug === slug), [slug]);
   const body = post ? getPostBody(slug) : undefined;
+  const related = useMemo(() => getRelatedPosts(slug, 3), [slug]);
+  // Hide the section entirely if fewer than 2 other posts exist in total.
+  const showRelated = posts.length - 1 >= 2 && related.length > 0;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -73,7 +77,11 @@ function InsightPost() {
           {post.tags?.length > 0 && (
             <ul className="insight-tags" aria-label="Tags">
               {post.tags.map((tag) => (
-                <li key={tag} className="insight-tag">{tag}</li>
+                <li key={tag}>
+                  <Link to={`/insights/tag/${tag}`} className="insight-tag">
+                    {tag}
+                  </Link>
+                </li>
               ))}
             </ul>
           )}
@@ -102,16 +110,19 @@ function InsightPost() {
 
         <aside className="insight-author" data-reveal>
           <p className="insight-author-line">
-            Written by <strong>Fadi Alkhatib, CPEng.</strong> StrucLab.
+            <a
+              href="https://www.linkedin.com/in/fadi-al-khatib-30b6a8324/"
+              className="linkedin-badge insight-author-badge"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Fadi Alkhatib on LinkedIn"
+            >
+              <Linkedin size={16} aria-hidden="true" />
+            </a>
+            <span>
+              Written by <strong>Fadi Alkhatib, CPEng.</strong> StrucLab.
+            </span>
           </p>
-          <a
-            href="https://www.linkedin.com/company/struclab-australia"
-            className="insight-author-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Connect on LinkedIn →
-          </a>
         </aside>
 
         <aside className="insight-cta" data-reveal>
@@ -122,6 +133,41 @@ function InsightPost() {
             Get in touch
           </Link>
         </aside>
+
+        {showRelated && (
+          <aside className="insight-related" aria-labelledby="related-heading">
+            <h2 id="related-heading" className="insight-related-heading">
+              Related posts
+            </h2>
+            <ul className="insight-related-grid">
+              {related.map((p) => (
+                <li key={p.slug} className="related-card">
+                  <div className="related-card-meta">
+                    <time dateTime={p.date}>{formatDate(p.date)}</time>
+                    {p.tags?.length > 0 && (
+                      <ul className="insight-tags" aria-label="Tags">
+                        {p.tags.map((tag) => (
+                          <li key={tag}>
+                            <Link
+                              to={`/insights/tag/${tag}`}
+                              className="insight-tag"
+                            >
+                              {tag}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  <h3 className="related-card-title">
+                    <Link to={`/insights/${p.slug}`}>{p.title}</Link>
+                  </h3>
+                  <p className="related-card-excerpt">{p.excerpt}</p>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
       </div>
     </section>
   );

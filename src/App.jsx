@@ -6,6 +6,7 @@ import LabKit from './components/LabKit';
 import ConcreteIndex from './components/labkit/concrete/ConcreteIndex';
 import ColumnPunching from './components/labkit/concrete/ColumnPunching';
 import InsightsIndex from './components/insights/InsightsIndex';
+import InsightsByTag from './components/insights/InsightsByTag';
 import InsightPost from './components/insights/InsightPost';
 import Footer from './components/Footer';
 import { SECTION_IDS } from './content/siteContent';
@@ -42,6 +43,7 @@ function App() {
           <Route path="/labkit/concrete" element={<ConcreteIndex />} />
           <Route path="/labkit/concrete/column-punching" element={<ColumnPunching />} />
           <Route path="/insights" element={<InsightsIndex />} />
+          <Route path="/insights/tag/:tag" element={<InsightsByTag />} />
           <Route path="/insights/:slug" element={<InsightPost />} />
         </Routes>
       </main>
