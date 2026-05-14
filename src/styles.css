@@ -1072,6 +1072,15 @@ a.contact-meta-item:hover {
   transform: translateY(0);
 }
 
+/* Routes that opt out of the reveal-on-scroll animation: content snaps
+   to its final visible state on first paint so nothing stays hidden
+   until the user scrolls. */
+.no-reveal-animations [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 /* Stagger children */
 .services-grid [data-reveal]:nth-child(2) { transition-delay: 0.08s; }
 .services-grid [data-reveal]:nth-child(3) { transition-delay: 0.16s; }
@@ -1419,6 +1428,7 @@ a:focus-visible > .linkedin-badge {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.3rem;
   margin-top: 0.5rem;
+  align-items: stretch;
 }
 
 .labkit-card {
@@ -1427,12 +1437,38 @@ a:focus-visible > .linkedin-badge {
   grid-template-columns: auto minmax(0, 1fr);
   gap: 14px;
   padding: 16px 18px;
+  height: 100%;
   border: 1px solid var(--brand-gold-deep);
   border-radius: 6px;
   background: #ffffff;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* /labkit index only — centered vertical card layout (scoped to #labkit so
+   category sub-pages like /labkit/concrete keep the original left-aligned layout) */
+#labkit .labkit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 22px 18px 18px;
+}
+
+#labkit .labkit-card-icon {
+  padding-top: 0;
+}
+
+#labkit .labkit-card-body {
+  flex: 1;
+  width: 100%;
+  align-items: center;
+}
+
+#labkit .labkit-card-badge {
+  align-self: center;
 }
 
 /* Reserve room for the "open in new tab" corner icon (tool cards only) */
@@ -1575,9 +1611,8 @@ article.labkit-card .labkit-card-badge {
 }
 
 /*  Insights — index list  */
-.insights-landing {
-  background: var(--bg);
-}
+/* (no insights-landing background override — inherits var(--bg-alt) from .labkit-landing
+   so /insights and /labkit share the same neutral grey canvas) */
 
 .insights-list {
   list-style: none;
@@ -1653,7 +1688,7 @@ a.insight-tag:focus-visible {
 }
 
 .insight-title {
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-size: clamp(1.1rem, 1.7vw, 1.4rem);
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -1852,6 +1887,175 @@ a.insight-tag:focus-visible {
   max-width: 700px;
 }
 
+/*  Insights / LabKit — two-column page layout (page + sidebar)  */
+.page-with-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.39fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+/* Inside the sidebar layout, give LabKit category cards a uniform floor
+   height so badges line up across rows. */
+.page-with-sidebar .labkit-card {
+  min-height: 168px;
+}
+
+.page-with-sidebar > .page-main {
+  min-width: 0;
+}
+
+.insights-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.sidebar-widget {
+  padding: 1.2rem 1.35rem 1.3rem;
+  border: none;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-lg);
+  background: rgba(200, 162, 74, 0.07);
+  box-shadow: var(--shadow-xs);
+}
+
+.sidebar-widget-eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-widget-body {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.sidebar-widget-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.sidebar-widget-list:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-widget-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.55rem;
+  padding: 0.3rem 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  transition: color var(--transition);
+}
+
+.sidebar-widget-item:hover,
+.sidebar-widget-item:focus-visible {
+  color: var(--accent-deep);
+}
+
+.sidebar-widget-item.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sidebar-widget-item.is-disabled .sidebar-widget-item-label {
+  color: var(--muted);
+}
+
+.sidebar-widget-item-count {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sidebar-widget-cross-link {
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: color var(--transition);
+}
+
+.sidebar-widget-list li:last-child .sidebar-widget-cross-link {
+  border-bottom: none;
+}
+
+.sidebar-widget-cross-link:hover,
+.sidebar-widget-cross-link:focus-visible {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sidebar-widget-cross-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-widget-list li:last-child .sidebar-widget-cross-item {
+  border-bottom: none;
+}
+
+.sidebar-widget-cross-date {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.sidebar-widget-cross-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+.sidebar-widget-cross-item:hover .sidebar-widget-cross-title,
+.sidebar-widget-cross-item:focus-visible .sidebar-widget-cross-title {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sidebar-widget-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  transition: color var(--transition);
+}
+
+.sidebar-widget-link:hover,
+.sidebar-widget-link:focus-visible {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .page-with-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*  Insights — Author card  */
 .insight-author-card {
   max-width: 700px;
@@ -1984,6 +2188,40 @@ a.insight-tag:focus-visible {
   .insight-cta-btn {
     width: 100%;
   }
+}
+
+/*  Insights — Explore LabKit cross-promo callout  */
+.insight-explore-callout {
+  max-width: 700px;
+  margin: 0 0 1.25rem;
+  padding: 1.05rem 1.35rem 1.15rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-alt);
+}
+
+.insight-explore-eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.insight-explore-text {
+  margin: 0 0 0.55rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.insight-explore-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  transition: color var(--transition);
+}
+
+.insight-explore-link:hover,
+.insight-explore-link:focus-visible {
+  color: var(--accent);
 }
 
 /*  Insights — Related posts  */

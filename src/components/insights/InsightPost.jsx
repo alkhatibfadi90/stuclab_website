@@ -137,6 +137,17 @@ function InsightPost() {
           </div>
         </aside>
 
+        <aside className="insight-explore-callout" data-reveal>
+          <p className="eyebrow insight-explore-eyebrow">Explore LabKit</p>
+          <p className="insight-explore-text">
+            Practical engineering tools for concrete, steel, lateral systems,
+            and automation.
+          </p>
+          <Link to="/labkit" className="insight-explore-link">
+            Browse LabKit tools →
+          </Link>
+        </aside>
+
         <aside className="insight-cta" data-reveal>
           <p className="insight-cta-text">
             Need automation, training, or structural support? Get in touch.

@@ -8,8 +8,9 @@ import {
   Terminal,
   Wind,
 } from 'lucide-react';
+import Sidebar from './insights/Sidebar';
 
-const LABKIT_CATEGORIES = [
+export const LABKIT_CATEGORIES = [
   {
     title: 'Loads & Actions',
     description: 'Wind, seismic, and load combinations to AS/NZS 1170.',
@@ -58,63 +59,69 @@ function LabKit() {
   return (
     <section id="labkit" className="section labkit-landing" aria-labelledby="labkit-title">
       <div className="container">
-        <div className="section-heading labkit-heading" data-reveal>
-          <p className="eyebrow">Free Engineering Tools</p>
-          <h1 id="labkit-title" className="labkit-h1 labkit-page-title">LabKit</h1>
-          <p className="section-lead labkit-lead">
-            Free calculators and utilities for practicing structural engineers.
-            Built around Australian Standards.
-          </p>
+        <div className="page-with-sidebar">
+          <div className="page-main">
+            <div className="section-heading labkit-heading" data-reveal>
+              <p className="eyebrow">Free Engineering Tools</p>
+              <h1 id="labkit-title" className="labkit-h1 labkit-page-title">LabKit</h1>
+              <p className="section-lead labkit-lead">
+                Free calculators and utilities for practicing structural engineers.
+                Built around Australian Standards.
+              </p>
+            </div>
+
+            <div className="labkit-grid">
+              {LABKIT_CATEGORIES.map(({ title, description, badge, Icon, href }) => {
+                const cardInner = (
+                  <>
+                    <div className="labkit-card-icon" aria-hidden="true">
+                      <Icon size={36} color="var(--brand-gold)" strokeWidth={1.5} />
+                    </div>
+                    <div className="labkit-card-body">
+                      <h3 className="labkit-card-title">{title}</h3>
+                      <p className="labkit-card-desc">{description}</p>
+                      <span className="labkit-card-badge">{badge}</span>
+                    </div>
+                  </>
+                );
+
+                if (href) {
+                  return (
+                    <Link
+                      className="labkit-card labkit-card-link"
+                      to={href}
+                      key={title}
+                      data-reveal
+                    >
+                      {cardInner}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <article className="labkit-card" key={title} data-reveal aria-disabled="true">
+                    {cardInner}
+                  </article>
+                );
+              })}
+            </div>
+
+            <p className="labkit-meta">More tools added regularly.</p>
+
+            <aside className="labkit-disclaimer" role="note" data-reveal>
+              <p className="labkit-disclaimer-label">Disclaimer</p>
+              <p className="labkit-disclaimer-body">
+                All tools provided by StrucLab are for educational and indicative
+                purposes only. Results must be independently verified by a qualified
+                engineer. Use of these tools does not create an engineer-client
+                relationship and StrucLab accepts no liability for design decisions
+                made using them.
+              </p>
+            </aside>
+          </div>
+
+          <Sidebar variant="labkit" />
         </div>
-
-        <div className="labkit-grid">
-          {LABKIT_CATEGORIES.map(({ title, description, badge, Icon, href }) => {
-            const cardInner = (
-              <>
-                <div className="labkit-card-icon" aria-hidden="true">
-                  <Icon size={24} color="var(--brand-gold)" strokeWidth={1.5} />
-                </div>
-                <div className="labkit-card-body">
-                  <h3 className="labkit-card-title">{title}</h3>
-                  <p className="labkit-card-desc">{description}</p>
-                  <span className="labkit-card-badge">{badge}</span>
-                </div>
-              </>
-            );
-
-            if (href) {
-              return (
-                <Link
-                  className="labkit-card labkit-card-link"
-                  to={href}
-                  key={title}
-                  data-reveal
-                >
-                  {cardInner}
-                </Link>
-              );
-            }
-
-            return (
-              <article className="labkit-card" key={title} data-reveal aria-disabled="true">
-                {cardInner}
-              </article>
-            );
-          })}
-        </div>
-
-        <p className="labkit-meta">More tools added regularly.</p>
-
-        <aside className="labkit-disclaimer" role="note" data-reveal>
-          <p className="labkit-disclaimer-label">Disclaimer</p>
-          <p className="labkit-disclaimer-body">
-            All tools provided by StrucLab are for educational and indicative
-            purposes only. Results must be independently verified by a qualified
-            engineer. Use of these tools does not create an engineer-client
-            relationship and StrucLab accepts no liability for design decisions
-            made using them.
-          </p>
-        </aside>
       </div>
     </section>
   );

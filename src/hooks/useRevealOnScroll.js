@@ -1,7 +1,16 @@
 import { useEffect } from 'react';
 
-export function useRevealOnScroll(trigger) {
+export function useRevealOnScroll(trigger, options) {
+  const disabled = Boolean(options && options.disabled);
+
   useEffect(() => {
+    if (disabled) {
+      // Caller opted out (e.g. content-heavy routes like /insights).
+      // The page wrapper applies .no-reveal-animations so CSS forces
+      // [data-reveal] elements to their final visible state.
+      return undefined;
+    }
+
     const revealElements = document.querySelectorAll('[data-reveal]:not(.is-visible)');
 
     if (!revealElements.length) {
@@ -28,5 +37,5 @@ export function useRevealOnScroll(trigger) {
     return () => {
       observer.disconnect();
     };
-  }, [trigger]);
+  }, [trigger, disabled]);
 }

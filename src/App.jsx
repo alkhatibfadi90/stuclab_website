@@ -23,7 +23,8 @@ const TOOL_ROUTE_RE = /^\/labkit\/[^/]+\/[^/]+/;
 function App() {
   const location = useLocation();
   const activeSection = useActiveSection(SECTION_IDS, location.pathname);
-  useRevealOnScroll(location.pathname);
+  const isInsightsRoute = location.pathname.startsWith('/insights');
+  useRevealOnScroll(location.pathname, { disabled: isInsightsRoute });
 
   const isToolPage = TOOL_ROUTE_RE.test(location.pathname);
 
@@ -39,7 +40,10 @@ function App() {
         Skip to main content
       </a>
       {!isToolPage && <Navbar activeSection={activeSection} />}
-      <main id="main-content">
+      <main
+        id="main-content"
+        className={isInsightsRoute ? 'no-reveal-animations' : undefined}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/labkit" element={<LabKit />} />
