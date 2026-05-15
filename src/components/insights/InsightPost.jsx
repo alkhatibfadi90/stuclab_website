@@ -117,10 +117,10 @@ function InsightPost() {
               About the author
             </p>
             <p className="insight-author-bio">
-              <strong>Fadi Al-Khatib, PhD, CPEng</strong> — Senior Structural
-              Engineer and founder of StrucLab. Specialises in high-rise design,
-              advanced FE analysis, ETABS modelling, post-tensioned concrete,
-              and engineering automation.
+              Fadi Al-Khatib, PhD, CPEng, IntPE(Aus) — structural and
+              computational engineer. Founder of StrucLab, working across
+              advanced analysis and design, digital workflows and automation,
+              and the emerging role of AI in structural engineering.
             </p>
             <a
               href="https://www.linkedin.com/in/fadi-alkhatib"
