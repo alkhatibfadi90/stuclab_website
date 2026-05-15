@@ -1,13 +1,1 @@
-export function scrollToSection(sectionId, onSuccess) {
-  const target = document.getElementById(sectionId);
-
-  if (!target) {
-    return;
-  }
-
-  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-  if (typeof onSuccess === 'function') {
-    onSuccess();
-  }
-}
+// Removed during the Vite → Next.js migration. Safe to delete (along with all of src/).

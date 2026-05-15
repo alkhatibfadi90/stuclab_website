@@ -1,11 +1,1 @@
-:root {
-    /* StrucLab brand colours */
-    --brand-gold: #C49A2E;
-    --brand-gold-bright: #E0B548;
-    --brand-gold-deep: #8C6E1E;
-    --brand-ink: #1A1A1A;
-
-    /* StrucLab brand fonts */
-    --brand-font-sans: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
-    --brand-font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
-}
+/* Removed during the Vite → Next.js migration. Safe to delete. */

@@ -1,15 +1,1 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './styles/tokens.css';
-import './styles/labkit.css';
-import './styles.css';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
-);
+// Removed during the Vite → Next.js migration. Safe to delete (along with all of src/).

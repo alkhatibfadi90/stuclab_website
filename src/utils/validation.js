@@ -1,5 +1,1 @@
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-export function isValidEmail(email) {
-  return EMAIL_PATTERN.test(email);
-}
+// Removed during the Vite → Next.js migration. Safe to delete (along with all of src/).

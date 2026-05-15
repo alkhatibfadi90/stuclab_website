@@ -1,0 +1,719 @@
+/* LabKit-specific styles. All rules scoped under .labkit-page. */
+/* Extracted from labkit_template_v1.html — tool page dark theme. */
+
+.labkit-page {
+    /* Custom properties scoped to .labkit-page so they cannot collide
+       with the site's :root tokens (e.g., --bg, --text are also defined
+       in styles.css for the cream/light site theme). */
+    --gold-tint: rgba(196, 154, 46, 0.10);
+
+    --bg: #232120;
+    --workspace: #2A2826;
+    --inputs-bg: #232120;
+    --results-bg: #2A2826;
+    --topbar: #1A1816;
+    --card: #322F2C;
+    --card-deep: #2E2B28;
+    --card-input: #1F1D1B;
+    --highlight: #3A3733;
+
+    --text: #EDE8DD;
+    --text-soft: #C8C2B5;
+    --text-muted: #8E887D;
+    --text-faint: #6B665D;
+
+    --line: #3C3936;
+    --line-soft: #34312E;
+    --line-strong: #4A4641;
+
+    --pass: #6FB87C;
+    --pass-deep: #4A8E56;
+    --warn: #D4A82E;
+    --fail: #D87171;
+    --fail-deep: #B05050;
+
+    margin: 0;
+    font-family: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14.5px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+    min-height: 100vh;
+}
+
+.labkit-page,
+.labkit-page *,
+.labkit-page *::before,
+.labkit-page *::after { box-sizing: border-box; }
+
+.labkit-page .mono,
+.labkit-page .calc-table td.value,
+.labkit-page .input-field input,
+.labkit-page .dc-value,
+.labkit-page .rc-value {
+    font-family: 'IBM Plex Mono', 'SF Mono', monospace;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ==================== TOP BAR ==================== */
+.labkit-page .topbar {
+    background: var(--topbar);
+    padding: 13px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #00000060;
+}
+.labkit-page .topbar-left { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+
+/* StrucLab brand — matches logo: Struc in white, Lab in gold */
+.labkit-page .brand {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+.labkit-page .brand:hover { opacity: 0.85; }
+.labkit-page .brand .lab { color: var(--brand-gold-bright); }
+
+.labkit-page .location {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12.5px; color: var(--text-muted);
+    user-select: none;
+}
+.labkit-page .location .sep { color: var(--text-faint); }
+.labkit-page .location .current { color: var(--text); font-weight: 500; }
+
+.labkit-page .btn-pdf {
+    background: var(--brand-gold); color: #1A1A1A;
+    border: none; padding: 8px 16px; border-radius: 3px;
+    font-family: inherit; font-size: 12.5px; font-weight: 600;
+    letter-spacing: 0.2px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px;
+    transition: background 0.15s, transform 0.1s;
+}
+.labkit-page .btn-pdf:hover { background: var(--brand-gold-bright); }
+.labkit-page .btn-pdf:active { transform: translateY(1px); }
+.labkit-page .btn-pdf svg { width: 13px; height: 13px; }
+
+/* ==================== WORKSPACE ==================== */
+.labkit-page .workspace {
+    max-width: 1440px;
+    margin: 24px auto;
+    background: var(--workspace);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #00000080;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 12px 32px #00000060;
+}
+
+/* ==================== TOOL HEADER ==================== */
+.labkit-page .tool-header {
+    padding: 24px 36px 22px;
+    border-bottom: 1px solid var(--line);
+    background: var(--workspace);
+}
+.labkit-page .tool-header .title {
+    margin: 0; font-size: 19px; font-weight: 600;
+    color: var(--text); letter-spacing: 0.3px;
+    text-transform: uppercase; line-height: 1.2;
+    max-width: none;
+}
+.labkit-page .tool-header .subtitle {
+    margin-top: 6px; font-size: 13px;
+    color: var(--text-muted); font-style: italic;
+    letter-spacing: 0.1px;
+}
+
+/* ==================== BODY ==================== */
+.labkit-page .body {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+}
+
+/* ==================== INPUTS COLUMN ==================== */
+.labkit-page .inputs-col {
+    background: var(--inputs-bg);
+    border-right: 1px solid var(--line);
+    padding: 28px 24px 32px;
+    min-width: 0;
+}
+
+.labkit-page .col-heading {
+    margin: 0 0 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+}
+.labkit-page .col-heading .label {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-gold-bright);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.labkit-page .col-heading .hint {
+    margin: 4px 0 0;
+    font-size: 11.5px;
+    color: var(--text-muted);
+}
+
+.labkit-page .meta-block {
+    background: rgba(255,255,255,0.018);
+    border: 1px solid var(--line-soft);
+    border-radius: 3px;
+    padding: 14px 14px 12px;
+    margin-bottom: 28px;
+}
+.labkit-page .meta-block .meta-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.labkit-page .input-group-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--brand-gold-bright);
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin: 28px 0 10px;
+}
+.labkit-page .input-group-title:first-of-type { margin-top: 0; }
+
+.labkit-page .input-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 9px;
+    margin-bottom: 9px;
+}
+.labkit-page .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 9px;
+    min-width: 0;
+}
+.labkit-page .input-row .input-field { margin-bottom: 0; }
+.labkit-page .input-field label {
+    font-size: 11.5px;
+    color: var(--text-soft);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.labkit-page .input-field input,
+.labkit-page .input-field select {
+    background: var(--card-input);
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    padding: 8px 10px;
+    font-size: 12.5px;
+    color: var(--text);
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+    width: 100%;
+    min-width: 0;
+}
+.labkit-page .input-field select { font-family: 'IBM Plex Sans', sans-serif; }
+.labkit-page .input-field input:focus,
+.labkit-page .input-field select:focus {
+    outline: none;
+    border-color: var(--brand-gold);
+    background: #1A1816;
+    box-shadow: 0 0 0 2px var(--gold-tint);
+}
+.labkit-page .input-field input::placeholder { color: var(--text-faint); }
+.labkit-page .input-field select option { background: var(--card-input); color: var(--text); }
+
+.labkit-page .conditional { display: none; }
+.labkit-page .conditional.show { display: block; }
+.labkit-page .conditional-row { display: none; }
+.labkit-page .conditional-row.show { display: grid; }
+
+.labkit-page .input-helper {
+    font-size: 10.5px;
+    color: var(--text-faint);
+    margin: -4px 0 9px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.labkit-page .btn-calc {
+    width: 100%;
+    background: var(--brand-gold); color: #1A1A1A;
+    border: none; padding: 12px; border-radius: 3px;
+    font-family: inherit; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.3px; cursor: pointer;
+    margin-top: 26px;
+    transition: background 0.15s, transform 0.1s;
+}
+.labkit-page .btn-calc:hover { background: var(--brand-gold-bright); }
+.labkit-page .btn-calc:active { transform: translateY(1px); }
+
+/* ==================== RESULTS COLUMN ==================== */
+.labkit-page .results-col {
+    padding: 24px 36px 32px;
+    min-width: 0;
+    background: var(--results-bg);
+}
+
+.labkit-page .results-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+}
+.labkit-page .toggle-link {
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    color: var(--text-soft);
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.15s;
+}
+.labkit-page .toggle-link:hover { color: var(--brand-gold-bright); border-color: var(--brand-gold-deep); }
+.labkit-page .toggle-link .arrow {
+    transition: transform 0.2s;
+    display: inline-block;
+    font-size: 13px; line-height: 1; opacity: 0.7;
+}
+.labkit-page .toggle-link.open .arrow { transform: rotate(90deg); opacity: 1; }
+.labkit-page .toggle-link.open {
+    color: var(--brand-gold-bright);
+    border-color: var(--brand-gold-deep);
+    background: var(--gold-tint);
+}
+
+.labkit-page .theory-panel {
+    display: none;
+    background: var(--card-deep);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-bottom: 32px;
+}
+.labkit-page .theory-panel.open { display: block; }
+.labkit-page .theory-panel h4 {
+    margin: 0 0 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brand-gold-bright);
+}
+.labkit-page .theory-panel h5 {
+    color: var(--text);
+    margin: 18px 0 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+.labkit-page .theory-panel p { color: var(--text-soft); margin: 0 0 10px; font-size: 13.5px; max-width: 760px; }
+.labkit-page .theory-panel ul, .labkit-page .theory-panel ol { color: var(--text-soft); padding-left: 20px; font-size: 13.5px; max-width: 760px; }
+.labkit-page .theory-panel li { margin-bottom: 4px; }
+
+.labkit-page .eq-block {
+    text-align: center;
+    margin: 12px 0;
+    padding: 14px;
+    background: var(--workspace);
+    border-radius: 3px;
+    border: 1px solid var(--line);
+    overflow-x: auto;
+    color: var(--text);
+}
+.labkit-page .sketch {
+    margin: 18px auto;
+    text-align: center;
+    background: var(--workspace);
+    border-radius: 3px;
+    padding: 18px;
+    max-width: 480px;
+    border: 1px solid var(--line);
+}
+
+.labkit-page .results-col > section { margin-bottom: 32px; }
+.labkit-page .results-col > section:last-child { margin-bottom: 0; }
+
+.labkit-page .section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.labkit-page .section-heading h3 {
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--brand-gold-bright);
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+.labkit-page .section-heading .ref {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+/* Demand cards */
+.labkit-page .demand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+}
+.labkit-page .demand-card {
+    background: var(--card-deep);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 9px 12px;
+    border-left: 2px solid var(--text-faint);
+    min-width: 0;
+}
+.labkit-page .demand-card .dc-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.labkit-page .demand-card .dc-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+    margin-bottom: 1px;
+}
+.labkit-page .demand-card .dc-meta {
+    font-size: 10.5px;
+    color: var(--text-faint);
+    line-height: 1.3;
+}
+
+/* Capacity cards */
+.labkit-page .capacity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.labkit-page .result-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 16px 18px;
+    border-left: 3px solid var(--text-faint);
+    min-width: 0;
+}
+.labkit-page .result-card.pass { border-left-color: var(--pass); }
+.labkit-page .result-card.warn { border-left-color: var(--warn); }
+.labkit-page .result-card.fail { border-left-color: var(--fail); }
+.labkit-page .result-card .rc-label {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+.labkit-page .result-card .rc-value {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+.labkit-page .result-card .rc-status {
+    font-size: 11.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.2px;
+}
+.labkit-page .rc-status.pass { color: var(--pass); }
+.labkit-page .rc-status.warn { color: var(--warn); }
+.labkit-page .rc-status.fail { color: var(--fail); }
+.labkit-page .rc-status .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor; display: inline-block;
+}
+.labkit-page .result-card .rc-note {
+    font-size: 10.5px;
+    color: var(--text-faint);
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* Tables */
+.labkit-page table.calc-table {
+    width: 100%; border-collapse: collapse; font-size: 12.5px;
+}
+.labkit-page .calc-table th {
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line-strong);
+}
+.labkit-page .calc-table th:nth-child(2) { text-align: right; }
+.labkit-page .calc-table th:nth-child(3) { text-align: right; width: 130px; }
+.labkit-page .calc-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    color: var(--text-soft);
+}
+.labkit-page .calc-table td.label { color: var(--text-soft); font-weight: 400; }
+.labkit-page .calc-table td.value {
+    text-align: right; color: var(--text);
+    font-weight: 500; white-space: nowrap;
+}
+.labkit-page .calc-table td.ref {
+    text-align: right;
+    font-size: 10.5px;
+    color: var(--brand-gold);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.labkit-page .calc-table tr.subhead td {
+    color: var(--text-soft);
+    font-weight: 600;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 16px;
+    background: transparent;
+    border-bottom: 1px solid var(--line);
+}
+.labkit-page .calc-table tr.summary-row td {
+    background: var(--highlight);
+    font-weight: 600;
+    padding: 11px 10px;
+    border-bottom: 1px solid var(--line-strong);
+    border-top: 1px solid var(--line-strong);
+}
+.labkit-page .calc-table tr.summary-row td.label { color: var(--text); }
+.labkit-page .calc-table tr.summary-row td.value { color: var(--text); font-size: 13.5px; }
+
+.labkit-page .indent { padding-left: 18px !important; }
+
+.labkit-page .workspace-footer {
+    padding: 14px 36px;
+    border-top: 1px solid var(--line);
+    background: var(--inputs-bg);
+    color: var(--text-muted);
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 1024px) {
+    .labkit-page .workspace { margin: 16px; border-radius: 6px; }
+    .labkit-page .body { grid-template-columns: 1fr; }
+    .labkit-page .inputs-col {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+    .labkit-page .tool-header,
+    .labkit-page .results-col,
+    .labkit-page .inputs-col,
+    .labkit-page .workspace-footer { padding-left: 22px; padding-right: 22px; }
+    .labkit-page .topbar { padding: 13px 16px; }
+}
+@media (max-width: 600px) {
+    .labkit-page .input-row { grid-template-columns: 1fr; }
+    .labkit-page .conditional-row.show { grid-template-columns: 1fr; }
+    .labkit-page .topbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .labkit-page .topbar-left { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .labkit-page .tool-header { padding: 22px; }
+    .labkit-page .tool-header .title { font-size: 16px; }
+    .labkit-page .results-col,
+    .labkit-page .inputs-col { padding: 18px; }
+    .labkit-page { font-size: 13.5px; }
+}
+
+/* Print */
+@media print {
+    @page { size: A4; margin: 16mm 14mm; }
+
+    /* Page wrapper: drop the screen min-height so it doesn't reserve a viewport per page */
+    .labkit-page {
+        background: white;
+        color: #000;
+        font-size: 10.5pt;
+        min-height: auto !important;
+    }
+
+    /* Topbar / floating UI fully hidden */
+    .labkit-page .topbar,
+    .labkit-page .btn-pdf,
+    .labkit-page .btn-calc,
+    .labkit-page .toggle-link,
+    .labkit-page .results-toolbar,
+    .labkit-page .workspace-footer { display: none !important; }
+
+    /* Workspace flows as a normal block document — no card frame, no min-height */
+    .labkit-page .workspace {
+        min-height: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    /* Body grid → block flow (kill the two-column layout) */
+    .labkit-page .body {
+        display: block !important;
+        grid-template-columns: none !important;
+    }
+
+    /* Inputs column completely removed from layout */
+    .labkit-page .inputs-col {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Results column flows naturally */
+    .labkit-page .results-col {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: white !important;
+        border: none !important;
+    }
+
+    .labkit-page .print-only { display: block !important; }
+    .labkit-page .screen-only { display: none !important; }
+
+    .labkit-page .print-letterhead {
+        display: block !important;
+        border-bottom: 1.5pt solid #8C6E1E;
+        padding-bottom: 10pt;
+        margin-bottom: 14pt;
+    }
+    .labkit-page .print-letterhead .lh-row { display: flex; justify-content: space-between; align-items: flex-end; }
+    .labkit-page .print-letterhead .lh-brand { font-size: 18pt; font-weight: 700; color: #000; }
+    .labkit-page .print-letterhead .lh-brand .lab { color: #8C6E1E; }
+    .labkit-page .print-letterhead .lh-meta { font-size: 9pt; color: #555; text-align: right; }
+
+    .labkit-page .print-project-block { display: block !important; margin-bottom: 12pt; page-break-inside: avoid; }
+    .labkit-page .print-project-block table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+    .labkit-page .print-project-block table td { padding: 4pt 6pt; border: 1pt solid #ccc; }
+    .labkit-page .print-project-block .ppb-label {
+        background: #f5f5f5;
+        font-weight: 600; color: #333;
+        width: 22%; text-transform: uppercase;
+        letter-spacing: 0.5pt; font-size: 8.5pt;
+    }
+
+    /* Tool header sits directly under project block, no break before next section */
+    .labkit-page .tool-header {
+        padding: 0;
+        border: none;
+        background: white;
+        margin-top: 0 !important;
+        padding-top: 8pt !important;
+        margin-bottom: 12pt;
+        page-break-after: avoid;
+    }
+    .labkit-page .tool-header .title { color: #000; font-size: 13pt; }
+    .labkit-page .tool-header .subtitle { color: #555; }
+
+    /* Avoid forced page breaks before sections / grids / tables */
+    .labkit-page section,
+    .labkit-page .demand-grid,
+    .labkit-page .capacity-grid,
+    .labkit-page .calc-table {
+        page-break-before: auto !important;
+    }
+    .labkit-page .section-heading { page-break-after: avoid; }
+
+    .labkit-page .theory-panel {
+        display: block !important;
+        background: white;
+        border: 1pt solid #999;
+        padding: 8pt;
+        margin-bottom: 12pt;
+        page-break-inside: avoid;
+    }
+    .labkit-page .theory-panel h4 { color: #8C6E1E; }
+    .labkit-page .theory-panel p,
+    .labkit-page .theory-panel ul,
+    .labkit-page .theory-panel ol,
+    .labkit-page .theory-panel h5 { color: #000; }
+    .labkit-page .eq-block,
+    .labkit-page .sketch { background: white; border: 1pt solid #999; }
+
+    .labkit-page .results-col > section { margin-bottom: 14pt; page-break-inside: avoid; }
+    .labkit-page .section-heading { border-bottom: 1pt solid #8C6E1E; padding-bottom: 4pt; margin-bottom: 8pt; }
+    .labkit-page .section-heading h3 { color: #8C6E1E; }
+    .labkit-page .section-heading .ref { color: #555; }
+
+    .labkit-page .demand-card,
+    .labkit-page .result-card { page-break-inside: avoid; background: white; border: 1pt solid #999; }
+    .labkit-page .demand-card .dc-value,
+    .labkit-page .result-card .rc-value { color: #000; }
+    .labkit-page .demand-card .dc-label,
+    .labkit-page .result-card .rc-label { color: #333; }
+    .labkit-page .demand-card .dc-meta { color: #666; }
+
+    .labkit-page .calc-table { color: #000; }
+    .labkit-page .calc-table th { color: #444; border-bottom-color: #444; }
+    .labkit-page .calc-table td { color: #000; border-bottom-color: #ccc; }
+    .labkit-page .calc-table td.ref { color: #8C6E1E !important; }
+    .labkit-page .calc-table tr.subhead td { color: #000; font-weight: 600; }
+    .labkit-page .calc-table tr.summary-row td { background: #F0EBDF; color: #000; }
+
+    .labkit-page .print-footer {
+        display: block !important;
+        margin-top: 16pt; padding-top: 8pt;
+        border-top: 1pt solid #999;
+        font-size: 8.5pt; color: #555; text-align: center;
+    }
+    .labkit-page .mjx-chtml { color: #000 !important; }
+}
+.labkit-page .print-only,
+.labkit-page .print-letterhead,
+.labkit-page .print-project-block,
+.labkit-page .print-footer { display: none; }

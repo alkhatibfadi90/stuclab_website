@@ -1,11 +1,1 @@
-import { useEffect } from 'react';
-
-export function useBodyScrollLock(isLocked) {
-  useEffect(() => {
-    document.body.style.overflow = isLocked ? 'hidden' : '';
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isLocked]);
-}
+// Removed during the Vite → Next.js migration. Safe to delete (along with all of src/).
