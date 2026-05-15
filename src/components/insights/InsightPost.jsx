@@ -117,8 +117,9 @@ function InsightPost() {
               About the author
             </p>
             <p className="insight-author-bio">
-              Fadi Al-Khatib, PhD, CPEng, IntPE(Aus) — structural and
-              computational engineer. Founder of StrucLab, working across
+              <strong>Fadi Al-Khatib, PhD, CPEng, IntPE(Aus)</strong> —
+              structural and computational engineer. Founder of StrucLab,
+              working across
               advanced analysis and design, digital workflows and automation,
               and the emerging role of AI in structural engineering.
             </p>
