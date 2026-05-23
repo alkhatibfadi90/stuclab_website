@@ -17,6 +17,34 @@ export const staticRoutes = {
     title: 'Column Punching Shear Calculator',
     description: 'Punching shear check for concrete flat slabs at column locations. Interactive tool — adjust geometry, reinforcement, and loads.',
   },
+  '/labkit/concrete/column-punching-bulk': {
+    title: 'Column Punching Shear — Bulk Check (AS 3600)',
+    description: 'Check punching shear for multiple concrete columns at once to AS 3600:2018 Cl 9.3. Paste a column schedule from Excel; biaxial moments, ties, and shear heads supported. Free StrucLab LabKit tool.',
+  },
+  '/labkit/concrete/pad-footing': {
+    title: 'Isolated Pad Footing Check (AS 3600)',
+    description: 'Free preliminary pad footing check to AS 3600:2018 — bearing, one-way shear, punching shear and flexure for an isolated spread footing. StrucLab LabKit.',
+  },
+  '/labkit/loads-actions': {
+    title: 'Loads & Actions — LabKit',
+    description: 'Free structural loading tools to AS/NZS 1170 — gravity load takedowns, combinations, and actions. By StrucLab.',
+  },
+  '/labkit/loads-actions/load-takedown': {
+    title: 'Gravity Load Takedown (AS/NZS 1170)',
+    description: 'Free column gravity load takedown to AS/NZS 1170.0 & 1170.1. Accumulates G and Q floor-by-floor with live-load area reduction and load combinations. StrucLab LabKit.',
+  },
+  '/labkit/loads-actions/load-takedown-multi': {
+    title: 'Load Takedown — Multi-Column (AS/NZS 1170)',
+    description: 'Run a gravity load takedown for multiple columns from one floor schedule, to AS/NZS 1170. Per-column footing reactions with live-load area reduction. StrucLab LabKit.',
+  },
+  '/labkit/loads-actions/seismic-lateral': {
+    title: 'Seismic Lateral Loads (AS 1170.4:2024)',
+    description: 'Free equivalent static seismic analysis to AS 1170.4:2024 — seismic weight, base shear, vertical force distribution and accidental torsion. Encoded spectral shape factors and hazard values. StrucLab LabKit.',
+  },
+  '/labkit/loads-actions/pdelta-stability': {
+    title: 'P-Delta Stability Coefficient (AS 1170.4:2024)',
+    description: 'Free inter-storey P-delta stability check to AS 1170.4:2024 Cl 6.7.3. Computes the stability coefficient θ per storey from an ETABS schedule, with amplification factor and verdict. StrucLab LabKit.',
+  },
   '/labkit/modelling-analysis': {
     title: 'Modelling & Analysis Tools — LabKit',
     description: 'Modelling helpers for ETABS — stiffness modifiers, cracked section properties, lateral system workflows.',

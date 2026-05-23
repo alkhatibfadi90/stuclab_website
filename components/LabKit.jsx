@@ -13,13 +13,14 @@ export const LABKIT_CATEGORIES = [
   {
     title: 'Loads & Actions',
     description: 'Wind, seismic, and load combinations to AS/NZS 1170.',
-    badge: 'Coming soon',
+    badge: '4 tools',
     Icon: Wind,
+    href: '/labkit/loads-actions',
   },
   {
     title: 'Concrete Design',
     description: 'Member design, cover, and detailing to AS 3600.',
-    badge: '1 tool',
+    badge: '3 tools',
     Icon: Columns3,
     href: '/labkit/concrete',
   },

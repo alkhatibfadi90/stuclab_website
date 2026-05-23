@@ -13,6 +13,18 @@ const CATEGORIES = [
     href: '/labkit/concrete/column-punching',
   },
   {
+    title: 'Concrete Column Punching — Bulk',
+    description: 'Check punching shear for multiple columns at once — paste a schedule from Excel. Same engine, AS 3600 Cl 9.3.',
+    badge: 'LIVE',
+    href: '/labkit/concrete/column-punching-bulk',
+  },
+  {
+    title: 'Pad Footing',
+    description: 'Preliminary isolated pad footing check to AS 3600:2018 — bearing, one-way shear, punching and flexure.',
+    badge: 'LIVE',
+    href: '/labkit/concrete/pad-footing',
+  },
+  {
     title: 'Cover & Durability Selector',
     description: 'AS 3600 Section 4 cover requirements lookup.',
     badge: 'Coming soon',

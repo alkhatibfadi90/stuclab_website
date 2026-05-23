@@ -19,9 +19,9 @@ function computeResults(raw) {
   const W = num(raw.W);
   const D = num(raw.D);
   const position = raw.position;
-  const Vstar = num(raw.Vstar);
-  const Mvx = num(raw.Mvx);
-  const Mvy = num(raw.Mvy);
+  const Vstar = Math.abs(num(raw.Vstar));
+  const Mvx = Math.abs(num(raw.Mvx));
+  const Mvy = Math.abs(num(raw.Mvy));
   const u_ineff = num(raw.u_ineff);
   const shear_head = raw.shear_head;
   const ties_provided = raw.ties_provided;

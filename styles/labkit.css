@@ -717,3 +717,462 @@
 .labkit-page .print-letterhead,
 .labkit-page .print-project-block,
 .labkit-page .print-footer { display: none; }
+
+/* ============================================================
+   BULK TOOL LAYER — shared grid styling for any LabKit "bulk"
+   tool (multi-row schedule + paste-from-Excel). Uses existing
+   tokens only. Added once; reusable by future bulk tools.
+   ============================================================ */
+
+/* Project meta row */
+.bulk-meta {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+/* Toolbar */
+.bulk-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  flex-wrap: wrap;
+}
+.bulk-spacer { flex: 1; }
+
+.bulk-btn {
+  background: var(--card);
+  color: var(--text-soft);
+  border: 1px solid var(--line-strong);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: var(--brand-font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.bulk-btn:hover {
+  background: var(--highlight);
+  border-color: var(--brand-gold-deep);
+  color: var(--text);
+}
+.bulk-btn-danger { color: var(--fail); }
+.bulk-btn-danger:hover { border-color: var(--fail-deep); color: var(--fail); }
+
+/* Grid wrapper — horizontal scroll for the wide schedule */
+.bulk-grid-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--inputs-bg);
+}
+
+.bulk-grid {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+.bulk-grid thead th {
+  position: sticky;
+  top: 0;
+  background: var(--topbar);
+  color: var(--brand-gold-bright);
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line-strong);
+  border-right: 1px solid var(--line-soft);
+  white-space: nowrap;
+  font-size: 0.74rem;
+  letter-spacing: 0.2px;
+}
+.bulk-grid thead .bulk-unit {
+  display: block;
+  color: var(--text-faint);
+  font-weight: 400;
+  font-size: 0.66rem;
+  margin-top: 1px;
+}
+.bulk-th-idx { width: 30px; min-width: 30px; }
+.bulk-th-res { background: var(--results-bg) !important; }
+
+.bulk-grid tbody td {
+  padding: 0;
+  border-right: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.bulk-grid tbody tr:hover td { background: var(--highlight); }
+
+.bulk-grid input,
+.bulk-grid select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--brand-font-mono);
+  font-size: 0.82rem;
+  padding: 7px 6px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.bulk-grid input:focus,
+.bulk-grid select:focus {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: -2px;
+  background: var(--card-input);
+}
+.bulk-grid select {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  color: var(--text-soft);
+}
+.bulk-grid select option { background: var(--card); color: var(--text); }
+
+.bulk-idx {
+  text-align: center;
+  color: var(--text-faint);
+  font-family: var(--brand-font-mono);
+  font-size: 0.74rem;
+  background: var(--topbar);
+}
+.bulk-res {
+  text-align: center;
+  padding: 7px 8px !important;
+  background: var(--results-bg);
+  color: var(--text);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+.bulk-status {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.4px;
+  padding: 7px 8px !important;
+  white-space: nowrap;
+}
+.bulk-status.pass { color: var(--pass); }
+.bulk-status.warn { color: var(--warn); }
+.bulk-status.fail { color: var(--fail); }
+
+.bulk-del { width: 30px; text-align: center; }
+.bulk-del button {
+  background: transparent;
+  border: none;
+  color: var(--text-faint);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.bulk-del button:hover { color: var(--fail); }
+
+/* Summary band */
+.bulk-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 16px 0 0;
+}
+.bulk-sum-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bulk-sum-card.pass { border-left: 3px solid var(--pass); }
+.bulk-sum-card.warn { border-left: 3px solid var(--warn); }
+.bulk-sum-card.fail { border-left: 3px solid var(--fail); }
+.bulk-sum-n {
+  font-family: var(--brand-font-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.bulk-sum-l {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* Theory box */
+.bulk-theory {
+  margin-top: 10px;
+  background: var(--card-deep);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.86rem;
+  color: var(--text-soft);
+}
+.bulk-theory p { margin: 0 0 8px; }
+.bulk-theory p:last-child { margin-bottom: 0; }
+
+/* Paste modal */
+.bulk-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+.bulk-modal {
+  background: var(--workspace);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 22px;
+  width: min(720px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.bulk-modal h3 { margin: 0 0 6px; }
+.bulk-paste-order {
+  font-size: 0.72rem;
+  color: var(--brand-gold-bright);
+  background: var(--card-input);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 8px 0 12px;
+  word-break: break-word;
+}
+.bulk-paste-area {
+  width: 100%;
+  min-height: 160px;
+  background: var(--card-input);
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--brand-font-mono);
+  font-size: 0.82rem;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.bulk-paste-area:focus { outline: 2px solid var(--brand-gold); outline-offset: -2px; }
+.bulk-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* Print: hide screen-only controls, keep results table + letterhead */
+@media print {
+  .bulk-meta,
+  .bulk-toolbar,
+  .bulk-grid-wrap,
+  .bulk-modal-overlay { display: none !important; }
+}
+
+/* Checkbox cells inside the bulk grid (used by Load Takedown etc.) */
+.bulk-grid .bulk-check-cell { text-align: center; }
+.bulk-grid .bulk-check-cell input[type="checkbox"] {
+  width: auto;
+  margin: 0 auto;
+  accent-color: var(--brand-gold);
+  cursor: pointer;
+}
+
+/* Load Takedown — column setup row */
+.takedown-setup {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  background: var(--card-deep);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.takedown-setup .input-field { margin: 0; min-width: 120px; }
+.takedown-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+.takedown-check input[type="checkbox"] { accent-color: var(--brand-gold); cursor: pointer; }
+
+/* Load Takedown — multi-column setup cards */
+.takedown-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.takedown-col-card {
+  background: var(--card-input);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.takedown-col-head { display: flex; align-items: center; gap: 6px; }
+.takedown-col-label {
+  flex: 1;
+  background: var(--card);
+  color: var(--brand-gold-bright);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-family: var(--brand-font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.takedown-col-card .takedown-check { padding: 0; font-size: 0.78rem; }
+.takedown-sw-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.takedown-sw-row input {
+  width: 56px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-family: var(--brand-font-mono);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+/* Trib-area cells highlighted as the per-column inputs in the multi grid */
+.bulk-grid .bulk-res-cell { background: var(--results-bg); }
+.bulk-grid .bulk-res-cell input { color: var(--brand-gold-bright); }
+
+/* Fix: ensure inputs honour their grid/flex cell width inside meta/setup
+   containers (the shared .input-field input has width:100% + padding but
+   no border-box in this context, causing overflow/overlap). */
+.bulk-meta .input-field,
+.takedown-setup .input-field { min-width: 0; }
+.bulk-meta .input-field input,
+.bulk-meta .input-field select,
+.takedown-setup .input-field input,
+.takedown-setup .input-field select {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ============================================================
+   SEISMIC tool layer — stage headers, param grids, result chips
+   ============================================================ */
+.seismic-stage {
+  margin: 22px 0 12px;
+  padding: 8px 14px;
+  background: var(--topbar);
+  border-left: 3px solid var(--brand-gold);
+  border-radius: 4px;
+  color: var(--brand-gold-bright);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+}
+.seismic-params {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  margin: 0 0 14px;
+  padding: 14px;
+  background: var(--card-deep);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.seismic-params .input-field { margin: 0; min-width: 0; }
+.seismic-params .input-field input,
+.seismic-params .input-field select { box-sizing: border-box; width: 100%; max-width: 100%; }
+
+.seismic-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 0 0 6px;
+}
+.seismic-results-grid > div {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.seismic-results-grid .seismic-rv-strong { border-left: 3px solid var(--brand-gold); }
+.seismic-rk { font-size: 0.72rem; color: var(--text-muted); }
+.seismic-rv {
+  font-family: var(--brand-font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.seismic-flag {
+  margin: 6px 0 0;
+  padding: 10px 12px;
+  background: rgba(212, 168, 46, 0.12);
+  border: 1px solid var(--warn);
+  border-radius: 6px;
+  color: var(--warn);
+  font-size: 0.82rem;
+}
+
+/* Pad footing — full-width governing verdict banner */
+.footing-verdict {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 18px;
+  padding: 16px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--text-faint);
+  border-radius: 8px;
+}
+.footing-verdict.pass { border-left-color: var(--pass); }
+.footing-verdict.warn { border-left-color: var(--warn); }
+.footing-verdict.fail { border-left-color: var(--fail); }
+.footing-verdict-main { display: flex; align-items: baseline; gap: 14px; }
+.footing-verdict-label { font-size: 0.82rem; color: var(--text-muted); }
+.footing-verdict-value {
+  font-family: var(--brand-font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+}
+.footing-verdict-status {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+.footing-verdict-status.pass { color: var(--pass); background: rgba(111,184,124,0.12); }
+.footing-verdict-status.warn { color: var(--warn); background: rgba(212,168,46,0.12); }
+.footing-verdict-status.fail { color: var(--fail); background: rgba(216,113,113,0.12); }
