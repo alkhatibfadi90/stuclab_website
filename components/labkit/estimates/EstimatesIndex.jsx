@@ -1,63 +1,46 @@
 import Link from 'next/link';
-import { Square } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 // Within a category page, every tool card uses the same category icon.
-// For Concrete: Square (column cross-section).
-const CATEGORY_ICON = Square;
+// For Estimates & Quantities: BookOpen (matches the LabKit landing card).
+const CATEGORY_ICON = BookOpen;
 
 const CATEGORIES = [
   {
-    title: 'Concrete Column Punching',
-    description: 'Biaxial punching shear check at slab–column connections to AS 3600 Cl 9.3.',
+    title: 'Pad Footing Reo Rate',
+    description: 'Reinforcement rate estimator for an isolated pad footing — kg/m² and kg/m³ from geometry and bar layout, with a live section sketch.',
     badge: 'LIVE',
-    href: '/labkit/concrete/column-punching',
+    href: '/labkit/estimates/pad-footing-reo',
   },
   {
-    title: 'Concrete Column Punching — Bulk',
-    description: 'Check punching shear for multiple columns at once — paste a schedule from Excel. Same engine, AS 3600 Cl 9.3.',
+    title: 'Beam Reo Rate',
+    description: 'Reinforcement rate estimator for a rectangular or T-beam — kg/m³ from a bar schedule and ties, with a live section sketch.',
     badge: 'LIVE',
-    href: '/labkit/concrete/column-punching-bulk',
+    href: '/labkit/estimates/beam-reo',
   },
   {
-    title: 'Pad Footing',
-    description: 'Preliminary isolated pad footing check to AS 3600:2018 — bearing, one-way shear, punching and flexure.',
+    title: 'Column Reo Rate',
+    description: 'Reinforcement rate estimator for rectangular, square or circular columns — kg/m³ with and without ties, with a live section sketch.',
     badge: 'LIVE',
-    href: '/labkit/concrete/pad-footing',
-  },
-  {
-    title: 'Development Length & Laps',
-    description: 'Rebar development length and lap splice to AS 3600:2018 Cl 13.1.2 / 13.2.2 — basic length, hook/cog, tension lap with all k-factors.',
-    badge: 'LIVE',
-    href: '/labkit/concrete/development-length',
-  },
-  {
-    title: 'Cover & Exposure',
-    description: 'Required concrete cover for corrosion protection to AS 3600:2018 Cl 4.10.3 — by exposure classification and grade, with cast-against-ground adjustments.',
-    badge: 'LIVE',
-    href: '/labkit/concrete/cover-exposure',
-  },
-  {
-    title: 'Beam Capacity Check',
-    description: 'Flexural and shear capacity check to AS 3600 Cl 8 & 9.',
-    badge: 'Coming soon',
+    href: '/labkit/estimates/column-reo',
   },
 ];
 
-function ConcreteIndex() {
+function EstimatesIndex() {
   return (
     <section
-      id="labkit-concrete"
+      id="labkit-estimates"
       className="section labkit-landing"
-      aria-labelledby="labkit-concrete-title"
+      aria-labelledby="labkit-estimates-title"
     >
       <div className="container">
         <Link href="/labkit" className="labkit-back">← Back to LabKit</Link>
 
         <div className="section-heading labkit-heading" data-reveal>
-          <p className="eyebrow">LabKit · Concrete Design</p>
-          <h1 id="labkit-concrete-title" className="labkit-h1">Concrete Design</h1>
+          <p className="eyebrow">LabKit · Estimates &amp; Quantities</p>
+          <h1 id="labkit-estimates-title" className="labkit-h1">Estimates &amp; Quantities</h1>
           <p className="section-lead labkit-lead">
-            Free design and analysis tools for reinforced and prestressed concrete to AS 3600.
+            Reinforcement rate and material quantity estimating tools for concrete elements.
           </p>
         </div>
 
@@ -99,7 +82,7 @@ function ConcreteIndex() {
           })}
         </div>
 
-        <p className="labkit-meta">More concrete tools coming soon.</p>
+        <p className="labkit-meta">More estimating tools coming soon.</p>
 
         <aside className="labkit-disclaimer" role="note" data-reveal>
           <p className="labkit-disclaimer-label">Disclaimer</p>
@@ -116,4 +99,4 @@ function ConcreteIndex() {
   );
 }
 
-export default ConcreteIndex;
+export default EstimatesIndex;

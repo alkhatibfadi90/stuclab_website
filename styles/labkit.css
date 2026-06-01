@@ -1176,3 +1176,68 @@
 .footing-verdict-status.pass { color: var(--pass); background: rgba(111,184,124,0.12); }
 .footing-verdict-status.warn { color: var(--warn); background: rgba(212,168,46,0.12); }
 .footing-verdict-status.fail { color: var(--fail); background: rgba(216,113,113,0.12); }
+
+/* Load Combination Generator — action chips */
+.combo-actions { display: flex; flex-direction: column; gap: 6px; }
+.combo-action {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 6px; font-size: 0.85rem; color: var(--text-soft);
+  cursor: pointer; transition: border-color 0.15s, color 0.15s;
+}
+.combo-action input[type="checkbox"] { accent-color: var(--brand-gold); cursor: pointer; }
+.combo-action.on { border-color: var(--brand-gold-deep); color: var(--text); }
+.combo-psi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 6px; }
+.combo-psi-grid .input-field { margin: 0; min-width: 0; }
+.combo-psi-grid .input-field input { box-sizing: border-box; width: 100%; }
+
+/* ============================================================
+   FIX: horizontal inset for bulk-tool content blocks.
+   Native chrome (.tool-header, .workspace-footer, print blocks)
+   sits 36px in from the workspace edge; the bulk-layer blocks
+   had none and overhung. Match the 36px inset so every tool's
+   meta row / toolbar / grid / summary aligns with the header.
+   ============================================================ */
+.labkit-page .bulk-meta,
+.labkit-page .takedown-setup,
+.labkit-page .seismic-params,
+.labkit-page .seismic-stage,
+.labkit-page .seismic-results-grid,
+.labkit-page .seismic-flag,
+.labkit-page .bulk-toolbar,
+.labkit-page .bulk-grid-wrap,
+.labkit-page .bulk-summary,
+.labkit-page .footing-verdict,
+.labkit-page .workspace > .hint {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+@media (max-width: 768px) {
+  .labkit-page .bulk-meta,
+  .labkit-page .takedown-setup,
+  .labkit-page .seismic-params,
+  .labkit-page .seismic-stage,
+  .labkit-page .seismic-results-grid,
+  .labkit-page .seismic-flag,
+  .labkit-page .bulk-toolbar,
+  .labkit-page .bulk-grid-wrap,
+  .labkit-page .bulk-summary,
+  .labkit-page .footing-verdict,
+  .labkit-page .workspace > .hint {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+/* Result sections (col-heading + calc-table) that sit directly in
+   .workspace in the bulk tools also need the 36px inset. */
+.labkit-page .workspace > section,
+.labkit-page .workspace > p.hint {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+@media (max-width: 768px) {
+  .labkit-page .workspace > section,
+  .labkit-page .workspace > p.hint { margin-left: 16px; margin-right: 16px; }
+}

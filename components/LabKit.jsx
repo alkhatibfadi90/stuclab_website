@@ -20,7 +20,7 @@ export const LABKIT_CATEGORIES = [
   {
     title: 'Concrete Design',
     description: 'Member design, cover, and detailing to AS 3600.',
-    badge: '3 tools',
+    badge: '5 tools',
     Icon: Columns3,
     href: '/labkit/concrete',
   },
@@ -38,16 +38,18 @@ export const LABKIT_CATEGORIES = [
     href: '/labkit/modelling-analysis',
   },
   {
-    title: 'Detailing & Reference',
-    description: 'Reo schedules, bolt lookups, and code references.',
-    badge: 'Coming soon',
+    title: 'Estimates & Quantities',
+    description: 'Reinforcement rates and material quantity estimates for concrete elements.',
+    badge: '3 tools',
     Icon: BookOpen,
+    href: '/labkit/estimates',
   },
   {
-    title: 'Productivity & Automation',
-    description: 'Unit converters, ETABS helpers, and Python snippets.',
-    badge: 'Coming soon',
+    title: 'Automation',
+    description: 'Generators and utilities that automate repetitive engineering data work.',
+    badge: '1 tool',
     Icon: Terminal,
+    href: '/labkit/automation',
   },
 ];
 

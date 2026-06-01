@@ -1,63 +1,34 @@
 import Link from 'next/link';
-import { Square } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 // Within a category page, every tool card uses the same category icon.
-// For Concrete: Square (column cross-section).
-const CATEGORY_ICON = Square;
+// For Automation: Terminal.
+const CATEGORY_ICON = Terminal;
 
 const CATEGORIES = [
   {
-    title: 'Concrete Column Punching',
-    description: 'Biaxial punching shear check at slab–column connections to AS 3600 Cl 9.3.',
+    title: 'Load Combination Generator',
+    description: 'AS/NZS 1170.0 strength, stability and serviceability combinations with Table 4.1 ψ factors — ready to copy or export to CSV.',
     badge: 'LIVE',
-    href: '/labkit/concrete/column-punching',
-  },
-  {
-    title: 'Concrete Column Punching — Bulk',
-    description: 'Check punching shear for multiple columns at once — paste a schedule from Excel. Same engine, AS 3600 Cl 9.3.',
-    badge: 'LIVE',
-    href: '/labkit/concrete/column-punching-bulk',
-  },
-  {
-    title: 'Pad Footing',
-    description: 'Preliminary isolated pad footing check to AS 3600:2018 — bearing, one-way shear, punching and flexure.',
-    badge: 'LIVE',
-    href: '/labkit/concrete/pad-footing',
-  },
-  {
-    title: 'Development Length & Laps',
-    description: 'Rebar development length and lap splice to AS 3600:2018 Cl 13.1.2 / 13.2.2 — basic length, hook/cog, tension lap with all k-factors.',
-    badge: 'LIVE',
-    href: '/labkit/concrete/development-length',
-  },
-  {
-    title: 'Cover & Exposure',
-    description: 'Required concrete cover for corrosion protection to AS 3600:2018 Cl 4.10.3 — by exposure classification and grade, with cast-against-ground adjustments.',
-    badge: 'LIVE',
-    href: '/labkit/concrete/cover-exposure',
-  },
-  {
-    title: 'Beam Capacity Check',
-    description: 'Flexural and shear capacity check to AS 3600 Cl 8 & 9.',
-    badge: 'Coming soon',
+    href: '/labkit/automation/load-combinations',
   },
 ];
 
-function ConcreteIndex() {
+function AutomationIndex() {
   return (
     <section
-      id="labkit-concrete"
+      id="labkit-automation"
       className="section labkit-landing"
-      aria-labelledby="labkit-concrete-title"
+      aria-labelledby="labkit-automation-title"
     >
       <div className="container">
         <Link href="/labkit" className="labkit-back">← Back to LabKit</Link>
 
         <div className="section-heading labkit-heading" data-reveal>
-          <p className="eyebrow">LabKit · Concrete Design</p>
-          <h1 id="labkit-concrete-title" className="labkit-h1">Concrete Design</h1>
+          <p className="eyebrow">LabKit · Automation</p>
+          <h1 id="labkit-automation-title" className="labkit-h1">Automation</h1>
           <p className="section-lead labkit-lead">
-            Free design and analysis tools for reinforced and prestressed concrete to AS 3600.
+            Generators and utilities that automate repetitive engineering data work.
           </p>
         </div>
 
@@ -99,7 +70,7 @@ function ConcreteIndex() {
           })}
         </div>
 
-        <p className="labkit-meta">More concrete tools coming soon.</p>
+        <p className="labkit-meta">More automation tools coming soon.</p>
 
         <aside className="labkit-disclaimer" role="note" data-reveal>
           <p className="labkit-disclaimer-label">Disclaimer</p>
@@ -116,4 +87,4 @@ function ConcreteIndex() {
   );
 }
 
-export default ConcreteIndex;
+export default AutomationIndex;
