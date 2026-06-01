@@ -2,8 +2,8 @@ export const SITE_URL = 'https://www.struclab.com.au';
 
 export const staticRoutes = {
   '/': {
-    title: 'StrucLab — Structural & Computational Engineering | Fadi Al-Khatib, PhD, CPEng',
-    description: 'Structural engineering training, automation, and specialist analysis support across Australia. Led by Fadi Al-Khatib, PhD, CPEng — high-rise, ETABS, post-tensioned concrete, lateral systems, and Python automation.',
+    title: 'StrucLab — Structural & Computational Engineering',
+    description: 'Structural engineering training, automation, and specialist analysis support across Australia. High-rise, ETABS, post-tensioned concrete, lateral systems, and Python automation.',
   },
   '/labkit': {
     title: 'LabKit — Structural Engineering Tools',
