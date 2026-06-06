@@ -24,6 +24,24 @@ const CATEGORIES = [
     badge: 'LIVE',
     href: '/labkit/estimates/column-reo',
   },
+  {
+    title: 'Shear Wall Reo Rate',
+    description: 'Reinforcement rate estimator for a solid shear wall — kg/m³ from vertical and horizontal mats plus end U-bars, with f′c-dependent laps and a live section sketch.',
+    badge: 'LIVE',
+    href: '/labkit/estimates/shear-wall-reo',
+  },
+  {
+    title: 'Slab Reo Rate',
+    description: 'Reinforcement rate estimator for a flat slab — kg/m² and kg/m³ from up to four layers, with a crack-control advisory and a live section sketch.',
+    badge: 'LIVE',
+    href: '/labkit/estimates/slab-reo',
+  },
+  {
+    title: 'Slab PT Rate',
+    description: 'Post-tension estimator for a PT slab or beam — strand mass (kg/m², kg/m³) and average applied prestress, with a draped-tendon section sketch.',
+    badge: 'LIVE',
+    href: '/labkit/estimates/slab-pt-reo',
+  },
 ];
 
 function EstimatesIndex() {

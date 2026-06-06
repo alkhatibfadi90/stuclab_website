@@ -89,6 +89,18 @@ export const staticRoutes = {
     title: 'Column Reinforcement Rate Calculator',
     description: 'Free column reinforcement rate estimator — kg/m³ with and without ties for rectangular, square or circular columns, with a live section sketch. StrucLab LabKit.',
   },
+  '/labkit/estimates/shear-wall-reo': {
+    title: 'Shear Wall Reinforcement Rate Calculator',
+    description: 'Free shear wall reinforcement rate estimator — kg/m³ from vertical and horizontal mats plus end U-bars, with f′c-dependent laps and a live section sketch. StrucLab LabKit.',
+  },
+  '/labkit/estimates/slab-reo': {
+    title: 'Slab Reinforcement Rate Calculator',
+    description: 'Free slab reinforcement rate estimator — kg/m² and kg/m³ from up to four layers, with a crack-control advisory and a live section sketch. StrucLab LabKit.',
+  },
+  '/labkit/estimates/slab-pt-reo': {
+    title: 'Slab Post-Tension Rate Calculator',
+    description: 'Free PT slab estimator — strand mass (kg/m², kg/m³) and average applied prestress by tendon, strand and profile, with a draped-tendon section sketch. StrucLab LabKit.',
+  },
   '/insights': {
     title: 'Insights — Structural Engineering Writing',
     description: 'Short, practical writing on concrete and steel design, lateral systems, advanced analysis, and Python workflows for structural engineers.',

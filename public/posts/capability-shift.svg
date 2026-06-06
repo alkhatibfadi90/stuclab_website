@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="A before-and-after contrast. On the left, the signals that used to mark a capable firm — polished proposals, broad capability claims, production volume — now commoditised by AI. On the right, what signals capability now: proven specialism, demonstrable track record, a named accountable engineer, and earned trust.">
+  <defs>
+    <marker id="cross" markerWidth="12" markerHeight="12" refX="6" refY="6">
+      <path d="M2,2 L10,10 M10,2 L2,10" stroke="#b9b1a0" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="492" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="42" font-size="21" font-weight="bold" fill="#1f2a33">What Wins Work After AI Flattens the Polish</text>
+  <text x="40" y="63" font-size="13" fill="#6b7680" font-style="italic">When everyone's proposal looks professional, looking professional stops being a signal.</text>
+
+  <!-- ============ LEFT COLUMN : was a signal (now faded) ============ -->
+  <rect x="40" y="92" width="340" height="368" rx="8" fill="#f6f4ef" stroke="#ddd6c8" stroke-width="1.4"/>
+  <text x="210" y="122" font-size="13" font-weight="bold" fill="#9a917f" text-anchor="middle" letter-spacing="0.5">USED TO SIGNAL A CAPABLE FIRM</text>
+  <text x="210" y="140" font-size="10.5" fill="#a89e8a" text-anchor="middle" font-style="italic">— now produced by anyone in minutes —</text>
+
+  <g font-size="13" fill="#8c8474">
+    <!-- item 1 -->
+    <line x1="64" y1="172" x2="80" y2="172" stroke="#b9b1a0" stroke-width="1.6" marker-end="url(#cross)"/>
+    <text x="92" y="170" text-decoration="line-through">A polished capability statement</text>
+    <text x="92" y="186" font-size="10" fill="#a89e8a" font-style="italic">effort used to prove competence</text>
+    <!-- item 2 -->
+    <line x1="64" y1="226" x2="80" y2="226" stroke="#b9b1a0" stroke-width="1.6" marker-end="url(#cross)"/>
+    <text x="92" y="224" text-decoration="line-through">Broad capability claims</text>
+    <text x="92" y="240" font-size="10" fill="#a89e8a" font-style="italic">"we do structural engineering"</text>
+    <!-- item 3 -->
+    <line x1="64" y1="280" x2="80" y2="280" stroke="#b9b1a0" stroke-width="1.6" marker-end="url(#cross)"/>
+    <text x="92" y="278" text-decoration="line-through">A tidy, confident methodology</text>
+    <text x="92" y="294" font-size="10" fill="#a89e8a" font-style="italic">structure without substance</text>
+    <!-- item 4 -->
+    <line x1="64" y1="334" x2="80" y2="334" stroke="#b9b1a0" stroke-width="1.6" marker-end="url(#cross)"/>
+    <text x="92" y="332" text-decoration="line-through">Sheer production volume</text>
+    <text x="92" y="348" font-size="10" fill="#a89e8a" font-style="italic">turning out calcs and drawings</text>
+  </g>
+
+  <rect x="64" y="392" width="292" height="48" rx="6" fill="#efece4" stroke="#ddd6c8" stroke-width="1"/>
+  <text x="210" y="412" font-size="11" fill="#8c8474" text-anchor="middle" font-style="italic">The signal is gone because</text>
+  <text x="210" y="428" font-size="11" fill="#8c8474" text-anchor="middle" font-style="italic">the effort behind it is gone.</text>
+
+  <!-- ============ centre arrow ============ -->
+  <g>
+    <line x1="386" y1="276" x2="414" y2="276" stroke="#C49A2E" stroke-width="2.4"/>
+    <path d="M412 270 L424 276 L412 282 Z" fill="#C49A2E"/>
+  </g>
+
+  <!-- ============ RIGHT COLUMN : signals capability now ============ -->
+  <rect x="420" y="92" width="340" height="368" rx="8" fill="#ffffff" stroke="#C49A2E" stroke-width="2"/>
+  <text x="590" y="122" font-size="13" font-weight="bold" fill="#1f2a33" text-anchor="middle" letter-spacing="0.5">SIGNALS CAPABILITY NOW</text>
+  <text x="590" y="140" font-size="10.5" fill="#a07e1f" text-anchor="middle" font-style="italic">— the things AI cannot fabricate —</text>
+
+  <g font-size="13" fill="#1f2a33">
+    <!-- item 1 -->
+    <circle cx="450" cy="168" r="4" fill="#C49A2E"/>
+    <text x="466" y="172" font-weight="bold">A proven, narrow specialism</text>
+    <text x="466" y="188" font-size="10" fill="#6b7680" font-style="italic">PT transfers, high-rise lateral — shown, not claimed</text>
+    <!-- item 2 -->
+    <circle cx="450" cy="222" r="4" fill="#C49A2E"/>
+    <text x="466" y="226" font-weight="bold">A demonstrable track record</text>
+    <text x="466" y="242" font-size="10" fill="#6b7680" font-style="italic">real projects, checkable, actually yours</text>
+    <!-- item 3 -->
+    <circle cx="450" cy="276" r="4" fill="#C49A2E"/>
+    <text x="466" y="280" font-weight="bold">A named, accountable engineer</text>
+    <text x="466" y="296" font-size="10" fill="#6b7680" font-style="italic">registered — AI has no registration number</text>
+    <!-- item 4 -->
+    <circle cx="450" cy="330" r="4" fill="#C49A2E"/>
+    <text x="466" y="334" font-weight="bold">Trust, earned over time</text>
+    <text x="466" y="350" font-size="10" fill="#6b7680" font-style="italic">right before, flagged the problem early</text>
+  </g>
+
+  <rect x="450" y="392" width="290" height="48" rx="6" fill="#fbf6e9" stroke="#e9d9a8" stroke-width="1"/>
+  <text x="595" y="412" font-size="11" fill="#7a5f14" text-anchor="middle" font-style="italic">Substance that's visibly yours is</text>
+  <text x="595" y="428" font-size="11" fill="#7a5f14" text-anchor="middle" font-style="italic">the one thing a competitor can't prompt.</text>
+
+  <!-- bottom teaching line -->
+  <text x="400" y="482" font-size="11.5" fill="#6b7680" text-anchor="middle" font-style="italic">The noise got commoditised. Substance is suddenly the only thing left that's scarce.</text>
+</svg>

@@ -40,7 +40,7 @@ export const LABKIT_CATEGORIES = [
   {
     title: 'Estimates & Quantities',
     description: 'Reinforcement rates and material quantity estimates for concrete elements.',
-    badge: '3 tools',
+    badge: '6 tools',
     Icon: BookOpen,
     href: '/labkit/estimates',
   },

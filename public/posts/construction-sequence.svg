@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="Section through a building under construction showing back-propping: the freshly cast top slab's construction load is carried by props down through several floors, so a lower slab carries accumulated load at an early age before it has reached full strength.">
+  <defs>
+    <pattern id="soil2" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#cfc4a8" stroke-width="1.4"/>
+    </pattern>
+    <marker id="load" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1f2a33"/>
+    </marker>
+    <marker id="loadg" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#C49A2E"/>
+    </marker>
+  </defs>
+
+  <rect x="4" y="4" width="792" height="552" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Back-Propping: A Load the Final Model Never Sees</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Pouring the top slab loads the floors below — at the age they are weakest.</text>
+
+  <rect x="170" y="466" width="320" height="50" fill="url(#soil2)"/>
+  <line x1="170" y1="466" x2="490" y2="466" stroke="#8a7f63" stroke-width="2"/>
+
+  <rect x="206" y="120" width="12" height="346" fill="#e7e3d8" stroke="#1f2a33" stroke-width="1.4"/>
+  <rect x="442" y="120" width="12" height="346" fill="#e7e3d8" stroke="#1f2a33" stroke-width="1.4"/>
+
+  <g stroke="#1f2a33" stroke-width="1.4">
+    <rect x="206" y="192" width="248" height="9" fill="#d8d2c4"/>
+    <rect x="206" y="264" width="248" height="9" fill="#d8d2c4"/>
+    <rect x="206" y="336" width="248" height="9" fill="#d8d2c4"/>
+    <rect x="206" y="408" width="248" height="9" fill="#d8d2c4"/>
+  </g>
+  <rect x="206" y="119" width="248" height="12" fill="#e9d9a8" stroke="#a07e1f" stroke-width="1.8"/>
+  <text x="330" y="128" font-size="9.5" fill="#7a5f14" text-anchor="middle" letter-spacing="0.3">WET CONCRETE</text>
+
+  <g stroke="#2a333b" stroke-width="3">
+    <line x1="270" y1="131" x2="270" y2="192"/>
+    <line x1="390" y1="131" x2="390" y2="192"/>
+    <line x1="270" y1="201" x2="270" y2="264"/>
+    <line x1="390" y1="201" x2="390" y2="264"/>
+    <line x1="270" y1="273" x2="270" y2="336"/>
+    <line x1="390" y1="273" x2="390" y2="336"/>
+  </g>
+  <g stroke="#2a333b" stroke-width="2.4">
+    <line x1="262" y1="131" x2="278" y2="131"/><line x1="262" y1="192" x2="278" y2="192"/>
+    <line x1="382" y1="131" x2="398" y2="131"/><line x1="382" y1="192" x2="398" y2="192"/>
+    <line x1="262" y1="201" x2="278" y2="201"/><line x1="262" y1="264" x2="278" y2="264"/>
+    <line x1="382" y1="201" x2="398" y2="201"/><line x1="382" y1="264" x2="398" y2="264"/>
+    <line x1="262" y1="273" x2="278" y2="273"/><line x1="262" y1="336" x2="278" y2="336"/>
+    <line x1="382" y1="273" x2="398" y2="273"/><line x1="382" y1="336" x2="398" y2="336"/>
+  </g>
+  <line x1="398" y1="228" x2="432" y2="228" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="436" y="231" font-size="10.5" fill="#2a333b" font-style="italic">back-props</text>
+
+  <g stroke="#1f2a33" stroke-width="2" marker-end="url(#load)">
+    <line x1="300" y1="92" x2="300" y2="115"/>
+    <line x1="330" y1="92" x2="330" y2="115"/>
+    <line x1="360" y1="92" x2="360" y2="115"/>
+  </g>
+  <text x="330" y="84" font-size="12" font-weight="bold" fill="#1f2a33" text-anchor="middle">formwork + wet concrete pour</text>
+
+  <g stroke="#C49A2E" stroke-width="2.4" marker-end="url(#loadg)">
+    <line x1="240" y1="138" x2="240" y2="188"/>
+    <line x1="240" y1="210" x2="240" y2="260"/>
+    <line x1="240" y1="282" x2="240" y2="332"/>
+    <line x1="330" y1="138" x2="330" y2="188"/>
+    <line x1="330" y1="210" x2="330" y2="260"/>
+    <line x1="330" y1="282" x2="330" y2="332"/>
+    <line x1="420" y1="138" x2="420" y2="188"/>
+    <line x1="420" y1="210" x2="420" y2="260"/>
+    <line x1="420" y1="282" x2="420" y2="332"/>
+  </g>
+
+  <rect x="202" y="332" width="256" height="17" fill="none" stroke="#C49A2E" stroke-width="2.4" rx="2"/>
+
+  <g font-size="10.5">
+    <line x1="454" y1="125" x2="540" y2="125" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="546" y="122" font-weight="bold" fill="#a07e1f">L5 — cast today</text>
+    <text x="546" y="136" fill="#6b7680">near-zero strength</text>
+
+    <line x1="454" y1="196" x2="540" y2="196" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="546" y="193" fill="#3a4750">L4 — a few days old</text>
+
+    <line x1="454" y1="268" x2="540" y2="268" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="546" y="265" fill="#3a4750">L3 — about a week</text>
+
+    <line x1="458" y1="340" x2="540" y2="340" stroke="#C49A2E" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="546" y="330" font-weight="bold" fill="#a07e1f">L2 — critical slab</text>
+    <text x="546" y="344" fill="#6b7680">carries shared construction</text>
+    <text x="546" y="357" fill="#6b7680">load before full strength</text>
+  </g>
+
+  <g transform="translate(170,498)">
+    <text x="0" y="0" font-size="11" fill="#6b7680" font-style="italic">A lower slab can carry more during construction than it ever does in service —</text>
+    <text x="0" y="15" font-size="11" fill="#6b7680" font-style="italic">at the age it is least able to take it. The in-service model shows none of this.</text>
+  </g>
+</svg>

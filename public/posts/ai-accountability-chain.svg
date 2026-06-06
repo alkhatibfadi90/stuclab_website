@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="An accountability chain: AI drafts the calculation and report, but verification, the registered engineer's signature, and the liability that follows are steps only a registered human can hold. Accountability does not transfer to the tool.">
+  <defs>
+    <marker id="ar" markerWidth="11" markerHeight="11" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#1f2a33"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="472" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="42" font-size="21" font-weight="bold" fill="#1f2a33">AI Drafts It. A Registered Engineer Owns It.</text>
+  <text x="40" y="63" font-size="13" fill="#6b7680" font-style="italic">The tool produces the work. Accountability for it does not transfer.</text>
+
+  <!-- ============ zone bands ============ -->
+  <!-- tool zone -->
+  <text x="120" y="118" font-size="11" fill="#a07e1f" font-weight="bold" text-anchor="middle" letter-spacing="1">THE TOOL</text>
+  <!-- human zone -->
+  <text x="500" y="118" font-size="11" fill="#1f2a33" font-weight="bold" text-anchor="middle" letter-spacing="1">ONLY A REGISTERED ENGINEER</text>
+  <line x1="300" y1="106" x2="700" y2="106" stroke="#1f2a33" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- ============ STEP 1 : AI drafts (tool, gold dashed) ============ -->
+  <rect x="40" y="140" width="160" height="120" rx="6" fill="#fbf6e9" stroke="#C49A2E" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <text x="120" y="172" font-size="14" font-weight="bold" fill="#7a5f14" text-anchor="middle">AI drafts</text>
+  <text x="120" y="194" font-size="11" fill="#3a4750" text-anchor="middle">calc · report ·</text>
+  <text x="120" y="209" font-size="11" fill="#3a4750" text-anchor="middle">justification</text>
+  <line x1="64" y1="222" x2="176" y2="222" stroke="#e0d3ad" stroke-width="1"/>
+  <text x="120" y="240" font-size="9.5" fill="#a07e1f" text-anchor="middle" font-style="italic">fast · fluent ·</text>
+  <text x="120" y="252" font-size="9.5" fill="#a07e1f" text-anchor="middle" font-style="italic">holds no accountability</text>
+
+  <!-- ============ accountability boundary ============ -->
+  <line x1="219" y1="128" x2="219" y2="268" stroke="#b03a2e" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <text x="120" y="282" font-size="10" fill="#b03a2e" text-anchor="middle" font-style="italic">accountability cannot flow back to the tool</text>
+
+  <!-- arrow 1 -> 2 -->
+  <line x1="200" y1="200" x2="236" y2="200" stroke="#1f2a33" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ============ STEP 2 : Engineer verifies ============ -->
+  <rect x="238" y="140" width="160" height="120" rx="6" fill="#f3f1ea" stroke="#1f2a33" stroke-width="1.6"/>
+  <text x="318" y="172" font-size="14" font-weight="bold" fill="#1f2a33" text-anchor="middle">Engineer</text>
+  <text x="318" y="190" font-size="14" font-weight="bold" fill="#1f2a33" text-anchor="middle">verifies</text>
+  <line x1="262" y1="204" x2="374" y2="204" stroke="#dcd6c7" stroke-width="1"/>
+  <text x="318" y="222" font-size="9.5" fill="#6b7680" text-anchor="middle">checks to the same</text>
+  <text x="318" y="234" font-size="9.5" fill="#6b7680" text-anchor="middle">standard as own work —</text>
+  <text x="318" y="246" font-size="9.5" fill="#6b7680" text-anchor="middle">must be able to catch errors</text>
+
+  <!-- arrow 2 -> 3 -->
+  <line x1="398" y1="200" x2="416" y2="200" stroke="#1f2a33" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ============ STEP 3 : Registered signature ============ -->
+  <rect x="418" y="140" width="160" height="120" rx="6" fill="#f3f1ea" stroke="#1f2a33" stroke-width="1.6"/>
+  <text x="498" y="172" font-size="14" font-weight="bold" fill="#1f2a33" text-anchor="middle">Signs the work</text>
+  <!-- signature swoosh motif -->
+  <path d="M452 196 q10 -10 20 0 t20 0 t20 -2" fill="none" stroke="#C49A2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="448" y1="204" x2="548" y2="204" stroke="#dcd6c7" stroke-width="1"/>
+  <text x="498" y="222" font-size="9.5" fill="#6b7680" text-anchor="middle">CPEng / registered —</text>
+  <text x="498" y="234" font-size="9.5" fill="#6b7680" text-anchor="middle">a named natural person,</text>
+  <text x="498" y="246" font-size="9.5" fill="#6b7680" text-anchor="middle">not a company or a tool</text>
+
+  <!-- arrow 3 -> 4 -->
+  <line x1="578" y1="200" x2="596" y2="200" stroke="#1f2a33" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ============ STEP 4 : Liability ============ -->
+  <rect x="598" y="140" width="160" height="120" rx="6" fill="#1f2a33" stroke="#1f2a33" stroke-width="1.6"/>
+  <text x="678" y="172" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Carries the</text>
+  <text x="678" y="190" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">liability</text>
+  <line x1="622" y1="204" x2="734" y2="204" stroke="#48555f" stroke-width="1"/>
+  <text x="678" y="222" font-size="9.5" fill="#cdd3d8" text-anchor="middle">professional + legal</text>
+  <text x="678" y="234" font-size="9.5" fill="#cdd3d8" text-anchor="middle">responsibility —</text>
+  <text x="678" y="246" font-size="9.5" fill="#C49A2E" text-anchor="middle" font-style="italic">cannot be delegated</text>
+
+  <!-- teaching line -->
+  <text x="400" y="300" font-size="11.5" fill="#6b7680" text-anchor="middle" font-style="italic">"The AI generated it" is not a defence any registration scheme recognises.</text>
+
+  <!-- bottom anchor strip -->
+  <rect x="40" y="330" width="718" height="46" rx="6" fill="#faf8f2" stroke="#e4ddcb" stroke-width="1"/>
+  <text x="400" y="350" font-size="12" fill="#1f2a33" text-anchor="middle" font-weight="bold">AI made the signature faster to reach.</text>
+  <text x="400" y="367" font-size="12" fill="#1f2a33" text-anchor="middle">It did not make it any less yours.</text>
+</svg>
