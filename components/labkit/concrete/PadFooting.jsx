@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from '../ThemeToggle';
 
 // ============================================================
 // PAD FOOTING — AS 3600:2018 (preliminary sizing check)
@@ -143,6 +144,7 @@ function PadFooting() {
             <span className="current">Pad Footing</span>
           </div>
         </div>
+        <ThemeToggle />
         <button className="btn-pdf" onClick={() => window.print()} type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />

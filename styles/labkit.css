@@ -7,24 +7,24 @@
        in styles.css for the cream/light site theme). */
     --gold-tint: rgba(196, 154, 46, 0.10);
 
-    --bg: #232120;
-    --workspace: #2A2826;
-    --inputs-bg: #232120;
-    --results-bg: #2A2826;
-    --topbar: #1A1816;
-    --card: #322F2C;
-    --card-deep: #2E2B28;
-    --card-input: #1F1D1B;
-    --highlight: #3A3733;
+    --bg: #2F2B27;
+    --workspace: #383430;
+    --inputs-bg: #2F2B27;
+    --results-bg: #383430;
+    --topbar: #26221E;
+    --card: #423D38;
+    --card-deep: #3C3833;
+    --card-input: #2A2622;
+    --highlight: #4C463F;
 
-    --text: #EDE8DD;
-    --text-soft: #C8C2B5;
-    --text-muted: #8E887D;
-    --text-faint: #6B665D;
+    --text: #EDE9E2;
+    --text-soft: #CFC9BD;
+    --text-muted: #948D82;
+    --text-faint: #726C62;
 
-    --line: #3C3936;
-    --line-soft: #34312E;
-    --line-strong: #4A4641;
+    --line: #4A453F;
+    --line-soft: #423D37;
+    --line-strong: #565049;
 
     --pass: #6FB87C;
     --pass-deep: #4A8E56;
@@ -577,6 +577,7 @@
     /* Topbar / floating UI fully hidden */
     .labkit-page .topbar,
     .labkit-page .btn-pdf,
+    .labkit-page .btn-theme,
     .labkit-page .btn-calc,
     .labkit-page .toggle-link,
     .labkit-page .results-toolbar,
@@ -779,7 +780,7 @@
 .bulk-grid thead th {
   position: sticky;
   top: 0;
-  background: var(--topbar);
+  background: var(--card-input);
   color: var(--brand-gold-bright);
   font-weight: 600;
   text-align: center;
@@ -838,7 +839,7 @@
   color: var(--text-faint);
   font-family: var(--brand-font-mono);
   font-size: 0.74rem;
-  background: var(--topbar);
+  background: var(--card-input);
 }
 .bulk-res {
   text-align: center;
@@ -984,6 +985,82 @@
   accent-color: var(--brand-gold);
   cursor: pointer;
 }
+
+/* ============================================================
+   LIGHT / DARK THEME — scoped to the .labkit-page tool workspace.
+   Dark (the tokens above) is the default; light is opt-in via
+   [data-theme="light"] set on the .labkit-page root by the topbar
+   toggle. Site pages, nav and the LabKit index are unaffected.
+   ============================================================ */
+
+/* Topbar text tokens — fixed light values, theme-independent (topbar
+   stays dark in both modes, so its text must not follow the global flip). */
+.labkit-page {
+  --topbar-text: #EDE8DD;
+  --topbar-text-muted: #B5AEA2;
+  --topbar-text-faint: #8E887D;
+}
+.labkit-page[data-theme="light"] {
+  --topbar-text: #F2EEE6;
+  --topbar-text-muted: #C8C0B2;
+  --topbar-text-faint: #A59C8C;
+}
+/* Pin topbar elements to the theme-independent tokens (override the
+   originals above by being later in source order). */
+.labkit-page .brand { color: var(--topbar-text); }
+.labkit-page .location { color: var(--topbar-text-muted); }
+.labkit-page .location .sep { color: var(--topbar-text-faint); }
+.labkit-page .location .current { color: var(--topbar-text); }
+
+/* Light theme — overrides the surface/text/line tokens only when
+   data-theme="light" is present on the .labkit-page root. */
+.labkit-page[data-theme="light"] {
+  --gold-tint: rgba(176, 133, 34, 0.12);
+  --bg: #E9E3D8;
+  --workspace: #F2EEE6;
+  --inputs-bg: #ECE6DB;
+  --results-bg: #F2EEE6;
+  --topbar: #2A2218;
+  --card: #FBF9F4;
+  --card-deep: #F4F0E8;
+  --card-input: #FFFFFF;
+  --highlight: #EFE7D5;
+  --text: #2A2218;
+  --text-soft: #4A4234;
+  --text-muted: #6E6556;
+  --text-faint: #8E8472;
+  --line: #DDD5C6;
+  --line-soft: #E7E0D2;
+  --line-strong: #C8BFAD;
+  --brand-gold: #B08522;
+  --brand-gold-bright: #C49A2E;
+  --pass: #3F8E55;
+  --warn: #A87E1E;
+  --fail: #C0504E;
+}
+
+/* Theme toggle button — icon-only, mirrors the .btn-pdf height, lives in
+   the topbar so it stays theme-independent. margin-left:auto clusters it
+   with the PDF button on the right of the topbar. */
+.labkit-page .btn-theme {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 33px;
+  height: 33px;
+  padding: 0;
+  background: transparent;
+  color: var(--topbar-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+}
+.labkit-page .btn-theme:hover { color: var(--brand-gold-bright); border-color: var(--brand-gold-deep); }
+.labkit-page .btn-theme:active { transform: translateY(1px); }
+.labkit-page .btn-theme svg { width: 16px; height: 16px; }
 
 /* Load Takedown — column setup row */
 .takedown-setup {
