@@ -3,7 +3,7 @@ slug: ai-will-change-what-engineers-are-paid-for
 title: "AI Won't Replace Structural Engineers — But It Will Change What We're Paid For"
 date: "2026-05-25"
 excerpt: "The fear is that AI takes the job. The reality is subtler: it takes the parts of the job that were never the valuable part, and leaves the engineer holding the things that always were — judgement, and accountability."
-tags: [ai, career]
+tags: [AI, career]
 readingTime: "5 min read"
 seoTitle: "How AI Changes the Structural Engineer's Job — and What's Expected Now"
 seoDescription: "AI will absorb routine production work. What stays human and grows more valuable: judgement, knowing what to model, and carrying accountability for the result."

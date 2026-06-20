@@ -3,7 +3,7 @@ slug: ai-wont-make-you-a-structural-engineer
 title: "AI Will Make You Faster. It Won't Make You a Structural Engineer."
 date: "2026-05-20"
 excerpt: "AI can hand a graduate a load take-down, a draft calc, and a plausible answer in seconds. The danger isn't that it's wrong. It's that the struggle it removes is the exact struggle that used to build judgement."
-tags: [ai, career]
+tags: [AI, career]
 readingTime: "5 min read"
 seoTitle: "AI and the Graduate Structural Engineer — What It Quietly Removes"
 seoDescription: "Why AI's biggest risk to young structural engineers isn't wrong answers, but the loss of the productive struggle that builds engineering judgement."
