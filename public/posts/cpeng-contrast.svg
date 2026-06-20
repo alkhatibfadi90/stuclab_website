@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="A contrast for CPEng submissions. The same project written two ways. On the left, what candidates submit: a description of the role, written in we, asserting competence without evidence. On the right, what assessors look for: the engineering decisions the candidate personally made, written in I, evidenced against a checkable artefact.">
+  <defs>
+    <marker id="arr" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#C49A2E"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="492" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">The Same Project, Two Different Documents</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Why CPEng submissions pass or struggle on the same wall.</text>
+
+  <!-- ===== LEFT : what candidates submit ===== -->
+  <rect x="40" y="86" width="340" height="368" rx="8" fill="#f6f4ef" stroke="#ddd6c8" stroke-width="1.4"/>
+  <text x="210" y="114" font-size="13" font-weight="bold" fill="#9a917f" text-anchor="middle" letter-spacing="0.5">WHAT CANDIDATES SUBMIT</text>
+  <text x="210" y="132" font-size="10.5" fill="#a89e8a" text-anchor="middle" font-style="italic">a description of the role</text>
+
+  <!-- the quote -->
+  <rect x="64" y="150" width="292" height="86" rx="6" fill="#ffffff" stroke="#e0dccf" stroke-width="1"/>
+  <text x="80" y="174" font-size="11.5" fill="#6b6557" font-style="italic">"We were responsible for the</text>
+  <text x="80" y="192" font-size="11.5" fill="#6b6557" font-style="italic">structural design of a 12-storey</text>
+  <text x="80" y="210" font-size="11.5" fill="#6b6557" font-style="italic">building, including the lateral</text>
+  <text x="80" y="228" font-size="11.5" fill="#6b6557" font-style="italic">system and foundations."</text>
+
+  <text x="210" y="266" font-size="11" font-weight="bold" fill="#8c8474" text-anchor="middle">An assessor cannot see:</text>
+  <g font-size="11" fill="#8c8474">
+    <text x="72" y="292">— what you personally decided</text>
+    <text x="72" y="316">— what you chose, and why</text>
+    <text x="72" y="340">— where your judgement was tested</text>
+    <text x="72" y="364">— any evidence they can check</text>
+  </g>
+  <rect x="64" y="392" width="292" height="44" rx="6" fill="#efece4"/>
+  <text x="210" y="412" font-size="11" fill="#8c8474" text-anchor="middle" font-style="italic">"We" hides the individual — the one</text>
+  <text x="210" y="427" font-size="11" fill="#8c8474" text-anchor="middle" font-style="italic">thing the assessment exists to find.</text>
+
+  <!-- ===== centre arrow ===== -->
+  <line x1="386" y1="270" x2="414" y2="270" stroke="#C49A2E" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="400" y="256" font-size="10" fill="#a07e1f" text-anchor="middle" font-style="italic">rewrite</text>
+
+  <!-- ===== RIGHT : what assessors look for ===== -->
+  <rect x="420" y="86" width="340" height="368" rx="8" fill="#ffffff" stroke="#C49A2E" stroke-width="2"/>
+  <text x="590" y="114" font-size="13" font-weight="bold" fill="#1f2a33" text-anchor="middle" letter-spacing="0.5">WHAT ASSESSORS LOOK FOR</text>
+  <text x="590" y="132" font-size="10.5" fill="#a07e1f" text-anchor="middle" font-style="italic">the competency you exercised</text>
+
+  <!-- the quote -->
+  <rect x="444" y="150" width="292" height="104" rx="6" fill="#fbf6e9" stroke="#e9d9a8" stroke-width="1"/>
+  <text x="460" y="172" font-size="11.5" fill="#3a4750" font-style="italic">"I assessed the building as</text>
+  <text x="460" y="190" font-size="11.5" fill="#3a4750" font-style="italic">torsionally sensitive from the core</text>
+  <text x="460" y="208" font-size="11.5" fill="#3a4750" font-style="italic">layout, ran the orthogonal cases</text>
+  <text x="460" y="226" font-size="11.5" fill="#3a4750" font-style="italic">independently, and recommended</text>
+  <text x="460" y="244" font-size="11.5" fill="#3a4750" font-style="italic">relocating the core after mode-1 torsion."</text>
+
+  <text x="590" y="284" font-size="11" font-weight="bold" fill="#1f2a33" text-anchor="middle">An assessor can now see:</text>
+  <g font-size="11" fill="#3a4750">
+    <circle cx="456" cy="305" r="3" fill="#C49A2E"/><text x="468" y="309">a real decision, made by you</text>
+    <circle cx="456" cy="329" r="3" fill="#C49A2E"/><text x="468" y="333">the reasoning behind the choice</text>
+    <circle cx="456" cy="353" r="3" fill="#C49A2E"/><text x="468" y="357">judgement under uncertainty</text>
+    <circle cx="456" cy="377" r="3" fill="#C49A2E"/><text x="468" y="381">evidence they can check</text>
+  </g>
+  <rect x="444" y="392" width="292" height="44" rx="6" fill="#fbf6e9" stroke="#e9d9a8" stroke-width="1"/>
+  <text x="590" y="412" font-size="11" fill="#7a5f14" text-anchor="middle" font-style="italic">"I" shows the engineer thinking — which</text>
+  <text x="590" y="427" font-size="11" fill="#7a5f14" text-anchor="middle" font-style="italic">is exactly what is being assessed.</text>
+
+  <!-- footer -->
+  <text x="400" y="478" font-size="11" fill="#6b7680" text-anchor="middle" font-style="italic">Could someone who merely stood near this project have written the sentence? If yes, it's a description, not a demonstration.</text>
+</svg>

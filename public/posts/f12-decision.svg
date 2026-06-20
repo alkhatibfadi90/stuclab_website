@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="Decision flowchart for the f12 in-plane shear stiffness modifier on a wall in ETABS. First ask whether the wall is shear-dominant — squat walls, spandrels, coupling beams, basement walls. If yes, reduce f12. If the wall is flexural-dominant, check the maximum principal tensile stress against roughly 0.33 root f-prime-c: if it exceeds the threshold the wall has shear-cracked and f12 should be reduced; if not, f12 can stay high.">
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="6.5" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#1f2a33"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="552" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Should You Reduce f12 on This Wall?</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">The in-plane shear stiffness modifier — decided per wall.</text>
+
+  <!-- START -->
+  <rect x="300" y="86" width="200" height="44" rx="22" fill="#1f2a33"/>
+  <text x="400" y="113" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Take one wall</text>
+  <line x1="400" y1="130" x2="400" y2="150" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+
+  <!-- DECISION 1: shear-dominant? -->
+  <polygon points="400,156 560,212 400,268 240,212" fill="#fbf6e9" stroke="#C49A2E" stroke-width="1.8"/>
+  <text x="400" y="200" font-size="13" font-weight="bold" fill="#1f2a33" text-anchor="middle">Shear-dominant?</text>
+  <text x="400" y="218" font-size="10" fill="#6b7680" text-anchor="middle">squat wall · spandrel ·</text>
+  <text x="400" y="231" font-size="10" fill="#6b7680" text-anchor="middle">coupling beam · basement wall</text>
+
+  <!-- YES branch (left) -->
+  <line x1="240" y1="212" x2="150" y2="212" stroke="#1f2a33" stroke-width="2"/>
+  <text x="195" y="204" font-size="11" font-weight="bold" fill="#3a7d44" text-anchor="middle">YES</text>
+  <line x1="150" y1="212" x2="150" y2="430" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+
+  <!-- NO branch (down) -->
+  <line x1="400" y1="268" x2="400" y2="300" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+  <text x="418" y="282" font-size="11" font-weight="bold" fill="#b07a1f" text-anchor="start">NO</text>
+  <text x="442" y="282" font-size="10" fill="#6b7680" text-anchor="start" font-style="italic">— flexural-dominant</text>
+
+  <!-- DECISION 2: principal stress check -->
+  <polygon points="400,306 580,366 400,426 220,366" fill="#fbf6e9" stroke="#C49A2E" stroke-width="1.8"/>
+  <text x="400" y="356" font-size="12.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">Max principal tensile</text>
+  <text x="400" y="373" font-size="12.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">stress Smax &gt; 0.33√f′c ?</text>
+  <text x="400" y="391" font-size="10" fill="#6b7680" text-anchor="middle">read Smax off the ETABS wall results</text>
+
+  <!-- D2 YES (right) -->
+  <line x1="580" y1="366" x2="650" y2="366" stroke="#1f2a33" stroke-width="2"/>
+  <text x="615" y="358" font-size="11" font-weight="bold" fill="#3a7d44" text-anchor="middle">YES</text>
+  <line x1="650" y1="366" x2="650" y2="430" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+
+  <!-- D2 NO (down) -->
+  <line x1="400" y1="426" x2="400" y2="464" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+  <text x="416" y="448" font-size="11" font-weight="bold" fill="#b07a1f" text-anchor="middle">NO</text>
+
+  <!-- OUTCOME: reduce (left, under YES branch) -->
+  <rect x="70" y="430" width="160" height="64" rx="8" fill="#1f2a33"/>
+  <text x="150" y="457" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Reduce f12</text>
+  <text x="150" y="477" font-size="10" fill="#C49A2E" text-anchor="middle">cracked in shear —</text>
+  <text x="150" y="489" font-size="10" fill="#cdd3d8" text-anchor="middle">soften the shear stiffness</text>
+
+  <!-- OUTCOME: reduce (right, under D2 YES) -->
+  <rect x="570" y="430" width="160" height="64" rx="8" fill="#1f2a33"/>
+  <text x="650" y="457" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Reduce f12</text>
+  <text x="650" y="477" font-size="10" fill="#C49A2E" text-anchor="middle">diagonal cracking —</text>
+  <text x="650" y="489" font-size="10" fill="#cdd3d8" text-anchor="middle">soften the shear stiffness</text>
+
+  <!-- OUTCOME: keep (centre, under D2 NO) -->
+  <rect x="300" y="462" width="200" height="58" rx="8" fill="#f3f1ea" stroke="#1f2a33" stroke-width="1.6"/>
+  <text x="400" y="487" font-size="13" font-weight="bold" fill="#1f2a33" text-anchor="middle">Leave f12 high</text>
+  <text x="400" y="505" font-size="10" fill="#6b7680" text-anchor="middle">not shear-cracked — uncracked is fine</text>
+
+  <!-- footer caution -->
+  <text x="400" y="542" font-size="10.5" fill="#b03a2e" text-anchor="middle" font-style="italic">Cracking the bending modifier does nothing to f12 — it stays at 1.0 until you change it.</text>
+</svg>

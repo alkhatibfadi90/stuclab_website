@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="Five types of technical interview question that reveal a structural engineer, each paired with what it reveals: open the problem up reveals whether they impose structure on ambiguity; ask them to estimate reveals a calibrated feel for scale; ask what they'd check reveals whether they verify or just accept output; ask how they'd know it's wrong reveals whether they reason about failure; and push past the first answer reveals whether reasoning or recall was holding it up.">
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="552" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Five Questions That Reveal an Engineer</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Stop testing what they memorised. Test how they reason.</text>
+
+  <!-- ===== CARD 1 ===== -->
+  <rect x="40" y="84" width="720" height="80" rx="8" fill="#faf8f2" stroke="#e4ddcb" stroke-width="1.2"/>
+  <circle cx="76" cy="124" r="17" fill="#1f2a33"/>
+  <text x="76" y="130" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="108" y="114" font-size="14.5" font-weight="bold" fill="#1f2a33">Open the problem up</text>
+  <text x="108" y="134" font-size="11.5" fill="#6b7680" font-style="italic">"How would you approach the lateral design of a 30-storey tower?"</text>
+  <text x="108" y="152" font-size="11" fill="#a07e1f">Reveals: whether they interrogate an under-specified problem before solving it.</text>
+
+  <!-- ===== CARD 2 ===== -->
+  <rect x="40" y="176" width="720" height="80" rx="8" fill="#faf8f2" stroke="#e4ddcb" stroke-width="1.2"/>
+  <circle cx="76" cy="216" r="17" fill="#1f2a33"/>
+  <text x="76" y="222" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="108" y="206" font-size="14.5" font-weight="bold" fill="#1f2a33">Ask them to estimate — no calculator</text>
+  <text x="108" y="226" font-size="11.5" fill="#6b7680" font-style="italic">"Ballpark the depth of a 12 m transfer beam carrying two columns."</text>
+  <text x="108" y="244" font-size="11" fill="#a07e1f">Reveals: a calibrated feel for scale — engineer versus calculator operator.</text>
+
+  <!-- ===== CARD 3 ===== -->
+  <rect x="40" y="268" width="720" height="80" rx="8" fill="#faf8f2" stroke="#e4ddcb" stroke-width="1.2"/>
+  <circle cx="76" cy="308" r="17" fill="#1f2a33"/>
+  <text x="76" y="314" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="108" y="298" font-size="14.5" font-weight="bold" fill="#1f2a33">"What would you check to believe it?"</text>
+  <text x="108" y="318" font-size="11.5" fill="#6b7680" font-style="italic">given a model result they've just been handed</text>
+  <text x="108" y="336" font-size="11" fill="#a07e1f">Reveals: whether they treat output as a claim to verify, or a fact to accept.</text>
+
+  <!-- ===== CARD 4 ===== -->
+  <rect x="40" y="360" width="720" height="80" rx="8" fill="#faf8f2" stroke="#e4ddcb" stroke-width="1.2"/>
+  <circle cx="76" cy="400" r="17" fill="#1f2a33"/>
+  <text x="76" y="406" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="108" y="390" font-size="14.5" font-weight="bold" fill="#1f2a33">"How would you know if it were wrong?"</text>
+  <text x="108" y="410" font-size="11.5" fill="#6b7680" font-style="italic">forces reasoning about load paths, failure, and what governs</text>
+  <text x="108" y="428" font-size="11" fill="#a07e1f">Reveals: whether they think about how things fail — not just how to get an answer.</text>
+
+  <!-- ===== CARD 5 ===== -->
+  <rect x="40" y="452" width="720" height="80" rx="8" fill="#fbf6e9" stroke="#C49A2E" stroke-width="1.8"/>
+  <circle cx="76" cy="492" r="17" fill="#C49A2E"/>
+  <text x="76" y="498" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="108" y="482" font-size="14.5" font-weight="bold" fill="#1f2a33">Push past the first answer</text>
+  <text x="108" y="502" font-size="11.5" fill="#6b7680" font-style="italic">"Why? What if the span doubled? What if it were seismic?"</text>
+  <text x="108" y="520" font-size="11" fill="#a07e1f">Reveals: whether reasoning or recall was holding the first answer up.</text>
+</svg>
