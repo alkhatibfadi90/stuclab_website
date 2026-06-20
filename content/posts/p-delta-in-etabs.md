@@ -3,7 +3,7 @@ slug: p-delta-in-etabs
 title: "P-Delta in ETABS: What the Setting Actually Does, and When It Bites"
 date: "2026-06-06"
 excerpt: "Ticking the P-delta box doesn't mean you've captured second-order effects. ETABS handles one half of the problem at the global level and leaves the other half to member design — and the gap is where people get caught."
-tags: [etabs, methodology, high-rise]
+tags: [etabs, high-rise]
 readingTime: "8 min read"
 seoTitle: "P-Delta in ETABS — What It Captures and What It Misses"
 seoDescription: "P-Delta vs P-delta, the two ETABS setup methods, the single-stiffness-matrix consequence, and when second-order effects actually govern. A practical guide."
