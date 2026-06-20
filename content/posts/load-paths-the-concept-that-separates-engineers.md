@@ -3,7 +3,7 @@ slug: load-paths-the-concept-that-separates-engineers
 title: "Load Paths: The Concept That Separates Engineers From Software Operators"
 date: "2026-05-21"
 excerpt: "Anyone can run the model. The engineer who can trace every force from where it lands to where it grounds — by hand, before the model — is the one who catches what the model hides."
-tags: [methodology, career, high-rise]
+tags: [career, high-rise]
 readingTime: "5 min read"
 seoTitle: "Load Paths — The Concept That Separates Engineers From Operators"
 seoDescription: "Why tracing the load path by hand is the single highest-leverage skill in structural engineering, and what gets missed when engineers trust the model instead."

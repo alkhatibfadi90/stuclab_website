@@ -3,7 +3,7 @@ slug: pt-slab-secondary-moments
 title: "PT Slabs: The Secondary Moments That Quietly Govern Your Design"
 date: "2026-06-01"
 excerpt: "In a continuous PT slab, the prestress doesn't just balance load — the supports fight the camber it induces, and that restraint generates moments that survive all the way to your ultimate strength check."
-tags: [pt, concrete, high-rise]
+tags: [post-tension, concrete, high-rise]
 readingTime: "5 min read"
 seoTitle: "Secondary (Hyperstatic) Moments in PT Slabs — Getting Them Right"
 seoDescription: "What secondary moments in post-tensioned slabs are, why they survive to ULS, the load factor that applies, and the double-counting mistake that corrupts capacity checks."

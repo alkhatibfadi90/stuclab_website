@@ -3,7 +3,7 @@ slug: accidental-torsion-as1170-4
 title: "Accidental Torsion: The Load Case Your Symmetric Building Still Needs"
 date: "2026-06-13"
 excerpt: "Your plan is symmetric, the centre of mass sits on the centre of rigidity, so torsion is zero — right? AS 1170.4 disagrees, and the eccentricity it makes you carry lands hardest on the corner elements you were least worried about."
-tags: [seismic, etabs, methodology]
+tags: [seismic, etabs]
 readingTime: "8 min read"
 seoTitle: "Accidental Torsion in AS 1170.4 — Why Symmetric Buildings Still Twist"
 seoDescription: "How AS 1170.4 handles accidental torsion with the 0.1b eccentricity, why it differs from US codes, how it loads corner elements, and how to apply it correctly in ETABS."

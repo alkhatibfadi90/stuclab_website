@@ -3,7 +3,7 @@ slug: modal-results-that-look-fine
 title: "Modal Results That Look Fine and Aren't"
 date: "2026-05-23"
 excerpt: "The model ran, the periods came out, the building drew a nice mode shape. None of that tells you the dynamics are right. Here are the checks that catch the silent errors before they reach a design report."
-tags: [etabs, seismic, methodology]
+tags: [etabs, seismic]
 readingTime: "8 min read"
 seoTitle: "ETABS Modal Results: The Checks That Catch Silent Errors"
 seoDescription: "Mass source mistakes, torsion-first modes, low participation, eigen vs Ritz — the modal sanity checks that separate a model that ran from a model that's right."

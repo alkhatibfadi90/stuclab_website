@@ -3,7 +3,7 @@ slug: cracked-section-properties-etabs
 title: "Cracked Section Properties in ETABS — What Most Engineers Get Wrong"
 date: "2026-05-22"
 excerpt: "Applying 0.7 to all columns and 0.35 to all walls and moving on is the most common stiffness-modifier mistake I see — and the one with the biggest downstream consequences."
-tags: [etabs, methodology, high-rise]
+tags: [etabs, high-rise]
 readingTime: "8 min read"
 seoTitle: "Cracked Section Properties in ETABS — A Practical Guide"
 seoDescription: "How to set cracked-section stiffness modifiers correctly in ETABS instead of defaulting to 0.7/0.35 everywhere."

@@ -3,7 +3,7 @@ slug: construction-sequence-loads-model-never-sees
 title: "Construction Sequence: The Loads Your Final-Condition Model Never Sees"
 date: "2026-06-03"
 excerpt: "Your model analyses a finished building under its design loads. The structure has to survive every stage of getting there — half-built, propped, eccentrically loaded — and some of those stages are worse than the day it opens."
-tags: [methodology, concrete, high-rise]
+tags: [concrete, high-rise]
 readingTime: "5 min read"
 seoTitle: "Construction Sequence Loads — What the Final-Condition Model Misses"
 seoDescription: "Why a final-condition analysis misses critical temporary states during construction, and which sequence-dependent effects govern in real structures."

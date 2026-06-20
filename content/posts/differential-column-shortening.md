@@ -3,7 +3,7 @@ slug: differential-column-shortening
 title: "Differential Column Shortening: The Movement Your Static Model Doesn't See"
 date: "2026-05-30"
 excerpt: "Run a tall concrete building in one shot and every column lands at the right level. Real buildings don't get built in one shot — the core and the columns shorten at different rates over years, and the difference redistributes force you never designed for."
-tags: [high-rise, concrete, methodology]
+tags: [high-rise, concrete]
 readingTime: "9 min read"
 seoTitle: "Differential Column Shortening in Tall Concrete Buildings"
 seoDescription: "Why cores and columns shorten at different rates, how elastic, creep and shrinkage combine, and why staged construction analysis matters for tall concrete buildings."

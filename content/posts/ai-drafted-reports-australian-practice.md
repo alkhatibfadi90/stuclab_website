@@ -3,7 +3,7 @@ slug: ai-drafted-reports-australian-practice
 title: "AI Drafts the Report. A Registered Engineer Still Owns It."
 date: "2026-05-27"
 excerpt: "AI can write the calc, the report, and the justification faster than you can read them. But in Australia the signature on the bottom belongs to a registered engineer who is personally accountable — and that gap is about to get sharper, not softer."
-tags: [ai, career, methodology]
+tags: [ai, career]
 readingTime: "5 min read"
 seoTitle: "AI-Drafted Engineering Reports and Australian Registration"
 seoDescription: "Why AI-drafted calcs and reports collide with Australia's tightening engineer registration regime, and what personal accountability means when the tool wrote the work."

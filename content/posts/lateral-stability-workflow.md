@@ -3,7 +3,7 @@ slug: lateral-stability-workflow
 title: "Setting Up a Lateral Stability Workflow That Actually Holds Up"
 date: "2026-05-15"
 excerpt: "Most lateral systems fail in review for the same reason — the workflow skipped straight to modelling. Here's the order that catches problems before they become rework."
-tags: [lateral, methodology, high-rise]
+tags: [lateral, high-rise]
 readingTime: "7 min read"
 seoTitle: "A Lateral Stability Workflow That Holds Up in Review"
 seoDescription: "A step-by-step lateral stability workflow for tall buildings — sequencing gravity, system classification, load path, and modelling before chasing forces."

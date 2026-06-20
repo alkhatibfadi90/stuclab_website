@@ -3,7 +3,7 @@ slug: capability-statement-is-dead-ai-winning-work
 title: "The Capability Statement Is Dead: How AI Changes How Engineering Firms Win Work"
 date: "2026-05-29"
 excerpt: "When AI can produce a polished capability statement, a tidy methodology, and a credible-looking proposal in minutes, those things stop being proof of anything. What's left is the part AI can't fake — and it favours the specialist."
-tags: [ai, career, methodology]
+tags: [ai, career]
 readingTime: "5 min read"
 seoTitle: "How AI Changes the Way Australian Engineering Firms Win Work"
 seoDescription: "Why AI commoditises the polished proposal and capability statement, and how specialist engineering practices can compete when production is no longer a differentiator."
