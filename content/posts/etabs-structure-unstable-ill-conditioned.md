@@ -1,7 +1,7 @@
 ---
 slug: etabs-structure-unstable-ill-conditioned
 title: "ETABS \"Structure Is Unstable or Ill-Conditioned\": What It Means and How to Fix It in Minutes"
-date: "2026-09-15"
+date: "2026-09-14"
 excerpt: "The analysis stops, the log fills with capital letters, and the instinct is to click around the model hoping to spot it. That can eat an afternoon. The warning is far more informative than it looks, and there's a sequence that finds the cause in minutes."
 tags: [analysis-modelling, practice]
 readingTime: "6 min read"

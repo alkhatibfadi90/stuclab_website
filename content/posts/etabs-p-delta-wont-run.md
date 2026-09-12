@@ -1,7 +1,7 @@
 ---
 slug: etabs-p-delta-wont-run
 title: "P-Delta Won't Run in ETABS: What's Actually Wrong and How to Fix It"
-date: "2026-09-22"
+date: "2026-09-08"
 excerpt: "The model runs perfectly. You switch on P-Delta and everything stops. P-Delta almost never fails on its own: the model has a real problem linear analysis was tolerating, and the iteration is the first thing honest enough to refuse."
 tags: [analysis-modelling, high-rise]
 readingTime: "5 min read"

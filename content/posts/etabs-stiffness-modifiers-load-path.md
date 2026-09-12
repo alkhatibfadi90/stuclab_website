@@ -1,7 +1,7 @@
 ---
 slug: etabs-stiffness-modifiers-load-path
 title: "Stiffness Modifiers in ETABS: Why One Uniform Value Corrupts Your Load Path"
-date: "2026-09-29"
+date: "2026-08-29"
 excerpt: "Pick one number, often 0.35, and apply it to everything. It feels consistent. It's actually one of the quieter ways to get a load path wrong, because the point of cracked-section modifiers is that different elements crack differently."
 tags: [analysis-modelling, concrete, high-rise]
 readingTime: "5 min read"

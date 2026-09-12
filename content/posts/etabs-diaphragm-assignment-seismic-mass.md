@@ -1,7 +1,7 @@
 ---
 slug: etabs-diaphragm-assignment-seismic-mass
 title: "Diaphragm Assignment in ETABS: The Mistake That Quietly Drops Your Seismic Mass"
-date: "2026-09-25"
+date: "2026-09-01"
 excerpt: "Miss a diaphragm on a floor, or assign it to the wrong thing, and nothing complains. The model runs, the seismic loads generate, the results look complete. Part of the building's mass has quietly stopped participating, and the accidental torsion on that floor has disappeared."
 tags: [analysis-modelling, seismic-wind]
 readingTime: "5 min read"
