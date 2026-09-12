@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="An engineering figure on diaphragm mass lumping in ETABS. Left: a floor plan meshed into nodes, each carrying a tributary mass. Nodes on the assigned diaphragm lump their mass to the diaphragm master node, shown by converging arrows, so the storey mass equals the sum of the assigned tributary masses. A late-drawn unassigned patch has nodes that do not lump, so their mass is excluded. Right: the consequence chain as a full-versus-leaked comparison with formulas. The storey mass drops, so the auto storey force, which is the design coefficient times the mass, drops in proportion, and the accidental torsion, which is the storey force times 0.1b, drops as well, while the centre of mass shifts. Bottom: a rigid diaphragm assigned to the area object lumps every meshed node to the master, whereas one assigned only to the corner points leaves the interior nodes unlumped." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyM2VjZWM0YS0zN2NjLTRkMTMtYmRhYy0zNDVlYjgwOWRkMjAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPH+ZMYA0zE4orj0HbsjpG4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1ZjRmNWI2YS05ZDU2LTRhMjktOTU2ZS0xZWQ2MzZkM2JlZjhscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNom/2zSY6gBUQuJ8NxD2jL9wAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggMB01/Y96C5+61Lq1G0IzjGgbOtlNu7M1zgs/ap3haMKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGjTNQ68ZwilHb2aV5LU71EAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICplDMK9gpn8FJiBQcmM0QVJL/T1KJcRD6axsX+bFWSRZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQQvZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjIzZWNlYzRhLTM3Y2MtNGQxMy1iZGFjLTM0NWViODA5ZGQyMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQwNDIzZTVjLWM3MzQtNGNkYS05ZGRiLWU3N2E2M2E3ZGNjYXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAwHTX9j3oLn7rUurUbQjOMaBs62U27szXOCz9qneFowqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggOrr674WV+8fHavmZuD63qjsy91KRXmndrYaWqDONaEOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggWfVTDf3Ho8SwbAS6Cm3wmAdJ37v3GjZQNEivhm0a62l0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMZ3aQT1q9CMWrlt2JaYyKpxuwEbdKdcL/Wra/RQ1d/5oGnuc9tMeoibKwYf5UjYiTrE+IGdm8M00cZICKbs2go=</c2pa:manifest></metadata>
+  <defs>
+    <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1f2a33"/>
+    </marker>
+    <marker id="fs" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#3a7d44"/>
+    </marker>
+    <pattern id="leak" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#b03a2e" stroke-width="1.3"/>
+    </pattern>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="672" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">How a Missing Diaphragm Leaks Mass Out of the Seismic Load</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Storey mass is the sum of what lumps to the diaphragm master. What isn't assigned isn't counted.</text>
+
+  <!-- ================= A. MASS LUMPING PLAN ================= -->
+  <text x="40" y="92" font-size="12" font-weight="bold" fill="#1f2a33">A. How ETABS builds the storey mass</text>
+
+  <!-- floor outline -->
+  <rect x="40" y="104" width="380" height="240" fill="#f7f9fa" stroke="#1f2a33" stroke-width="1.6"/>
+
+  <!-- tributary cell grid (5 cols x 4 rows), cell 76 x 60 -->
+  <g stroke="#d0d7dc" stroke-width="0.8">
+    <line x1="116" y1="104" x2="116" y2="344"/><line x1="192" y1="104" x2="192" y2="344"/>
+    <line x1="268" y1="104" x2="268" y2="344"/><line x1="344" y1="104" x2="344" y2="344"/>
+    <line x1="40" y1="164" x2="420" y2="164"/><line x1="40" y1="224" x2="420" y2="224"/><line x1="40" y1="284" x2="420" y2="284"/>
+  </g>
+  <text x="52" y="118" font-size="8.5" fill="#8a94a0" font-style="italic">each cell = tributary mass m at its node</text>
+
+  <!-- master node at CM -->
+  <circle cx="230" cy="224" r="9" fill="#1f2a33"/>
+  <circle cx="230" cy="224" r="4" fill="#C49A2E"/>
+  <text x="230" y="250" font-size="9" font-weight="bold" fill="#1f2a33" text-anchor="middle">diaphragm master</text>
+  <text x="230" y="261" font-size="8.5" fill="#6b7680" text-anchor="middle">(storey mass lumps here)</text>
+
+  <!-- assigned nodes (cell centres) with arrows converging to master -->
+  <g fill="#3a7d44">
+    <circle cx="78" cy="134" r="3.2"/><circle cx="154" cy="134" r="3.2"/><circle cx="230" cy="134" r="3.2"/>
+    <circle cx="78" cy="194" r="3.2"/><circle cx="154" cy="194" r="3.2"/><circle cx="306" cy="194" r="3.2"/><circle cx="382" cy="194" r="3.2"/>
+    <circle cx="78" cy="254" r="3.2"/><circle cx="154" cy="254" r="3.2"/><circle cx="306" cy="254" r="3.2"/><circle cx="382" cy="254" r="3.2"/>
+    <circle cx="78" cy="314" r="3.2"/><circle cx="154" cy="314" r="3.2"/><circle cx="230" cy="314" r="3.2"/><circle cx="306" cy="314" r="3.2"/><circle cx="382" cy="314" r="3.2"/>
+  </g>
+  <g stroke="#3a7d44" stroke-width="0.9" opacity="0.75" marker-end="url(#fs)">
+    <line x1="78" y1="134" x2="222" y2="219"/><line x1="154" y1="134" x2="226" y2="216"/><line x1="230" y1="134" x2="230" y2="213"/>
+    <line x1="78" y1="194" x2="219" y2="222"/><line x1="154" y1="194" x2="219" y2="220"/><line x1="306" y1="194" x2="241" y2="220"/><line x1="382" y1="194" x2="241" y2="222"/>
+    <line x1="78" y1="254" x2="219" y2="227"/><line x1="154" y1="254" x2="220" y2="229"/><line x1="306" y1="254" x2="241" y2="229"/><line x1="382" y1="254" x2="241" y2="227"/>
+    <line x1="78" y1="314" x2="222" y2="231"/><line x1="154" y1="314" x2="226" y2="233"/><line x1="230" y1="314" x2="230" y2="235"/><line x1="306" y1="314" x2="234" y2="233"/><line x1="382" y1="314" x2="238" y2="231"/>
+  </g>
+
+  <!-- UNASSIGNED patch: top-right 2x1 cells (nodes 306,134 and 382,134) -->
+  <rect x="268" y="104" width="152" height="60" fill="url(#leak)" opacity="0.45" stroke="#b03a2e" stroke-width="1.8"/>
+  <g fill="#ffffff" stroke="#b03a2e" stroke-width="1.6">
+    <circle cx="306" cy="134" r="3.6"/><circle cx="382" cy="134" r="3.6"/>
+  </g>
+  <text x="344" y="118" font-size="9" font-weight="bold" fill="#8a2a20" text-anchor="middle">no diaphragm assigned</text>
+  <text x="344" y="156" font-size="8.5" fill="#b03a2e" text-anchor="middle" font-style="italic">nodes do not lump: m(i) excluded</text>
+
+  <!-- equation under plan -->
+  <rect x="40" y="352" width="380" height="30" rx="5" fill="#f3f1ea" stroke="#e4ddcb" stroke-width="1"/>
+  <text x="230" y="372" font-size="10" fill="#1f2a33" text-anchor="middle">M(storey) = Σ m(i) over assigned nodes only. Hatched m(i) never enter the sum.</text>
+
+  <!-- ================= B. CONSEQUENCE CHAIN ================= -->
+  <text x="450" y="92" font-size="12" font-weight="bold" fill="#1f2a33">B. What that does to the load (full vs leaked)</text>
+
+  <!-- three stacked comparison rows -->
+  <!-- row 1: storey mass -->
+  <rect x="450" y="104" width="310" height="82" rx="6" fill="#f7f9fa" stroke="#d0d7dc" stroke-width="1"/>
+  <text x="462" y="122" font-size="10.5" font-weight="bold" fill="#1f2a33">Storey mass  M</text>
+  <text x="462" y="140" font-size="9" fill="#6b7680">full</text>
+  <rect x="504" y="132" width="216" height="10" fill="#3a7d44"/>
+  <text x="726" y="141" font-size="9" fill="#3a7d44" font-weight="bold">100%</text>
+  <text x="462" y="160" font-size="9" fill="#6b7680">leaked</text>
+  <rect x="504" y="152" width="186" height="10" fill="#b03a2e"/>
+  <text x="696" y="161" font-size="9" fill="#b03a2e" font-weight="bold">86%</text>
+  <text x="462" y="180" font-size="8.5" fill="#6b7680" font-style="italic">the hatched patch simply isn't in the sum</text>
+
+  <line x1="605" y1="186" x2="605" y2="196" stroke="#1f2a33" stroke-width="1.6" marker-end="url(#fa)"/>
+
+  <!-- row 2: storey force -->
+  <rect x="450" y="200" width="310" height="82" rx="6" fill="#f7f9fa" stroke="#d0d7dc" stroke-width="1"/>
+  <text x="462" y="218" font-size="10.5" font-weight="bold" fill="#1f2a33">Auto storey force  F = Cd · M</text>
+  <text x="462" y="236" font-size="9" fill="#6b7680">full</text>
+  <rect x="504" y="228" width="216" height="10" fill="#3a7d44"/>
+  <text x="726" y="237" font-size="9" fill="#3a7d44" font-weight="bold">100%</text>
+  <text x="462" y="256" font-size="9" fill="#6b7680">leaked</text>
+  <rect x="504" y="248" width="186" height="10" fill="#b03a2e"/>
+  <text x="696" y="257" font-size="9" fill="#b03a2e" font-weight="bold">86%</text>
+  <text x="462" y="276" font-size="8.5" fill="#6b7680" font-style="italic">force scales with mass: the floor is under-loaded</text>
+
+  <line x1="605" y1="282" x2="605" y2="292" stroke="#1f2a33" stroke-width="1.6" marker-end="url(#fa)"/>
+
+  <!-- row 3: accidental torsion -->
+  <rect x="450" y="296" width="310" height="86" rx="6" fill="#fbeeec" stroke="#b03a2e" stroke-width="1.2"/>
+  <text x="462" y="314" font-size="10.5" font-weight="bold" fill="#8a2a20">Accidental torsion  Mt = F · 0.1b</text>
+  <text x="462" y="332" font-size="9" fill="#6b7680">full</text>
+  <rect x="504" y="324" width="216" height="10" fill="#3a7d44"/>
+  <text x="726" y="333" font-size="9" fill="#3a7d44" font-weight="bold">100%</text>
+  <text x="462" y="352" font-size="9" fill="#6b7680">leaked</text>
+  <rect x="504" y="344" width="186" height="10" fill="#b03a2e"/>
+  <text x="696" y="353" font-size="9" fill="#b03a2e" font-weight="bold">86%</text>
+  <text x="462" y="372" font-size="8.5" fill="#8a2a20" font-style="italic">and the CM shifts: corner elements get less torsion than the code requires</text>
+
+  <!-- ================= C. AREA vs POINTS ================= -->
+  <line x1="40" y1="400" x2="760" y2="400" stroke="#e4ddcb" stroke-width="1.4"/>
+  <text x="40" y="424" font-size="12" font-weight="bold" fill="#1f2a33">C. The subtle version: where the rigid diaphragm is assigned decides which nodes lump</text>
+
+  <!-- left: assigned to area -->
+  <rect x="40" y="436" width="350" height="150" rx="8" fill="#eef4ef" stroke="#3a7d44" stroke-width="1.6"/>
+  <text x="215" y="456" font-size="11" font-weight="bold" fill="#2c5f34" text-anchor="middle">Assigned to the AREA object</text>
+  <rect x="60" y="468" width="150" height="100" fill="#f7f9fa" stroke="#1f2a33" stroke-width="1.2"/>
+  <g stroke="#d0d7dc" stroke-width="0.7">
+    <line x1="110" y1="468" x2="110" y2="568"/><line x1="160" y1="468" x2="160" y2="568"/>
+    <line x1="60" y1="501" x2="210" y2="501"/><line x1="60" y1="534" x2="210" y2="534"/>
+  </g>
+  <circle cx="135" cy="518" r="6" fill="#1f2a33"/><circle cx="135" cy="518" r="2.5" fill="#C49A2E"/>
+  <g fill="#3a7d44">
+    <circle cx="85" cy="484" r="2.6"/><circle cx="135" cy="484" r="2.6"/><circle cx="185" cy="484" r="2.6"/>
+    <circle cx="85" cy="518" r="2.6"/><circle cx="185" cy="518" r="2.6"/>
+    <circle cx="85" cy="552" r="2.6"/><circle cx="135" cy="552" r="2.6"/><circle cx="185" cy="552" r="2.6"/>
+  </g>
+  <g stroke="#3a7d44" stroke-width="0.8" opacity="0.8" marker-end="url(#fs)">
+    <line x1="85" y1="484" x2="128" y2="513"/><line x1="135" y1="484" x2="135" y2="509"/><line x1="185" y1="484" x2="142" y2="513"/>
+    <line x1="85" y1="518" x2="126" y2="518"/><line x1="185" y1="518" x2="144" y2="518"/>
+    <line x1="85" y1="552" x2="128" y2="523"/><line x1="135" y1="552" x2="135" y2="527"/><line x1="185" y1="552" x2="142" y2="523"/>
+  </g>
+  <text x="300" y="500" font-size="9.5" fill="#3a4750" text-anchor="middle">every meshed interior</text>
+  <text x="300" y="514" font-size="9.5" fill="#3a4750" text-anchor="middle">node lumps to the master</text>
+  <text x="300" y="540" font-size="10" font-weight="bold" fill="#2c5f34" text-anchor="middle">M = Σ of all m(i)</text>
+
+  <!-- right: assigned to points -->
+  <rect x="410" y="436" width="350" height="150" rx="8" fill="#fbeeec" stroke="#b03a2e" stroke-width="1.6"/>
+  <text x="585" y="456" font-size="11" font-weight="bold" fill="#8a2a20" text-anchor="middle">Assigned to the corner POINTS only</text>
+  <rect x="430" y="468" width="150" height="100" fill="#f7f9fa" stroke="#1f2a33" stroke-width="1.2"/>
+  <g stroke="#d0d7dc" stroke-width="0.7">
+    <line x1="480" y1="468" x2="480" y2="568"/><line x1="530" y1="468" x2="530" y2="568"/>
+    <line x1="430" y1="501" x2="580" y2="501"/><line x1="430" y1="534" x2="580" y2="534"/>
+  </g>
+  <circle cx="505" cy="518" r="6" fill="#1f2a33"/><circle cx="505" cy="518" r="2.5" fill="#C49A2E"/>
+  <!-- corners lump -->
+  <g fill="#3a7d44">
+    <circle cx="436" cy="474" r="2.6"/><circle cx="574" cy="474" r="2.6"/><circle cx="436" cy="562" r="2.6"/><circle cx="574" cy="562" r="2.6"/>
+  </g>
+  <g stroke="#3a7d44" stroke-width="0.8" opacity="0.8" marker-end="url(#fs)">
+    <line x1="436" y1="474" x2="499" y2="513"/><line x1="574" y1="474" x2="511" y2="513"/>
+    <line x1="436" y1="562" x2="499" y2="523"/><line x1="574" y1="562" x2="511" y2="523"/>
+  </g>
+  <!-- interior nodes hollow, no arrows -->
+  <g fill="#ffffff" stroke="#b03a2e" stroke-width="1.4">
+    <circle cx="455" cy="484" r="2.8"/><circle cx="505" cy="484" r="2.8"/><circle cx="555" cy="484" r="2.8"/>
+    <circle cx="455" cy="518" r="2.8"/><circle cx="555" cy="518" r="2.8"/>
+    <circle cx="455" cy="552" r="2.8"/><circle cx="505" cy="552" r="2.8"/><circle cx="555" cy="552" r="2.8"/>
+  </g>
+  <text x="670" y="500" font-size="9.5" fill="#3a4750" text-anchor="middle">only the corner nodes lump;</text>
+  <text x="670" y="514" font-size="9.5" fill="#3a4750" text-anchor="middle">the meshed interior never does</text>
+  <text x="670" y="540" font-size="10" font-weight="bold" fill="#b03a2e" text-anchor="middle">M = corner m(i) only</text>
+
+  <!-- takeaway -->
+  <rect x="40" y="600" width="720" height="58" rx="8" fill="#1f2a33"/>
+  <text x="400" y="622" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">The storey mass is only what lumps to the master. Everything downstream scales with it.</text>
+  <text x="400" y="642" font-size="10.5" fill="#C49A2E" text-anchor="middle">Read the storey mass table against floor area × unit loads. A shortfall on one storey is a diaphragm problem on that storey.</text>
+</svg>

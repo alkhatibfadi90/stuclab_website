@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="A decoder card for zero mass participation in ETABS. Three mock modal participation tables show the tell-tale patterns: a table frozen near zero in every mode, a table that is zero in the early modes with translation appearing suddenly at a high mode number, and a table showing zero lateral participation alongside an absurdly high frequency. Each pattern points down to its cause family: no mass in the model, local modes consuming the early count, or the building locked out by a restraint. Small sketches show an empty mass source, a single wall panel vibrating in isolation, and a diaphragm pinned against translation. A fourth family, too few modes, is the only one where adding modes is the right fix." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxYTZlODFiOC01OWU1LTRiMTQtYmEwNC00MjI5ZWIxNzFiZTIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJw1X4QMlrzr/B6LI4TZM9IAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoxZDljNTI0OS1lY2Y5LTQ3N2QtYTlhMi1kMTU2MDBjNjA5NTNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNobiRlidCCwudlVns2m+feqQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg5KBL89ar8Pcx4QDU5gmwETP41v+lNdb0Vocfx94HECakZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOfE+p5RHnGMEQBY0Sqf+BoAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICKGGEQv9hzOwJ9cVM8WH+mWWJMUzoLYv5E62Bor0nwHZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQOKZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjFhNmU4MWI4LTU5ZTUtNGIxNC1iYTA0LTQyMjllYjE3MWJlMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmVjODliNGUyLThhNzctNGRhNS04YmE0LWJmYjk3NzAzOGJkYXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDkoEvz1qvw9zHhANTmCbARM/jW/6U11vRWhx/H3gcQJqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggu/kylVZ8GWeOzGIeIRblv7/iqeyJtTax4+5jHrguLy2iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggdJhvOcxJROXrzzDotqPms6fih8zCkmE3wPhV6u3/JgZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIdV5J8uKdkYZGnQjMFUS46OzmaP522txjm0uRjWH0JN4+STm04NhcJiu8/LhqNGDm+F5LEm3DEqqoRtbclxP44=</c2pa:manifest></metadata>
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="6.5" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#1f2a33"/>
+    </marker>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#c9d0d6" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="692" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Read the Table, Find the Cause</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Three patterns in the modal participating mass ratios, and what each one means.</text>
+
+  <!-- ================= THREE MOCK TABLES ================= -->
+  <!-- shared table style: dark bg, gold header, mono -->
+
+  <!--  PATTERN A: frozen at zero  -->
+  <text x="160" y="92" font-size="11.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">Pattern A: frozen near zero</text>
+  <rect x="40" y="100" width="240" height="118" rx="5" fill="#1f2a33"/>
+  <g font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#cdd3d8">
+    <g fill="#C49A2E"><text x="52" y="116">Mode</text><text x="96" y="116">Period</text><text x="156" y="116">UX</text><text x="200" y="116">UY</text><text x="240" y="116">SumUX</text></g>
+    <line x1="52" y1="121" x2="270" y2="121" stroke="#48555f" stroke-width="0.8"/>
+    <text x="52" y="135">1</text><text x="96" y="135">0.412</text><text x="156" y="135" fill="#f3b8b0">0.000</text><text x="200" y="135" fill="#f3b8b0">0.000</text><text x="240" y="135">0.000</text>
+    <text x="52" y="149">2</text><text x="96" y="149">0.388</text><text x="156" y="149" fill="#f3b8b0">0.000</text><text x="200" y="149" fill="#f3b8b0">0.000</text><text x="240" y="149">0.000</text>
+    <text x="52" y="163">3</text><text x="96" y="163">0.301</text><text x="156" y="163" fill="#f3b8b0">0.000</text><text x="200" y="163" fill="#f3b8b0">0.000</text><text x="240" y="163">0.001</text>
+    <text x="52" y="177">…</text><text x="96" y="177">…</text><text x="156" y="177" fill="#f3b8b0">0.000</text><text x="200" y="177" fill="#f3b8b0">0.000</text><text x="240" y="177">0.001</text>
+    <text x="52" y="191">30</text><text x="96" y="191">0.044</text><text x="156" y="191" fill="#f3b8b0">0.000</text><text x="200" y="191" fill="#f3b8b0">0.000</text><text x="240" y="191" fill="#f3b8b0">0.001</text>
+  </g>
+  <text x="160" y="212" font-size="9" fill="#f3b8b0" text-anchor="middle" font-style="italic">the sum never moves</text>
+
+  <!--  PATTERN B: zero then jump  -->
+  <text x="400" y="92" font-size="11.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">Pattern B: zero, then a jump</text>
+  <rect x="280" y="100" width="240" height="118" rx="5" fill="#1f2a33"/>
+  <g font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#cdd3d8">
+    <g fill="#C49A2E"><text x="292" y="116">Mode</text><text x="336" y="116">Period</text><text x="396" y="116">UX</text><text x="440" y="116">UY</text><text x="480" y="116">SumUX</text></g>
+    <line x1="292" y1="121" x2="510" y2="121" stroke="#48555f" stroke-width="0.8"/>
+    <text x="292" y="135">1</text><text x="336" y="135">0.091</text><text x="396" y="135" fill="#f3b8b0">0.000</text><text x="440" y="135" fill="#f3b8b0">0.000</text><text x="480" y="135">0.000</text>
+    <text x="292" y="149">2</text><text x="336" y="149">0.088</text><text x="396" y="149" fill="#f3b8b0">0.000</text><text x="440" y="149" fill="#f3b8b0">0.000</text><text x="480" y="149">0.000</text>
+    <text x="292" y="163">…</text><text x="336" y="163">…</text><text x="396" y="163" fill="#f3b8b0">0.000</text><text x="440" y="163" fill="#f3b8b0">0.000</text><text x="480" y="163">0.000</text>
+    <text x="292" y="177">37</text><text x="336" y="177">0.031</text><text x="396" y="177" fill="#f3b8b0">0.000</text><text x="440" y="177" fill="#f3b8b0">0.000</text><text x="480" y="177">0.000</text>
+    <text x="292" y="191" fill="#e9d9a8">38</text><text x="336" y="191" fill="#e9d9a8">1.240</text><text x="396" y="191" fill="#9fd3a8">0.712</text><text x="440" y="191">0.003</text><text x="480" y="191" fill="#9fd3a8">0.712</text>
+  </g>
+  <text x="400" y="212" font-size="9" fill="#9fd3a8" text-anchor="middle" font-style="italic">translation finally appears, late</text>
+
+  <!--  PATTERN C: zero + absurd frequency  -->
+  <text x="640" y="92" font-size="11.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">Pattern C: zero, absurd period</text>
+  <rect x="520" y="100" width="240" height="118" rx="5" fill="#1f2a33"/>
+  <g font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#cdd3d8">
+    <g fill="#C49A2E"><text x="532" y="116">Mode</text><text x="576" y="116">Period</text><text x="636" y="116">Freq</text><text x="680" y="116">UX</text><text x="720" y="116">UY</text></g>
+    <line x1="532" y1="121" x2="750" y2="121" stroke="#48555f" stroke-width="0.8"/>
+    <text x="532" y="135">1</text><text x="576" y="135" fill="#f3b8b0">0.091</text><text x="636" y="135" fill="#f3b8b0">10.96</text><text x="680" y="135" fill="#f3b8b0">0.000</text><text x="720" y="135" fill="#f3b8b0">0.000</text>
+    <text x="532" y="149">2</text><text x="576" y="149" fill="#f3b8b0">0.084</text><text x="636" y="149" fill="#f3b8b0">11.9</text><text x="680" y="149" fill="#f3b8b0">0.000</text><text x="720" y="149" fill="#f3b8b0">0.000</text>
+    <text x="532" y="163">3</text><text x="576" y="163" fill="#f3b8b0">0.077</text><text x="636" y="163" fill="#f3b8b0">13.0</text><text x="680" y="163" fill="#f3b8b0">0.000</text><text x="720" y="163" fill="#f3b8b0">0.000</text>
+    <text x="532" y="177">…</text><text x="576" y="177">…</text><text x="636" y="177">…</text><text x="680" y="177" fill="#f3b8b0">0.000</text><text x="720" y="177" fill="#f3b8b0">0.000</text>
+    <text x="532" y="191" fill="#f3b8b0">a 10-storey building at 11 Hz?</text>
+  </g>
+  <text x="640" y="212" font-size="9" fill="#f3b8b0" text-anchor="middle" font-style="italic">a tall building cannot be this stiff</text>
+
+  <!-- arrows down to families -->
+  <line x1="160" y1="222" x2="160" y2="252" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="400" y1="222" x2="400" y2="252" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="640" y1="222" x2="640" y2="252" stroke="#1f2a33" stroke-width="2" marker-end="url(#fa)"/>
+
+  <!-- ================= THREE FAMILIES ================= -->
+  <!--  Family 1: no mass  -->
+  <rect x="40" y="256" width="240" height="250" rx="8" fill="#fbf6e9" stroke="#C49A2E" stroke-width="1.6"/>
+  <text x="160" y="280" font-size="12.5" font-weight="bold" fill="#7a5f14" text-anchor="middle">NO MASS IN THE MODEL</text>
+  <!-- sketch: empty mass source dialog -->
+  <rect x="100" y="292" width="120" height="58" rx="4" fill="#ffffff" stroke="#3a4750" stroke-width="1"/>
+  <rect x="100" y="292" width="120" height="12" fill="#3a4750"/>
+  <text x="160" y="301" font-size="7.5" fill="#ffffff" text-anchor="middle">Mass Source</text>
+  <text x="108" y="318" font-size="7.5" fill="#3a4750">Load patterns:</text>
+  <rect x="108" y="324" width="104" height="18" fill="#fbeeec" stroke="#b03a2e" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <text x="160" y="336" font-size="7.5" fill="#b03a2e" text-anchor="middle" font-style="italic">(none listed)</text>
+  <g font-size="10" fill="#3a4750">
+    <text x="56" y="372">· mass source points at nothing</text>
+    <text x="56" y="388">· net mass negative, zeroed silently</text>
+    <text x="56" y="404">· mass not lumped to the storey</text>
+  </g>
+  <rect x="56" y="420" width="208" height="70" rx="5" fill="#fff8e6" stroke="#e9d9a8" stroke-width="1"/>
+  <text x="160" y="440" font-size="9.5" font-weight="bold" fill="#7a5f14" text-anchor="middle">Quick test</text>
+  <text x="160" y="455" font-size="9" fill="#6b7680" text-anchor="middle">Read the total mass. Hand-check it</text>
+  <text x="160" y="468" font-size="9" fill="#6b7680" text-anchor="middle">against floor area × unit loads.</text>
+  <text x="160" y="481" font-size="9" fill="#a07e1f" text-anchor="middle" font-style="italic">A fraction of expected? Stop here.</text>
+
+  <!--  Family 2: local modes  -->
+  <rect x="280" y="256" width="240" height="250" rx="8" fill="#eef4ef" stroke="#3a7d44" stroke-width="1.6"/>
+  <text x="400" y="280" font-size="11.5" font-weight="bold" fill="#2c5f34" text-anchor="middle">LOCAL MODES EAT THE COUNT</text>
+  <!-- sketch: building with one wall panel flapping -->
+  <rect x="352" y="296" width="8" height="52" fill="#e7e3d8" stroke="#3a4750" stroke-width="1"/>
+  <rect x="440" y="296" width="8" height="52" fill="#e7e3d8" stroke="#3a4750" stroke-width="1"/>
+  <line x1="352" y1="310" x2="448" y2="310" stroke="#3a4750" stroke-width="1"/>
+  <line x1="352" y1="328" x2="448" y2="328" stroke="#3a4750" stroke-width="1"/>
+  <line x1="352" y1="348" x2="448" y2="348" stroke="#3a4750" stroke-width="1"/>
+  <!-- the flapping panel -->
+  <path d="M388 312 q10 6 0 14 q-10 6 0 14" fill="url(#hatch)" stroke="#b03a2e" stroke-width="1.4"/>
+  <path d="M388 312 q-6 6 0 14 q6 6 0 14" fill="none" stroke="#b03a2e" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="404" y="326" font-size="7.5" fill="#b03a2e">panel</text>
+  <text x="404" y="336" font-size="7.5" fill="#b03a2e">flaps alone</text>
+  <g font-size="10" fill="#3a4750">
+    <text x="296" y="372">· a wall, deck or isolated member</text>
+    <text x="296" y="388">  vibrates on its own first</text>
+    <text x="296" y="404">· each local mode consumes a mode</text>
+  </g>
+  <rect x="296" y="420" width="208" height="70" rx="5" fill="#f4faf5" stroke="#bcd8c2" stroke-width="1"/>
+  <text x="400" y="440" font-size="9.5" font-weight="bold" fill="#2c5f34" text-anchor="middle">Quick test</text>
+  <text x="400" y="455" font-size="9" fill="#6b7680" text-anchor="middle">Animate modes 1 to 3. If one element</text>
+  <text x="400" y="468" font-size="9" fill="#6b7680" text-anchor="middle">flaps instead of the building swaying,</text>
+  <text x="400" y="481" font-size="9" fill="#3a7d44" text-anchor="middle" font-style="italic">fix connectivity, not the mode count.</text>
+
+  <!--  Family 3: locked out  -->
+  <rect x="520" y="256" width="240" height="250" rx="8" fill="#fbeeec" stroke="#b03a2e" stroke-width="1.6"/>
+  <text x="640" y="280" font-size="12.5" font-weight="bold" fill="#8a2a20" text-anchor="middle">THE BUILDING IS LOCKED OUT</text>
+  <!-- sketch: building with diaphragm pinned against translation -->
+  <rect x="592" y="296" width="8" height="52" fill="#e7e3d8" stroke="#3a4750" stroke-width="1"/>
+  <rect x="680" y="296" width="8" height="52" fill="#e7e3d8" stroke="#3a4750" stroke-width="1"/>
+  <line x1="592" y1="310" x2="688" y2="310" stroke="#3a4750" stroke-width="1.6"/>
+  <line x1="592" y1="328" x2="688" y2="328" stroke="#3a4750" stroke-width="1.6"/>
+  <!-- restraint symbols on the diaphragms -->
+  <path d="M700 306 l8 4 l-8 4 z" fill="#b03a2e"/>
+  <path d="M700 324 l8 4 l-8 4 z" fill="#b03a2e"/>
+  <line x1="708" y1="300" x2="708" y2="336" stroke="#b03a2e" stroke-width="2"/>
+  <text x="716" y="322" font-size="7.5" fill="#b03a2e">pinned</text>
+  <!-- lateral load that can't move it -->
+  <line x1="560" y1="318" x2="586" y2="318" stroke="#C49A2E" stroke-width="2" marker-end="url(#fa)"/>
+  <g font-size="10" fill="#3a4750">
+    <text x="536" y="372">· a restraint where none belongs</text>
+    <text x="536" y="388">· diaphragm pinned against sway</text>
+    <text x="536" y="404">· supports at intermediate levels</text>
+  </g>
+  <rect x="536" y="420" width="208" height="70" rx="5" fill="#fdf3f1" stroke="#ecc4bd" stroke-width="1"/>
+  <text x="640" y="440" font-size="9.5" font-weight="bold" fill="#8a2a20" text-anchor="middle">Quick test</text>
+  <text x="640" y="455" font-size="9" fill="#6b7680" text-anchor="middle">Apply a static lateral load. If the</text>
+  <text x="640" y="468" font-size="9" fill="#6b7680" text-anchor="middle">building barely deflects, it's not stiff,</text>
+  <text x="640" y="481" font-size="9" fill="#b03a2e" text-anchor="middle" font-style="italic">it's restrained. Find the restraint.</text>
+
+  <!-- ================= FAMILY 4 strip ================= -->
+  <rect x="40" y="522" width="720" height="58" rx="8" fill="#f3f1ea" stroke="#1f2a33" stroke-width="1.3"/>
+  <text x="56" y="544" font-size="11.5" font-weight="bold" fill="#1f2a33">Pattern D: present, climbing, but stuck under 90%  →  TOO FEW MODES</text>
+  <text x="56" y="560" font-size="9.5" fill="#3a4750">The mass is real and the behaviour is right. Add modes, or switch to Ritz vectors, which reach the target with fewer modes.</text>
+  <text x="56" y="574" font-size="9.5" fill="#a07e1f" font-style="italic">The only family where "add more modes" is the fix. For A, B and C it just hides the problem.</text>
+
+  <!-- ================= bottom takeaway ================= -->
+  <rect x="40" y="596" width="720" height="82" rx="8" fill="#1f2a33"/>
+  <text x="400" y="620" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Zero participation is the model telling you, in plain numbers:</text>
+  <text x="400" y="640" font-size="11" fill="#C49A2E" text-anchor="middle">the mass isn't there  ·  the early modes are local  ·  the building can't move</text>
+  <text x="400" y="662" font-size="10.5" fill="#cdd3d8" text-anchor="middle" font-style="italic">Read the table. Animate the first three modes. Fix the cause, not the number.</text>
+</svg>

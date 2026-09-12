@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="Two diagrams explaining why P-Delta will not run in ETABS. The top shows the analysis sequence as a queue: the initial P-Delta iteration sits as a gate at the front, and when it fails to converge, every linear load case behind it is blocked and not run at all. The bottom shows the gravity-scaling method: P-Delta combinations at 10, 20, 40, 60, 80 and 86 percent of gravity converge, shown green, while 87 percent diverges, shown red. The deflected shape at the last converging step, 86 percent, reveals the incipient buckling mode and points at the buckling element." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxMWExYzA1Yy03MzZkLTQyYzMtYjA0Yy00ZjlkZmY3N2I3MzEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaM3cDl7Ouf8+vII6MWhE4KUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpmNTk2NWRiNi1mYWRkLTQ4OWUtOTQ5Ny02MTJlOGViMDRhNzJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoLrLclGcBE7RueTI1z8pooQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggLoOQLopVdxOhy8ugta/CYo2f0fP2OJKy5mX01tW0qQOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaCxz9pjqjl0qifC3MBMZiCUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIE/s0V7IgA5tCuAN/GOaIrLYAv5XvNrrdnDO8Bn2gq7VZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQL+Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjExYTFjMDVjLTczNmQtNDJjMy1iMDRjLTRmOWRmZjc3YjczMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjEwMzIxYWU1LWQzMWQtNGUzMS05YzIwLTExZmFhYjk5ODhmZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAug5AuilV3E6HLy6C1r8JijZ/R8/Y4krLmZfTW1bSpA6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggvGPvbfpqrQAQolpckMtbvvapiwqm6gV/S732p7HtGSyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggRuRqQzTq0nw3hBNgTH5tzW+rwSgfe69/UyW1Irphgvd0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHXx6+tRADuQ+rZuupuWWKNXurSL65Xk9EKjhhDL+JL1s2z+evoAE0DqVUVozs3gHCV4f5hxf4MoRA54aTimbeg=</c2pa:manifest></metadata>
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="6.5" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#1f2a33"/>
+    </marker>
+    <marker id="fr" markerWidth="10" markerHeight="10" refX="6.5" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#b03a2e"/>
+    </marker>
+  </defs>
+
+  <!-- card -->
+  <rect x="4" y="4" width="792" height="632" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <!-- title -->
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Why Everything Stops, and How to Find the Buckling</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">P-Delta is the gate at the front of the queue. When it refuses, nothing behind it runs.</text>
+
+  <!-- ================= TOP: the gate ================= -->
+  <text x="40" y="94" font-size="12.5" font-weight="bold" fill="#1f2a33">1. The analysis sequence</text>
+
+  <!-- P-Delta gate box -->
+  <rect x="40" y="108" width="190" height="86" rx="8" fill="#1f2a33"/>
+  <text x="135" y="134" font-size="12.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Initial P-Delta</text>
+  <text x="135" y="150" font-size="10" fill="#C49A2E" text-anchor="middle">iterative nonlinear case</text>
+  <text x="135" y="164" font-size="10" fill="#C49A2E" text-anchor="middle">on the gravity combination</text>
+  <text x="135" y="183" font-size="9.5" fill="#cdd3d8" text-anchor="middle" font-style="italic">runs FIRST, sets the stiffness</text>
+
+  <!-- gate bar (closed) -->
+  <rect x="242" y="104" width="10" height="94" rx="2" fill="#b03a2e"/>
+  <text x="247" y="216" font-size="10" font-weight="bold" fill="#b03a2e" text-anchor="middle">GATE</text>
+  <text x="247" y="229" font-size="9" fill="#b03a2e" text-anchor="middle" font-style="italic">closed if it</text>
+  <text x="247" y="241" font-size="9" fill="#b03a2e" text-anchor="middle" font-style="italic">won't converge</text>
+
+  <!-- blocked arrow -->
+  <line x1="232" y1="151" x2="240" y2="151" stroke="#b03a2e" stroke-width="2.5"/>
+  <text x="236" y="146" font-size="13" fill="#b03a2e" text-anchor="middle" font-weight="bold">X</text>
+
+  <!-- queue of linear cases, greyed / blocked -->
+  <g opacity="0.55">
+    <rect x="272" y="112" width="100" height="36" rx="6" fill="#f3f1ea" stroke="#9aa3ab" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="322" y="134" font-size="10.5" fill="#6b7680" text-anchor="middle">Wind X</text>
+    <rect x="384" y="112" width="100" height="36" rx="6" fill="#f3f1ea" stroke="#9aa3ab" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="434" y="134" font-size="10.5" fill="#6b7680" text-anchor="middle">Wind Y</text>
+    <rect x="496" y="112" width="100" height="36" rx="6" fill="#f3f1ea" stroke="#9aa3ab" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="546" y="134" font-size="10.5" fill="#6b7680" text-anchor="middle">Response spectrum</text>
+    <rect x="608" y="112" width="100" height="36" rx="6" fill="#f3f1ea" stroke="#9aa3ab" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="658" y="134" font-size="10.5" fill="#6b7680" text-anchor="middle">Every combo</text>
+    <rect x="272" y="158" width="436" height="34" rx="6" fill="#f3f1ea" stroke="#9aa3ab" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="490" y="179" font-size="10.5" fill="#6b7680" text-anchor="middle">all subsequent linear load cases</text>
+  </g>
+  <text x="490" y="214" font-size="11" font-weight="bold" fill="#b03a2e" text-anchor="middle">NOT RUN AT ALL. Not failed, not warned: never attempted.</text>
+  <text x="490" y="230" font-size="10" fill="#6b7680" text-anchor="middle" font-style="italic">so the symptom looks like "ETABS won't run", not "P-Delta gave a warning"</text>
+
+  <!-- divider -->
+  <line x1="40" y1="256" x2="760" y2="256" stroke="#e4ddcb" stroke-width="1.4"/>
+
+  <!-- ================= BOTTOM: the scaling ladder ================= -->
+  <text x="40" y="284" font-size="12.5" font-weight="bold" fill="#1f2a33">2. Find the buckling: scale the gravity down until it converges</text>
+
+  <!-- baseline -->
+  <line x1="70" y1="500" x2="560" y2="500" stroke="#3a4750" stroke-width="1.6"/>
+  <text x="70" y="532" font-size="9.5" fill="#6b7680" text-anchor="start" font-style="italic">fraction of gravity in the P-Delta combination</text>
+
+  <!-- bars: 10,20,40,60,80,86 converge (green); 87 diverges (red) -->
+  <!-- heights scale with % -->
+  <g>
+    <rect x="80"  y="480" width="40" height="20"  fill="#cfe3d3" stroke="#3a7d44" stroke-width="1.2"/>
+    <text x="100" y="514" font-size="10" fill="#3a4750" text-anchor="middle">10%</text>
+    <rect x="140" y="461" width="40" height="39"  fill="#cfe3d3" stroke="#3a7d44" stroke-width="1.2"/>
+    <text x="160" y="514" font-size="10" fill="#3a4750" text-anchor="middle">20%</text>
+    <rect x="200" y="422" width="40" height="78"  fill="#cfe3d3" stroke="#3a7d44" stroke-width="1.2"/>
+    <text x="220" y="514" font-size="10" fill="#3a4750" text-anchor="middle">40%</text>
+    <rect x="260" y="383" width="40" height="117" fill="#cfe3d3" stroke="#3a7d44" stroke-width="1.2"/>
+    <text x="280" y="514" font-size="10" fill="#3a4750" text-anchor="middle">60%</text>
+    <rect x="320" y="344" width="40" height="156" fill="#cfe3d3" stroke="#3a7d44" stroke-width="1.2"/>
+    <text x="340" y="514" font-size="10" fill="#3a4750" text-anchor="middle">80%</text>
+    <!-- 86% last converging, highlighted -->
+    <rect x="380" y="332" width="40" height="168" fill="#9fd3a8" stroke="#2c5f34" stroke-width="2"/>
+    <text x="400" y="514" font-size="10" font-weight="bold" fill="#2c5f34" text-anchor="middle">86%</text>
+    <text x="400" y="324" font-size="9.5" font-weight="bold" fill="#2c5f34" text-anchor="middle">converges</text>
+    <!-- 87% diverges -->
+    <rect x="440" y="330" width="40" height="170" fill="#f3d9d2" stroke="#b03a2e" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="460" y="514" font-size="10" font-weight="bold" fill="#b03a2e" text-anchor="middle">87%</text>
+    <text x="460" y="322" font-size="9.5" font-weight="bold" fill="#b03a2e" text-anchor="middle">diverges</text>
+    <text x="460" y="420" font-size="18" fill="#b03a2e" text-anchor="middle" font-weight="bold">X</text>
+  </g>
+
+  <!-- buckling-load marker between 86 and 87 -->
+  <line x1="430" y1="330" x2="430" y2="500" stroke="#b03a2e" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <text x="430" y="546" font-size="9.5" fill="#b03a2e" text-anchor="middle" font-style="italic">buckling load sits between 86 and 87% of gravity</text>
+
+  <!-- callout: the deflected shape at 86% -->
+  <rect x="580" y="296" width="180" height="204" rx="8" fill="#f4faf5" stroke="#3a7d44" stroke-width="1.5"/>
+  <text x="670" y="318" font-size="11" font-weight="bold" fill="#2c5f34" text-anchor="middle">Deflected shape at 86%</text>
+  <text x="670" y="332" font-size="9" fill="#6b7680" text-anchor="middle" font-style="italic">= the incipient buckling mode</text>
+  <!-- mini frame with one column bowing -->
+  <rect x="618" y="348" width="6" height="90" fill="#e7e3d8" stroke="#3a4750" stroke-width="1"/>
+  <rect x="716" y="348" width="6" height="90" fill="#e7e3d8" stroke="#3a4750" stroke-width="1"/>
+  <line x1="618" y1="370" x2="722" y2="370" stroke="#3a4750" stroke-width="1"/>
+  <line x1="618" y1="404" x2="722" y2="404" stroke="#3a4750" stroke-width="1"/>
+  <line x1="618" y1="438" x2="722" y2="438" stroke="#3a4750" stroke-width="1.4"/>
+  <!-- the bowing member -->
+  <path d="M670 370 q16 17 0 34" fill="none" stroke="#b03a2e" stroke-width="2.6"/>
+  <path d="M670 370 q-4 17 0 34" fill="none" stroke="#b03a2e" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <line x1="690" y1="387" x2="740" y2="387" stroke="#b03a2e" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="742" y="384" font-size="8.5" fill="#b03a2e">this one</text>
+  <text x="742" y="394" font-size="8.5" fill="#b03a2e">is buckling</text>
+  <text x="670" y="462" font-size="9" fill="#3a4750" text-anchor="middle">The element doing something</text>
+  <text x="670" y="474" font-size="9" fill="#3a4750" text-anchor="middle">dramatic in this shape is the</text>
+  <text x="670" y="486" font-size="9" fill="#2c5f34" text-anchor="middle" font-weight="bold">one to fix.</text>
+
+  <!-- bottom takeaway -->
+  <rect x="40" y="556" width="720" height="62" rx="8" fill="#1f2a33"/>
+  <text x="400" y="580" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">P-Delta not running is a diagnostic gift dressed as an error.</text>
+  <text x="400" y="598" font-size="10.5" fill="#C49A2E" text-anchor="middle">Something is buckling under gravity in a way linear analysis could not see.</text>
+  <text x="400" y="612" font-size="10" fill="#cdd3d8" text-anchor="middle" font-style="italic">Fix the structure, not the convergence setting.</text>
+</svg>
