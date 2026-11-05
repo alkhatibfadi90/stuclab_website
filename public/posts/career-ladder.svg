@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="A chart of a structural engineering career. Career level runs left to right: graduate, engineer, senior, associate, director. Two stacked bands show the share of the week spent on engineering versus on management, fees and clients. The engineering band shrinks with each step up as the management band grows, until at director level engineering is a thin slice of review. A dashed line, labelled depth kept outside the ladder, stays flat across all levels, representing a specialism, teaching, writing or a side practice that the promotion track does not reach.">
+  <rect x="4" y="4" width="792" height="512" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Where the Engineering Goes as You Climb</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Share of a typical week, by career level. Illustrative, not measured.</text>
+
+  <!-- axes -->
+  <!-- plot area x 100..740, y 100..400 -->
+  <line x1="100" y1="400" x2="740" y2="400" stroke="#3a4750" stroke-width="1.4"/>
+  <line x1="100" y1="100" x2="100" y2="400" stroke="#3a4750" stroke-width="1.4"/>
+  <g font-size="9.5" fill="#6b7680">
+    <text x="92" y="404" text-anchor="end">0%</text>
+    <text x="92" y="254" text-anchor="end">50%</text>
+    <text x="92" y="104" text-anchor="end">100%</text>
+  </g>
+  <text x="60" y="250" font-size="10" fill="#3a4750" text-anchor="middle" transform="rotate(-90 60 250)">share of the week</text>
+
+  <!-- 5 columns, each 100 wide with 28 gap: x = 112, 240, 368, 496, 624 -->
+  <!-- engineering share: 85, 70, 50, 30, 15  (of 300px height) -->
+  <!-- management share: 15, 30, 50, 70, 85 -->
+  <g>
+    <!-- Graduate -->
+    <rect x="112" y="100" width="100" height="45"  fill="#c9d0d6" stroke="#1f2a33" stroke-width="1"/>
+    <rect x="112" y="145" width="100" height="255" fill="#1f2a33" stroke="#1f2a33" stroke-width="1"/>
+    <text x="162" y="280" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">85%</text>
+    <!-- Engineer -->
+    <rect x="240" y="100" width="100" height="90"  fill="#c9d0d6" stroke="#1f2a33" stroke-width="1"/>
+    <rect x="240" y="190" width="100" height="210" fill="#1f2a33" stroke="#1f2a33" stroke-width="1"/>
+    <text x="290" y="300" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">70%</text>
+    <!-- Senior -->
+    <rect x="368" y="100" width="100" height="150" fill="#c9d0d6" stroke="#1f2a33" stroke-width="1"/>
+    <rect x="368" y="250" width="100" height="150" fill="#1f2a33" stroke="#1f2a33" stroke-width="1"/>
+    <text x="418" y="330" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">50%</text>
+    <!-- Associate -->
+    <rect x="496" y="100" width="100" height="210" fill="#c9d0d6" stroke="#1f2a33" stroke-width="1"/>
+    <rect x="496" y="310" width="100" height="90"  fill="#1f2a33" stroke="#1f2a33" stroke-width="1"/>
+    <text x="546" y="360" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">30%</text>
+    <!-- Director -->
+    <rect x="624" y="100" width="100" height="255" fill="#c9d0d6" stroke="#1f2a33" stroke-width="1"/>
+    <rect x="624" y="355" width="100" height="45"  fill="#1f2a33" stroke="#1f2a33" stroke-width="1"/>
+    <text x="674" y="383" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">15%</text>
+  </g>
+
+  <!-- in-band labels for the top (management) band -->
+  <text x="674" y="200" font-size="10" fill="#3a4750" text-anchor="middle">fees, clients,</text>
+  <text x="674" y="214" font-size="10" fill="#3a4750" text-anchor="middle">people, risk</text>
+  <text x="162" y="126" font-size="9" fill="#3a4750" text-anchor="middle">admin</text>
+
+  <!-- level labels -->
+  <g font-size="10.5" fill="#1f2a33" font-weight="bold">
+    <text x="162" y="420" text-anchor="middle">Graduate</text>
+    <text x="290" y="420" text-anchor="middle">Engineer</text>
+    <text x="418" y="420" text-anchor="middle">Senior</text>
+    <text x="546" y="420" text-anchor="middle">Associate</text>
+    <text x="674" y="420" text-anchor="middle">Director</text>
+  </g>
+
+  <!-- the third path: flat dashed line -->
+  <line x1="100" y1="236" x2="740" y2="236" stroke="#C49A2E" stroke-width="2.6" stroke-dasharray="9 5"/>
+  <rect x="408" y="222" width="210" height="18" rx="4" fill="#ffffff" opacity="0.92"/>
+  <text x="513" y="235" font-size="10" font-weight="bold" fill="#a07e1f" text-anchor="middle">depth kept outside the ladder</text>
+
+  <!-- legend -->
+  <g font-size="10">
+    <rect x="100" y="446" width="14" height="10" fill="#1f2a33"/><text x="120" y="455" fill="#3a4750">engineering: models, calcs, hard problems</text>
+    <rect x="360" y="446" width="14" height="10" fill="#c9d0d6" stroke="#1f2a33" stroke-width="0.8"/><text x="380" y="455" fill="#3a4750">management: fees, clients, people, review</text>
+    <line x1="100" y1="476" x2="130" y2="476" stroke="#C49A2E" stroke-width="2.6" stroke-dasharray="9 5"/>
+    <text x="138" y="480" fill="#3a4750">a specialism, teaching, writing or a side practice: the promotion track does not spend it</text>
+  </g>
+
+  <text x="400" y="504" font-size="10.5" fill="#6b7680" text-anchor="middle" font-style="italic">The ladder isn't wrong. It just isn't the only thing you're allowed to climb.</text>
+</svg>

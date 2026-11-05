@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <style>
+    text { font-family: Georgia, 'Times New Roman', serif; fill: #1f2a33; }
+    .t { font-size: 20px; font-weight: bold; }
+    .s { font-size: 13px; font-style: italic; fill: #6b7680; }
+    .h { font-size: 13px; font-weight: bold; }
+    .l { font-size: 12px; }
+    .m { font-size: 11px; fill: #6b7680; }
+    .mi { font-size: 11px; fill: #6b7680; font-style: italic; }
+    .ax { font-size: 11px; fill: #6b7680; }
+  </style>
+  <defs>
+    <marker id="ahS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/>
+    </marker>
+    <marker id="ahG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3a7d44"/>
+    </marker>
+    <marker id="ahR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b03a2e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="520" rx="10" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="6" rx="3" fill="#C49A2E"/>
+
+  <text class="t" x="40" y="40">The Fork Is Not Symmetric</text>
+  <text class="s" x="40" y="60">Technical currency over a career. One branch compounds; the other decays the day you stop doing the work.</text>
+
+  <!-- plot area: x 90..740 for years 0..30 ; y 420 (zero) .. 110 (max) -->
+  <!-- axes -->
+  <line x1="90" y1="420" x2="740" y2="420" stroke="#1f2a33" stroke-width="1.2"/>
+  <line x1="90" y1="420" x2="90" y2="100" stroke="#1f2a33" stroke-width="1.2"/>
+  <text class="ax" x="86" y="110" text-anchor="end">high</text>
+  <text class="ax" x="86" y="424" text-anchor="end">low</text>
+  <text class="ax" x="40" y="265" transform="rotate(-90 40 265)" text-anchor="middle">technical currency (what people call you for)</text>
+
+  <!-- year ticks: 0,8,15,22,30 -> x = 90 + yr*21.67 -->
+  <g stroke="#1f2a33" stroke-width="1">
+    <line x1="90" y1="420" x2="90" y2="426"/>
+    <line x1="263" y1="420" x2="263" y2="426"/>
+    <line x1="415" y1="420" x2="415" y2="426"/>
+    <line x1="567" y1="420" x2="567" y2="426"/>
+    <line x1="740" y1="420" x2="740" y2="426"/>
+  </g>
+  <text class="ax" x="90" y="440" text-anchor="middle">year 0</text>
+  <text class="ax" x="263" y="440" text-anchor="middle">year 8</text>
+  <text class="ax" x="415" y="440" text-anchor="middle">year 15</text>
+  <text class="ax" x="567" y="440" text-anchor="middle">year 22</text>
+  <text class="ax" x="740" y="440" text-anchor="middle">year 30</text>
+
+  <!-- fork marker -->
+  <line x1="263" y1="420" x2="263" y2="120" stroke="#C49A2E" stroke-width="1" stroke-dasharray="4 4"/>
+  <text class="h" x="263" y="112" text-anchor="middle" style="fill:#C49A2E">the fork</text>
+
+  <!-- shared early rise, year 0 to 8: from (90,400) to (263,290) -->
+  <path d="M90,400 C150,380 215,330 263,290" fill="none" stroke="#1f2a33" stroke-width="2.6"/>
+
+  <!-- branch A: stay technical, keeps compounding: (263,290) -> (740,150) -->
+  <path d="M263,290 C380,250 520,195 740,150" fill="none" stroke="#3a7d44" stroke-width="2.8"/>
+  <text class="h" x="620" y="212" style="fill:#3a7d44">stay technical</text>
+  <text class="mi" x="620" y="227">currency keeps compounding</text>
+
+  <!-- branch B: go up at 8, decays: (263,290) -> (740,385) -->
+  <path d="M263,290 C330,310 450,355 740,385" fill="none" stroke="#b03a2e" stroke-width="2.8"/>
+  <text class="h" x="540" y="336" style="fill:#b03a2e">go up at the fork</text>
+  <text class="mi" x="540" y="351">reputation expires quietly</text>
+
+  <!-- the easy move: technical then up later, solid arrow from green branch at year 15 going up-right to a management plateau -->
+  <!-- point on green at x=415: approx y=232 -->
+  <path d="M415,232 C460,205 520,160 600,150" fill="none" stroke="#3a7d44" stroke-width="2" stroke-dasharray="7 4" marker-end="url(#ahG)"/>
+  <text class="l" x="420" y="136" style="fill:#3a7d44">go up later: management learned at 40, depth kept</text>
+
+  <!-- the hard move: thin arrow from red branch at year 15 trying to climb back -->
+  <!-- point on red at x=415: approx y=343 -->
+  <path d="M415,343 C440,330 455,310 470,290" fill="none" stroke="#b03a2e" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ahR)"/>
+  <text class="l" x="478" y="290" style="fill:#b03a2e">the way back: possible, rare,</text>
+  <text class="l" x="478" y="305" style="fill:#b03a2e">and you re-enter below where you left</text>
+
+  <!-- default-decision shading: band around fork where most decisions happen by timing -->
+  <rect x="225" y="120" width="76" height="300" fill="#C49A2E" opacity="0.08"/>
+  <text class="m" x="263" y="128" text-anchor="middle" dy="12">years 6 to 10</text>
+  <text class="m" x="263" y="140" text-anchor="middle" dy="12">most choose here</text>
+  <text class="m" x="263" y="152" text-anchor="middle" dy="12">by default</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="462" width="720" height="40" rx="6" fill="#1f2a33"/>
+  <text class="l" x="400" y="479" text-anchor="middle" style="fill:#ffffff;font-weight:bold">If unsure, stay technical a little longer than feels comfortable, not a little shorter.</text>
+  <text class="m" x="400" y="495" text-anchor="middle" style="fill:#C49A2E">Management can be learned at 40. Modelling instincts cannot be rebuilt at 40.</text>
+</svg>

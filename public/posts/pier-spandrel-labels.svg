@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="An engineering figure on pier and spandrel labels in ETABS. Left: an elevation of a wall with a door opening. The wall segments either side of the opening are piers; horizontal section cuts are drawn at the top and bottom of each pier, where the integrated axial force, moment and shear are reported, and the mid-height of the opening is marked as having no result because no cut exists there. The lintel over the opening is a spandrel; vertical section cuts at its left and right ends mark where its end forces are reported. Right: the integration contrast. A core with one pier label on all four walls produces one merged section and one result; the same core with a separate label per wall produces four cuts and four results.">
+  <defs>
+    <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1f2a33"/></marker>
+    <marker id="fr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#b03a2e"/></marker>
+    <marker id="fg" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#3a7d44"/></marker>
+    <pattern id="conc" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#c9d0d6" stroke-width="1"/></pattern>
+  </defs>
+
+  <rect x="4" y="4" width="792" height="632" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">The Label Is the Section Cut</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">A pier or spandrel label tells ETABS where to cut the wall and what to integrate.</text>
+
+  <!-- ================= A: elevation ================= -->
+  <text x="40" y="92" font-size="12" font-weight="bold" fill="#1f2a33">A. Where the forces are actually reported</text>
+
+  <!-- wall elevation: x 60..380, y 110..400 ; opening x 180..260, y 200..400 (door) -->
+  <rect x="60" y="110" width="320" height="290" fill="url(#conc)" stroke="#1f2a33" stroke-width="1.6"/>
+  <!-- door opening -->
+  <rect x="180" y="200" width="80" height="200" fill="#ffffff" stroke="#1f2a33" stroke-width="1.6"/>
+  <text x="220" y="305" font-size="9.5" fill="#6b7680" text-anchor="middle" font-style="italic">opening</text>
+  <!-- ground -->
+  <line x1="44" y1="400" x2="396" y2="400" stroke="#8a7f63" stroke-width="1.8"/>
+  <!-- level line (roof) -->
+  <line x1="44" y1="110" x2="396" y2="110" stroke="#8a7f63" stroke-width="1"/>
+  <text x="48" y="106" font-size="8.5" fill="#8a7f63">level</text>
+  <text x="48" y="412" font-size="8.5" fill="#8a7f63">level below</text>
+
+  <!-- pier labels -->
+  <text x="120" y="330" font-size="12" font-weight="bold" fill="#1f2a33" text-anchor="middle">P1</text>
+  <text x="320" y="330" font-size="12" font-weight="bold" fill="#1f2a33" text-anchor="middle">P2</text>
+  <text x="220" y="160" font-size="12" font-weight="bold" fill="#7a5f14" text-anchor="middle">S1</text>
+
+  <!-- PIER horizontal cuts: top and bottom of P1 (top = at 200, bottom = 400) -->
+  <g stroke="#b03a2e" stroke-width="2" stroke-dasharray="6 3">
+    <line x1="56" y1="202" x2="184" y2="202"/>
+    <line x1="56" y1="396" x2="184" y2="396"/>
+    <line x1="256" y1="202" x2="384" y2="202"/>
+    <line x1="256" y1="396" x2="384" y2="396"/>
+  </g>
+  <!-- force glyphs at P1 top cut -->
+  <text x="100" y="194" font-size="9" fill="#b03a2e" text-anchor="middle" font-weight="bold">P, M, V reported</text>
+  <text x="100" y="392" font-size="9" fill="#b03a2e" text-anchor="middle" font-weight="bold">P, M, V reported</text>
+  <!-- mid-height: no result -->
+  <line x1="56" y1="300" x2="184" y2="300" stroke="#9aa3ab" stroke-width="1" stroke-dasharray="2 3"/>
+  <rect x="64" y="288" width="112" height="22" fill="#ffffff" opacity="0.9"/>
+  <text x="120" y="302" font-size="9" fill="#6b7680" text-anchor="middle" font-style="italic">no cut, no result here</text>
+
+  <!-- SPANDREL vertical cuts: left and right ends of S1 (x 180, 260; y 110..200) -->
+  <g stroke="#a07e1f" stroke-width="2" stroke-dasharray="6 3">
+    <line x1="180" y1="106" x2="180" y2="204"/>
+    <line x1="260" y1="106" x2="260" y2="204"/>
+  </g>
+  <text x="172" y="128" font-size="8.5" fill="#a07e1f" text-anchor="end">M, V at</text>
+  <text x="172" y="139" font-size="8.5" fill="#a07e1f" text-anchor="end">left end</text>
+  <text x="268" y="128" font-size="8.5" fill="#a07e1f">M, V at</text>
+  <text x="268" y="139" font-size="8.5" fill="#a07e1f">right end</text>
+
+  <!-- legend -->
+  <g font-size="9.5">
+    <line x1="60" y1="432" x2="90" y2="432" stroke="#b03a2e" stroke-width="2" stroke-dasharray="6 3"/>
+    <text x="96" y="436" fill="#3a4750">pier cut: horizontal, at pier top and bottom only (column-like)</text>
+    <line x1="60" y1="450" x2="90" y2="450" stroke="#a07e1f" stroke-width="2" stroke-dasharray="6 3"/>
+    <text x="96" y="454" fill="#3a4750">spandrel cut: vertical, at left and right ends only (beam-like)</text>
+  </g>
+
+  <!-- ================= B: integration contrast ================= -->
+  <text x="430" y="92" font-size="12" font-weight="bold" fill="#1f2a33">B. The label sets the scope of the integration</text>
+
+  <!-- wrong: one label on all -->
+  <rect x="430" y="104" width="330" height="150" rx="8" fill="#fbeeec" stroke="#b03a2e" stroke-width="1.5"/>
+  <text x="595" y="124" font-size="11" font-weight="bold" fill="#8a2a20" text-anchor="middle">One label on every wall: P1, P1, P1, P1</text>
+  <!-- core plan -->
+  <g fill="#e7e3d8" stroke="#1f2a33" stroke-width="1.2">
+    <rect x="460" y="144" width="70" height="8"/><rect x="460" y="208" width="70" height="8"/>
+    <rect x="460" y="144" width="8" height="72"/><rect x="522" y="144" width="8" height="72"/>
+  </g>
+  <g font-size="8" fill="#b03a2e" font-weight="bold">
+    <text x="495" y="140" text-anchor="middle">P1</text><text x="495" y="228" text-anchor="middle">P1</text>
+    <text x="444" y="184" text-anchor="end">P1</text><text x="546" y="184">P1</text>
+  </g>
+  <!-- one merged cut: big dashed box around the whole core -->
+  <rect x="452" y="136" width="86" height="88" fill="none" stroke="#b03a2e" stroke-width="2" stroke-dasharray="6 3"/>
+  <line x1="572" y1="180" x2="586" y2="180" stroke="#b03a2e" stroke-width="1.6" marker-end="url(#fr)"/>
+  <text x="588" y="176" font-size="10" font-weight="bold" fill="#8a2a20">ONE section</text>
+  <text x="588" y="190" font-size="10" fill="#3a4750">ONE merged result</text>
+  <text x="588" y="206" font-size="9" fill="#6b7680" font-style="italic">the four walls become a</text>
+  <text x="588" y="218" font-size="9" fill="#6b7680" font-style="italic">single number nobody</text>
+  <text x="588" y="230" font-size="9" fill="#6b7680" font-style="italic">can detail from</text>
+
+  <!-- right: per-pier labels -->
+  <rect x="430" y="266" width="330" height="150" rx="8" fill="#eef4ef" stroke="#3a7d44" stroke-width="1.5"/>
+  <text x="595" y="286" font-size="11" font-weight="bold" fill="#2c5f34" text-anchor="middle">A label per wall: P1, P2, P3, P4</text>
+  <g fill="#e7e3d8" stroke="#1f2a33" stroke-width="1.2">
+    <rect x="460" y="306" width="70" height="8"/><rect x="460" y="370" width="70" height="8"/>
+    <rect x="460" y="306" width="8" height="72"/><rect x="522" y="306" width="8" height="72"/>
+  </g>
+  <g font-size="8" fill="#2c5f34" font-weight="bold">
+    <text x="495" y="302" text-anchor="middle">P1</text><text x="495" y="390" text-anchor="middle">P3</text>
+    <text x="444" y="346" text-anchor="end">P2</text><text x="546" y="346">P4</text>
+  </g>
+  <!-- four separate cuts: dashed boxes on each wall -->
+  <g fill="none" stroke="#3a7d44" stroke-width="1.6" stroke-dasharray="5 3">
+    <rect x="456" y="302" width="78" height="16"/><rect x="456" y="366" width="78" height="16"/>
+    <rect x="456" y="302" width="16" height="80"/><rect x="518" y="302" width="16" height="80"/>
+  </g>
+  <line x1="572" y1="342" x2="586" y2="342" stroke="#3a7d44" stroke-width="1.6" marker-end="url(#fg)"/>
+  <text x="588" y="338" font-size="10" font-weight="bold" fill="#2c5f34">FOUR sections</text>
+  <text x="588" y="352" font-size="10" fill="#3a4750">FOUR results</text>
+  <text x="588" y="368" font-size="9" fill="#6b7680" font-style="italic">each wall designed and</text>
+  <text x="588" y="380" font-size="9" fill="#6b7680" font-style="italic">detailed as the element</text>
+  <text x="588" y="392" font-size="9" fill="#6b7680" font-style="italic">it actually is</text>
+
+  <!-- alignment rule strip -->
+  <rect x="430" y="428" width="330" height="40" rx="6" fill="#f3f1ea" stroke="#e4ddcb" stroke-width="1"/>
+  <text x="595" y="445" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">Alignment rule</text>
+  <text x="595" y="459" font-size="8.5" fill="#3a4750" text-anchor="middle">pier: top and bottom joints level. spandrel: end joints vertically aligned.</text>
+
+  <!-- ================= bottom checklist ================= -->
+  <line x1="40" y1="484" x2="760" y2="484" stroke="#e4ddcb" stroke-width="1.4"/>
+  <rect x="40" y="498" width="720" height="118" rx="8" fill="#1f2a33"/>
+  <text x="60" y="522" font-size="12" font-weight="bold" fill="#ffffff">Before you trust the wall design</text>
+  <g font-size="10.5" fill="#cdd3d8">
+    <text x="60" y="544">1. Every wall you will detail separately has its own pier label.</text>
+    <text x="60" y="562">2. Every lintel or coupling beam has its own spandrel label; tick Multistory where it spans a level.</text>
+    <text x="60" y="580">3. Subdivide the wall where you need a result between the pier ends. Piers report at top and bottom only.</text>
+    <text x="60" y="598">4. Read a few pier cuts against a hand estimate of P and M before the design run.</text>
+  </g>
+  <text x="740" y="608" font-size="9.5" fill="#C49A2E" text-anchor="end" font-style="italic">No label: no cut, no forces, no design.</text>
+</svg>

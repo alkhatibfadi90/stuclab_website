@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <style>
+    text { font-family: Georgia, 'Times New Roman', serif; fill: #1f2a33; }
+    .t { font-size: 20px; font-weight: bold; }
+    .s { font-size: 13px; font-style: italic; fill: #6b7680; }
+    .h { font-size: 13px; font-weight: bold; }
+    .l { font-size: 12px; }
+    .m { font-size: 11px; fill: #6b7680; }
+    .mi { font-size: 11px; fill: #6b7680; font-style: italic; }
+    .n { font-size: 11px; font-weight: bold; fill: #ffffff; }
+    .red { fill: #b03a2e; }
+    .grn { fill: #3a7d44; }
+    .gold { fill: #C49A2E; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2a33"/>
+    </marker>
+    <marker id="ahR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b03a2e"/>
+    </marker>
+    <marker id="ahG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C49A2E"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="560" rx="10" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="6" rx="3" fill="#C49A2E"/>
+
+  <text class="t" x="40" y="40">Where the Force Went</text>
+  <text class="s" x="40" y="60">The force is rarely lost. It is at a support you did not sum, or in a quantity that was never yours to add.</text>
+
+  <!-- ================ building section, left ================ -->
+  <!-- ground line -->
+  <line x1="60" y1="330" x2="345" y2="330" stroke="#6b7680" stroke-width="1" stroke-dasharray="3 3"/>
+  <text class="m" x="62" y="326">ground</text>
+
+  <!-- basement box: x 150..330, y 330..400 -->
+  <rect x="150" y="330" width="180" height="70" fill="#f4f1ea" stroke="#1f2a33" stroke-width="1.6"/>
+  <!-- basement slab restraint ticks on walls -->
+  <g stroke="#b03a2e" stroke-width="2">
+    <line x1="140" y1="365" x2="150" y2="365"/>
+    <line x1="330" y1="365" x2="340" y2="365"/>
+  </g>
+  <g fill="#b03a2e">
+    <polygon points="140,361 132,365 140,369"/>
+    <polygon points="340,361 348,365 340,369"/>
+  </g>
+  <!-- base supports -->
+  <g stroke="#1f2a33" stroke-width="1.6" fill="#ffffff">
+    <polygon points="150,400 142,412 158,412"/>
+    <polygon points="210,400 202,412 218,412"/>
+    <polygon points="270,400 262,412 278,412"/>
+    <polygon points="330,400 322,412 338,412"/>
+  </g>
+  <line x1="130" y1="412" x2="350" y2="412" stroke="#1f2a33" stroke-width="1.6"/>
+  <text class="m" x="240" y="428" text-anchor="middle">Base storey joints: the ones everyone sums</text>
+
+  <!-- superstructure: 5 storeys, x 150..330, y 130..330 (40 each) -->
+  <g stroke="#1f2a33" stroke-width="1.6" fill="none">
+    <rect x="150" y="130" width="180" height="200"/>
+    <line x1="150" y1="170" x2="330" y2="170"/>
+    <line x1="150" y1="210" x2="330" y2="210"/>
+    <line x1="150" y1="250" x2="330" y2="250"/>
+    <line x1="150" y1="290" x2="330" y2="290"/>
+    <line x1="210" y1="130" x2="210" y2="400"/>
+    <line x1="270" y1="130" x2="270" y2="400"/>
+  </g>
+  <!-- core wall shaded -->
+  <rect x="210" y="130" width="60" height="270" fill="#1f2a33" opacity="0.08"/>
+
+  <!-- floor without diaphragm, level at y=210 highlighted -->
+  <line x1="150" y1="210" x2="330" y2="210" stroke="#b03a2e" stroke-width="3" stroke-dasharray="6 4"/>
+
+  <!-- wind arrows on floors with diaphragm -->
+  <g stroke="#1f2a33" stroke-width="1.4" marker-end="url(#ah)">
+    <line x1="100" y1="130" x2="146" y2="130"/>
+    <line x1="100" y1="170" x2="146" y2="170"/>
+    <line x1="100" y1="250" x2="146" y2="250"/>
+    <line x1="100" y1="290" x2="146" y2="290"/>
+  </g>
+  <text class="m" x="70" y="200" text-anchor="start">wind</text>
+  <!-- missing arrow at 210 -->
+  <text class="m red" x="126" y="214" text-anchor="end">none</text>
+
+  <!-- excluded base mass band -->
+  <rect x="150" y="400" width="180" height="0" fill="none"/>
+  <rect x="150" y="365" width="180" height="35" fill="#C49A2E" opacity="0.18"/>
+  <text class="m" x="235" y="386" text-anchor="middle">base mass: not in seismic weight</text>
+
+  <!-- global origin marker, off to the left corner -->
+  <circle cx="96" cy="412" r="3.5" fill="#b03a2e"/>
+  <text class="m red" x="96" y="398" text-anchor="middle">origin</text>
+  <!-- centroid marker -->
+  <circle cx="240" cy="412" r="3.5" fill="#3a7d44"/>
+  <!-- moment arrow between -->
+  <path d="M102,412 L232,412" stroke="#b03a2e" stroke-width="1" stroke-dasharray="3 3"/>
+  <text class="m red" x="240" y="446" text-anchor="middle">moment reported about the origin, not the centroid</text>
+
+  <!-- numbered callouts (circles) -->
+  <g>
+    <circle cx="352" cy="365" r="9" fill="#b03a2e"/><text class="n" x="352" y="369" text-anchor="middle">1</text>
+    <circle cx="74" cy="412" r="9" fill="#b03a2e"/><text class="n" x="74" y="416" text-anchor="middle">2</text>
+    <circle cx="372" cy="383" r="9" fill="#C49A2E"/><text class="n" x="372" y="387" text-anchor="middle">3</text>
+  <line x1="330" y1="383" x2="362" y2="383" stroke="#C49A2E" stroke-width="1"/>
+    <circle cx="352" cy="210" r="9" fill="#b03a2e"/><text class="n" x="352" y="214" text-anchor="middle">5</text>
+  </g>
+
+  <!-- ================ right column: the six ================ -->
+  <g>
+    <circle cx="430" cy="118" r="9" fill="#b03a2e"/><text class="n" x="430" y="122" text-anchor="middle">1</text>
+    <text class="h" x="448" y="115">Restraints above Base</text>
+    <text class="l" x="448" y="130">basement slabs, springs, retained levels: in the table,</text>
+    <text class="l" x="448" y="144">not in your base-storey sum</text>
+
+    <circle cx="430" cy="172" r="9" fill="#b03a2e"/><text class="n" x="430" y="176" text-anchor="middle">2</text>
+    <text class="h" x="448" y="169">Moment about the origin</text>
+    <text class="l" x="448" y="184">forces are point-independent, moments are not;</text>
+    <text class="l" x="448" y="198">set the location or use storey shears</text>
+
+    <circle cx="430" cy="226" r="9" fill="#C49A2E"/><text class="n" x="430" y="230" text-anchor="middle">3</text>
+    <text class="h" x="448" y="223">Mass source, not load pattern</text>
+    <text class="l" x="448" y="238">base-level mass excluded; self-weight counted twice;</text>
+    <text class="l" x="448" y="252">reconcile to Mass Summary by Story</text>
+
+    <circle cx="430" cy="280" r="9" fill="#6b7680"/><text class="n" x="430" y="284" text-anchor="middle">4</text>
+    <text class="h" x="448" y="277">Spectrum results are signless</text>
+    <text class="l" x="448" y="292">CQC magnitudes at different instants never sum;</text>
+    <text class="l" x="448" y="306">use the Storey Forces table</text>
+
+    <circle cx="430" cy="334" r="9" fill="#b03a2e"/><text class="n" x="430" y="338" text-anchor="middle">5</text>
+    <text class="h" x="448" y="331">Floor with no diaphragm</text>
+    <text class="l" x="448" y="346">auto wind from extents loads diaphragms only;</text>
+    <text class="l" x="448" y="360">a missing level gets zero wind, no warning</text>
+
+    <circle cx="430" cy="388" r="9" fill="#3a7d44"/><text class="n" x="430" y="392" text-anchor="middle">6</text>
+    <text class="h" x="448" y="385">The log settles it</text>
+    <text class="l" x="448" y="400">global force balance relative error per case;</text>
+    <text class="l" x="448" y="414">small means equilibrium, look elsewhere</text>
+  </g>
+
+  <!-- ================ equilibrium ledger ================ -->
+  <rect x="40" y="470" width="720" height="70" rx="6" fill="#1f2a33"/>
+  <text class="h" x="400" y="492" text-anchor="middle" style="fill:#ffffff">What the analysis log actually checks, per load case, resolved at the origin</text>
+  <text class="l" x="400" y="514" text-anchor="middle" style="fill:#C49A2E">applied + inertial + spring + link + reaction + constraint + P-delta = 0</text>
+  <text class="m" x="400" y="531" text-anchor="middle" style="fill:#aab3bb">relative error reported for FX FY FZ MX MY MZ. Not computed for time-history cases.</text>
+</svg>

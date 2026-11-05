@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="An engineering figure on inter-storey drift limits. Top: a logarithmic scale of drift ratio from H over 1000 to 1.5 percent of storey height. Ticks mark H over 1000 for sensitive facades, H over 500 for brittle partitions and cladding, H over 300 for tolerant finishes, all checked against the serviceability wind at the 1 in 25 annual probability, and 1.5 percent for the ultimate earthquake under AS 1170.4, a damage and stability limit. The wide gap between H over 500 and 1.5 percent shows they are different checks. Bottom: a frame elevation showing inter-storey drift between two floors, total drift at the roof, and a separate long-term gravity lean from differential shortening that sits underneath the wind drift." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2ODg4ZmQyZS0yY2YxLTQyYzAtYjgxNC04ZjFhOTI5NzllNTcAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaAyaL7qEyvwjgYERL64lMqIAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplYTE1YTkzMC0xMGEwLTRlMGItODQwYS1kM2QyY2E5YmNkZjRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNonyJXJ0gnXH1YTHES4uXjTQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg7s8VuFVp4KxgFX4IeetDxTkgQE+wSu3RIKpYxZrAs1SkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaBnRMg8plJbUZWDaJSAivmYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIAbBXs0fTHPakgZEFc12qNs/6a8PHmL7OUr6jLqdUGiwZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQOYZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjY4ODhmZDJlLTJjZjEtNDJjMC1iODE0LThmMWE5Mjk3OWU1Ny9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjA0YmMwMmYwLWQwMTAtNDZkOC05MTM4LTM5ZTcwMWQ0ZDAwNHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDuzxW4VWngrGAVfgh560PFOSBAT7BK7dEgqljFmsCzVKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggAfzbXT9TJC14uY/vr1yFBsZUcfz+ogLYJYXGDlgnW+miY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg2No8ubdyTxQSyF2+++dIM5ez59kxb2eFa1Ou16LuBIZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIEtBi70y5NmDXIMRgZE8Z5jXLsqfNEnByHTVIG7yXv4UKW79Pu2Mu/frLPm8YlfEjWxeVnZS7+6YstG2yllnpk=</c2pa:manifest></metadata>
+  <defs>
+    <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1f2a33"/></marker>
+    <marker id="fg" markerWidth="10" markerHeight="10" refX="6.5" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#C49A2E"/></marker>
+    <marker id="fr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#b03a2e"/></marker>
+  </defs>
+
+  <rect x="4" y="4" width="792" height="552" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">One Scale, Four Limits, Two Different Checks</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Drift ratio, log scale. The limit depends on what it protects and which event it pairs with.</text>
+
+  <!-- ================= A: drift scale ================= -->
+  <text x="40" y="92" font-size="12" font-weight="bold" fill="#1f2a33">A. Where the limits sit</text>
+
+  <!-- axis: log scale from 0.1% (H/1000) at x=100 to 2% at x=740. positions: log10 ratio -->
+  <!-- 0.1%=100 ; 0.2%(H/500)=100+640*log10(2)/log10(20)=100+640*0.2314=248 ; 0.333%(H/300)=100+640*log10(3.33)/1.301=100+640*0.4022=357 ; 1.5%=100+640*log10(15)/1.301=100+640*0.904=679 -->
+  <line x1="100" y1="210" x2="740" y2="210" stroke="#3a4750" stroke-width="2" marker-end="url(#fa)"/>
+  
+
+  <!-- serviceability band -->
+  <rect x="100" y="196" width="257" height="28" fill="#fbf6e9" opacity="0.9"/>
+  <text x="228" y="246" font-size="9.5" fill="#a07e1f" text-anchor="middle" font-weight="bold">SERVICEABILITY: frequent wind, 1 in 25 annual probability</text>
+  <text x="228" y="259" font-size="9" fill="#a07e1f" text-anchor="middle" font-style="italic">no damage accepted; protecting finishes and comfort</text>
+
+  <!-- ultimate marker band -->
+  <rect x="660" y="196" width="40" height="28" fill="#fbeeec" opacity="0.9"/>
+  <text x="756" y="246" font-size="9.5" fill="#b03a2e" text-anchor="end" font-weight="bold">ULTIMATE: design earthquake</text>
+  <text x="756" y="259" font-size="9" fill="#b03a2e" text-anchor="end" font-style="italic">damage accepted; stability governs</text>
+
+  <!-- ticks -->
+  <g stroke="#1f2a33" stroke-width="2">
+    <line x1="100" y1="200" x2="100" y2="220"/>
+    <line x1="248" y1="200" x2="248" y2="220"/>
+    <line x1="357" y1="200" x2="357" y2="220"/>
+    <line x1="679" y1="200" x2="679" y2="220" stroke="#b03a2e"/>
+  </g>
+
+  <!-- tick labels (above axis) -->
+  <g font-size="11" font-weight="bold" fill="#1f2a33" text-anchor="middle">
+    <text x="100" y="188">H/1000</text>
+    <text x="248" y="188">H/500</text>
+    <text x="357" y="188">H/300</text>
+    <text x="679" y="188" fill="#b03a2e">1.5%</text>
+  </g>
+  <g font-size="9" fill="#6b7680" text-anchor="middle">
+    <text x="100" y="174">0.1%</text>
+    <text x="248" y="174">0.2%</text>
+    <text x="357" y="174">0.33%</text>
+    <text x="679" y="174">H/67</text>
+  </g>
+
+  <!-- what each protects (callouts above) -->
+  <g font-size="9.5" fill="#3a4750">
+    <text x="100" y="118" text-anchor="middle" font-weight="bold">sensitive facades</text>
+    <text x="100" y="131" text-anchor="middle">glazing, tight joints</text>
+    <text x="100" y="144" text-anchor="middle" font-style="italic">often a total-drift limit</text>
+    <text x="248" y="118" text-anchor="middle" font-weight="bold">brittle partitions, cladding</text>
+    <text x="248" y="131" text-anchor="middle">the general multistorey case</text>
+    <text x="248" y="144" text-anchor="middle" font-style="italic">the template default</text>
+    <text x="440" y="118" text-anchor="middle" font-weight="bold">tolerant finishes</text>
+    <text x="440" y="131" text-anchor="middle">flexible cladding</text>
+    <text x="440" y="144" text-anchor="middle" font-style="italic">comfort governs</text>
+    <text x="679" y="118" text-anchor="middle" font-weight="bold" fill="#b03a2e">AS 1170.4 storey drift cap</text>
+    <text x="679" y="131" text-anchor="middle" fill="#b03a2e">P-delta and collapse control</text>
+    <text x="679" y="144" text-anchor="middle" font-style="italic" fill="#b03a2e">not a comfort limit</text>
+  </g>
+  <g stroke="#c9d0d6" stroke-width="0.8">
+    <line x1="100" y1="150" x2="100" y2="166"/><line x1="248" y1="150" x2="248" y2="166"/><line x1="440" y1="150" x2="440" y2="158"/><line x1="440" y1="158" x2="357" y2="166"/><line x1="679" y1="150" x2="679" y2="166"/>
+  </g>
+
+  <!-- the gap -->
+  <line x1="262" y1="232" x2="665" y2="232" stroke="#9aa3ab" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="500" y="285" font-size="10" fill="#1f2a33" text-anchor="middle" font-weight="bold">7.5 times apart. Not the same check. A building has to pass both, each against its own load.</text>
+
+  <!-- ================= B: inter-storey vs total vs lean ================= -->
+  <line x1="40" y1="304" x2="760" y2="304" stroke="#e4ddcb" stroke-width="1.4"/>
+  <text x="40" y="328" font-size="12" font-weight="bold" fill="#1f2a33">B. Three different drifts in one building</text>
+
+  <!-- frame elevation: base x 200..290 at y=500, 6 storeys of 26 -->
+  <!-- undeformed (dashed) -->
+  <g stroke="#9aa3ab" stroke-width="1" stroke-dasharray="3 3" fill="none">
+    <rect x="200" y="344" width="90" height="156"/>
+  </g>
+  <!-- wind-deformed shape: lean increasing with height, total 28 at roof -->
+  <g fill="none" stroke="#1f2a33" stroke-width="1.6">
+    <path d="M200 500 L203 474 L208 448 L214 422 L220 396 L226 370 L232 344"/>
+    <path d="M290 500 L293 474 L298 448 L304 422 L310 396 L316 370 L322 344"/>
+    <line x1="203" y1="474" x2="293" y2="474"/><line x1="208" y1="448" x2="298" y2="448"/><line x1="214" y1="422" x2="304" y2="422"/>
+    <line x1="220" y1="396" x2="310" y2="396"/><line x1="226" y1="370" x2="316" y2="370"/><line x1="232" y1="344" x2="322" y2="344"/>
+  </g>
+  <line x1="180" y1="500" x2="340" y2="500" stroke="#8a7f63" stroke-width="1.8"/>
+  <!-- wind arrows -->
+  <g stroke="#C49A2E" stroke-width="2" marker-end="url(#fg)">
+    <line x1="160" y1="360" x2="190" y2="360"/><line x1="160" y1="410" x2="190" y2="410"/><line x1="160" y1="460" x2="190" y2="460"/>
+  </g>
+  <text x="150" y="430" font-size="9" fill="#a07e1f" text-anchor="middle" transform="rotate(-90 150 430)">wind</text>
+
+  <!-- inter-storey drift callout (between 422 and 396 on right column) -->
+  <line x1="304" y1="422" x2="304" y2="396" stroke="#b03a2e" stroke-width="1.2" stroke-dasharray="2 2"/>
+  <line x1="304" y1="396" x2="310" y2="396" stroke="#b03a2e" stroke-width="2.2"/>
+  <line x1="330" y1="409" x2="400" y2="409" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="404" y="405" font-size="10" font-weight="bold" fill="#b03a2e">inter-storey drift</text>
+  <text x="404" y="418" font-size="9" fill="#6b7680">offset between two adjacent floors, over h</text>
+  <text x="404" y="430" font-size="9" fill="#6b7680" font-style="italic">the H/500-type check, floor by floor</text>
+
+  <!-- total drift callout at roof -->
+  <line x1="290" y1="340" x2="322" y2="340" stroke="#1f2a33" stroke-width="2.2"/>
+  <line x1="330" y1="340" x2="400" y2="340" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="404" y="336" font-size="10" font-weight="bold" fill="#1f2a33">total drift</text>
+  <text x="404" y="349" font-size="9" fill="#6b7680">roof offset over the full height H</text>
+  <text x="404" y="361" font-size="9" fill="#6b7680" font-style="italic">a separate limit on tall buildings; passing every floor isn't enough</text>
+
+  <!-- gravity lean: an extra, slow offset drawn as a faint tilted outline -->
+  <g fill="none" stroke="#3a7d44" stroke-width="1.2" stroke-dasharray="5 3">
+    <path d="M200 500 L212 344 L302 344 L290 500"/>
+  </g>
+  <line x1="330" y1="470" x2="400" y2="470" stroke="#9aa3ab" stroke-width="0.8" stroke-dasharray="3 2"/>
+  <text x="404" y="466" font-size="10" font-weight="bold" fill="#3a7d44">long-term gravity lean</text>
+  <text x="404" y="479" font-size="9" fill="#6b7680">differential shortening with an eccentric core</text>
+  <text x="404" y="491" font-size="9" fill="#6b7680" font-style="italic">accumulates over years; its own criterion, then combined</text>
+
+  <!-- stiffness note -->
+  <rect x="40" y="510" width="720" height="38" rx="6" fill="#1f2a33"/>
+  <text x="400" y="526" font-size="10.5" fill="#ffffff" text-anchor="middle" font-weight="bold">The limit rarely decides the outcome. The stiffness you computed the drift with does.</text>
+  <text x="400" y="541" font-size="10" fill="#C49A2E" text-anchor="middle">Uncracked passes, cracked may not. Say which one you used.</text>
+</svg>

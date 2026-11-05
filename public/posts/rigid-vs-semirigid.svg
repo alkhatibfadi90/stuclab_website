@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" font-family="Georgia, 'Times New Roman', serif" role="img" aria-label="An engineering figure comparing rigid and semi-rigid diaphragms on a long narrow floor plate with stiff walls at both ends under lateral load. Rigid: the plate translates as one block, every point moves the same amount, the load splits by wall stiffness alone, and the slab reports zero in-plane force. Semi-rigid: the plate bows in-plane like a deep beam, mid-length deflection exceeds the end deflection, chord tension and compression develop along the edges, collector forces feed the end walls, and the mid-length elements carry more than the rigid model gave them. A strip below shows the four plan conditions where rigid is a false claim: a long narrow plate, a large opening, a transfer level, and a re-entrant corner.">
+  <defs>
+    <marker id="fa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1f2a33"/></marker>
+    <marker id="fg" markerWidth="10" markerHeight="10" refX="6.5" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#C49A2E"/></marker>
+    <marker id="fr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#b03a2e"/></marker>
+    <marker id="fgr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#3a7d44"/></marker>
+    <pattern id="conc" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#c9d0d6" stroke-width="1"/></pattern>
+  </defs>
+
+  <rect x="4" y="4" width="792" height="632" rx="10" fill="#ffffff" stroke="#e4ddcb" stroke-width="1.5"/>
+  <rect x="4" y="4" width="792" height="5" rx="2.5" fill="#C49A2E"/>
+
+  <text x="40" y="40" font-size="21" font-weight="bold" fill="#1f2a33">Rigid Is a Claim That the Slab Cannot Deform In-Plane</text>
+  <text x="40" y="60" font-size="13" fill="#6b7680" font-style="italic">Same long plate, stiff walls at both ends, same lateral load. Plan view.</text>
+
+  <!-- ================= LEFT: RIGID ================= -->
+  <text x="210" y="92" font-size="12.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">RIGID DIAPHRAGM</text>
+  <text x="210" y="107" font-size="9.5" fill="#6b7680" text-anchor="middle" font-style="italic">infinite in-plane stiffness</text>
+
+  <!-- load arrows (lateral, pushing down in plan = +y) -->
+  <g stroke="#C49A2E" stroke-width="2" marker-end="url(#fg)">
+    <line x1="80" y1="122" x2="80" y2="140"/><line x1="145" y1="122" x2="145" y2="140"/><line x1="210" y1="122" x2="210" y2="140"/><line x1="275" y1="122" x2="275" y2="140"/><line x1="340" y1="122" x2="340" y2="140"/>
+  </g>
+  <!-- end walls -->
+  <rect x="52" y="144" width="10" height="110" fill="url(#conc)" stroke="#1f2a33" stroke-width="1.6"/>
+  <rect x="358" y="144" width="10" height="110" fill="url(#conc)" stroke="#1f2a33" stroke-width="1.6"/>
+  <!-- undeformed outline -->
+  <rect x="62" y="150" width="296" height="98" fill="none" stroke="#9aa3ab" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- deformed: whole plate shifted uniformly down by 10 -->
+  <rect x="62" y="160" width="296" height="98" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.6"/>
+  <!-- uniform displacement markers -->
+  <g stroke="#1f2a33" stroke-width="1.2" marker-end="url(#fa)">
+    <line x1="100" y1="150" x2="100" y2="158"/><line x1="210" y1="150" x2="210" y2="158"/><line x1="320" y1="150" x2="320" y2="158"/>
+  </g>
+  <text x="210" y="212" font-size="10.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">every point moves the same</text>
+  <text x="210" y="228" font-size="9.5" fill="#6b7680" text-anchor="middle" font-style="italic">in-plane force reported: 0</text>
+  <!-- reactions into walls: equal -->
+  <g stroke="#1f2a33" stroke-width="2.6" marker-end="url(#fa)">
+    <line x1="57" y1="262" x2="57" y2="290"/><line x1="363" y1="262" x2="363" y2="290"/>
+  </g>
+  <text x="57" y="304" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">50%</text>
+  <text x="363" y="304" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">50%</text>
+  <text x="210" y="304" font-size="9.5" fill="#6b7680" text-anchor="middle" font-style="italic">split by wall stiffness alone</text>
+
+  <!-- ================= divider ================= -->
+  <line x1="400" y1="84" x2="400" y2="320" stroke="#e4ddcb" stroke-width="1.4"/>
+
+  <!-- ================= RIGHT: SEMI-RIGID ================= -->
+  <text x="590" y="92" font-size="12.5" font-weight="bold" fill="#1f2a33" text-anchor="middle">SEMI-RIGID DIAPHRAGM</text>
+  <text x="590" y="107" font-size="9.5" fill="#6b7680" text-anchor="middle" font-style="italic">the slab's real in-plane stiffness</text>
+
+  <g stroke="#C49A2E" stroke-width="2" marker-end="url(#fg)">
+    <line x1="460" y1="122" x2="460" y2="140"/><line x1="525" y1="122" x2="525" y2="140"/><line x1="590" y1="122" x2="590" y2="140"/><line x1="655" y1="122" x2="655" y2="140"/><line x1="720" y1="122" x2="720" y2="140"/>
+  </g>
+  <rect x="432" y="144" width="10" height="110" fill="url(#conc)" stroke="#1f2a33" stroke-width="1.6"/>
+  <rect x="738" y="144" width="10" height="110" fill="url(#conc)" stroke="#1f2a33" stroke-width="1.6"/>
+  <rect x="442" y="150" width="296" height="98" fill="none" stroke="#9aa3ab" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- deformed: bowed plate; top edge and bottom edge sag at midspan -->
+  <path d="M442 158 Q590 192 738 158 L738 256 Q590 290 442 256 Z" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.6"/>
+  <!-- mid deflection marker -->
+  <line x1="590" y1="150" x2="590" y2="172" stroke="#b03a2e" stroke-width="1.6" marker-end="url(#fr)"/>
+  <rect x="532" y="176" width="116" height="13" fill="#e9eef1"/>
+  <text x="590" y="186" font-size="9" fill="#b03a2e" font-weight="bold" text-anchor="middle">mid-length deflects more</text>
+  <!-- chord forces along edges -->
+  <text x="590" y="208" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">chord compression</text>
+  <line x1="470" y1="200" x2="530" y2="204" stroke="#1f2a33" stroke-width="1.4" marker-end="url(#fa)"/>
+  <line x1="710" y1="200" x2="650" y2="204" stroke="#1f2a33" stroke-width="1.4" marker-end="url(#fa)"/>
+  <text x="590" y="278" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">chord tension</text>
+  <line x1="530" y1="272" x2="470" y2="268" stroke="#1f2a33" stroke-width="1.4" marker-end="url(#fa)"/>
+  <line x1="650" y1="272" x2="710" y2="268" stroke="#1f2a33" stroke-width="1.4" marker-end="url(#fa)"/>
+  <!-- collector into walls -->
+  <line x1="470" y1="236" x2="446" y2="236" stroke="#3a7d44" stroke-width="2" marker-end="url(#fgr)"/>
+  <line x1="710" y1="236" x2="734" y2="236" stroke="#3a7d44" stroke-width="2" marker-end="url(#fgr)"/>
+  <text x="590" y="240" font-size="9" fill="#3a7d44" text-anchor="middle" font-style="italic">collector forces into the walls, now reported</text>
+  <!-- reactions -->
+  <g stroke="#1f2a33" stroke-width="2.6" marker-end="url(#fa)">
+    <line x1="437" y1="262" x2="437" y2="290"/><line x1="743" y1="262" x2="743" y2="290"/>
+  </g>
+  <text x="437" y="304" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">less</text>
+  <text x="743" y="304" font-size="9.5" fill="#1f2a33" text-anchor="middle" font-weight="bold">less</text>
+  <text x="590" y="304" font-size="9.5" fill="#b03a2e" text-anchor="middle" font-style="italic">mid-length elements carry more than rigid gave them</text>
+
+  <!-- ================= strip: where rigid lies ================= -->
+  <line x1="40" y1="330" x2="760" y2="330" stroke="#e4ddcb" stroke-width="1.4"/>
+  <text x="40" y="354" font-size="12" font-weight="bold" fill="#1f2a33">Where the rigid claim is false</text>
+
+  <!-- 4 icon cards: x 40,220,400,580 ; width 160 ; y 366..470 -->
+  <!-- card 1: long narrow plate -->
+  <rect x="40" y="366" width="160" height="104" rx="7" fill="#f7f9fa" stroke="#d0d7dc" stroke-width="1"/>
+  <rect x="56" y="384" width="128" height="26" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.2"/>
+  <rect x="52" y="380" width="6" height="34" fill="#1f2a33"/><rect x="182" y="380" width="6" height="34" fill="#1f2a33"/>
+  <text x="120" y="434" font-size="10" fill="#1f2a33" text-anchor="middle" font-weight="bold">Long, narrow plate</text>
+  <text x="120" y="448" font-size="9" fill="#6b7680" text-anchor="middle">aspect ratio above about 3,</text>
+  <text x="120" y="460" font-size="9" fill="#6b7680" text-anchor="middle">stiff walls at the ends</text>
+
+  <!-- card 2: large opening -->
+  <rect x="220" y="366" width="160" height="104" rx="7" fill="#f7f9fa" stroke="#d0d7dc" stroke-width="1"/>
+  <rect x="246" y="378" width="108" height="38" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.2"/>
+  <rect x="280" y="386" width="40" height="22" fill="#ffffff" stroke="#b03a2e" stroke-width="1.4"/>
+  <text x="300" y="434" font-size="10" fill="#1f2a33" text-anchor="middle" font-weight="bold">Large opening</text>
+  <text x="300" y="448" font-size="9" fill="#6b7680" text-anchor="middle">lift core or stair void;</text>
+  <text x="300" y="460" font-size="9" fill="#6b7680" text-anchor="middle">force must route around it</text>
+
+  <!-- card 3: transfer level (elevation) -->
+  <rect x="400" y="366" width="160" height="104" rx="7" fill="#f7f9fa" stroke="#d0d7dc" stroke-width="1"/>
+  <rect x="448" y="376" width="40" height="22" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.2"/>
+  <rect x="424" y="398" width="112" height="6" fill="#C49A2E"/>
+  <rect x="424" y="404" width="112" height="14" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.2"/>
+  <text x="480" y="434" font-size="10" fill="#1f2a33" text-anchor="middle" font-weight="bold">Transfer or podium level</text>
+  <text x="480" y="448" font-size="9" fill="#6b7680" text-anchor="middle">tower system hands shear to</text>
+  <text x="480" y="460" font-size="9" fill="#6b7680" text-anchor="middle">the podium through the slab</text>
+
+  <!-- card 4: re-entrant corner (L plan) -->
+  <rect x="580" y="366" width="160" height="104" rx="7" fill="#f7f9fa" stroke="#d0d7dc" stroke-width="1"/>
+  <path d="M612 378 L700 378 L700 398 L656 398 L656 418 L612 418 Z" fill="#e9eef1" stroke="#1f2a33" stroke-width="1.2"/>
+  <circle cx="656" cy="398" r="5" fill="none" stroke="#b03a2e" stroke-width="1.4"/>
+  <text x="660" y="434" font-size="10" fill="#1f2a33" text-anchor="middle" font-weight="bold">Irregular plan</text>
+  <text x="660" y="448" font-size="9" fill="#6b7680" text-anchor="middle">re-entrant corners and</text>
+  <text x="660" y="460" font-size="9" fill="#6b7680" text-anchor="middle">diaphragm discontinuities</text>
+
+  <!-- ================= bottom: the test ================= -->
+  <rect x="40" y="488" width="720" height="128" rx="8" fill="#1f2a33"/>
+  <text x="60" y="512" font-size="12" font-weight="bold" fill="#ffffff">The test</text>
+  <g font-size="10.5" fill="#cdd3d8">
+    <text x="60" y="534">1. Run the floor both ways. Compare storey drifts and element forces.</text>
+    <text x="60" y="552">2. Within about 10%: rigid is a fair simplification, keep the speed.</text>
+    <text x="60" y="570">3. Outside it: the slab's flexibility matters, the semi-rigid model is the real one.</text>
+    <text x="60" y="588">4. Need chord or collector forces? Only semi-rigid reports them. No test needed.</text>
+  </g>
+  <text x="740" y="606" font-size="9.5" fill="#C49A2E" text-anchor="end" font-style="italic">Mesh at about a tenth of the span, refine, and make the shells share nodes with the walls.</text>
+</svg>
